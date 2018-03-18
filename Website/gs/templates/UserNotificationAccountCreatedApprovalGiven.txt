@@ -1,0 +1,12 @@
+﻿[Subject]
+Gallery Notification: Account approved!
+
+[Body]
+Your account has been approved! Go to the gallery by clicking the link below or copying and pasting it into your browser's location bar.
+
+Gallery URL: {CurrentPageUrlFull}
+User name: {UserName}
+
+Thanks for joining.
+
+-- Gallery Server Administrator

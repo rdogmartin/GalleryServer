@@ -1,0 +1,12 @@
+﻿[Subject]
+Welcome to the gallery
+
+[Body]
+An account has been successfully created, but it must be approved before you can log on. You will be notified when your account is activated.
+
+Gallery URL: {CurrentPageUrlFull}
+User name: {UserName}
+
+Thanks for joining.
+
+-- Gallery Server Administrator

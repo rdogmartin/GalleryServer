@@ -1,0 +1,1237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Canvas xmlns="http://schemas.microsoft.com/client/2007" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="640" Height="480">
+  <Canvas.Resources>
+    <Storyboard x:Name="PlayPauseButton_MouseEnter">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_C" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PlayPauseButton_MouseLeave">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_C" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PlayPauseButton_MouseDown" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_A" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.084"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.37"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_A" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.652"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.846"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PlayPauseButton_MouseUp" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_A" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.37"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.084"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_A" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.846"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.652"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="StopButton_MouseEnter">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="stopBtn_glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.6"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="StopButton_MouseLeave" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="stopBtn_glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="StopButton_MouseDown" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_43" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.278"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.674"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="StopButton_MouseUp" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_43" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.674"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.278"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="NextButton_MouseEnter">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_53" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="NextButton_MouseLeave">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_53" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="NextButton_MouseDown" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_52" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.084"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.37"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_52" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.652"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.846"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="NextButton_MouseUp" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_52" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.37"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.084"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_52" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.846"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.652"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PreviousButton_MouseEnter">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_58" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PreviousButton_MouseLeave" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_58" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PreviousButton_MouseDown" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_56" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.084"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.37"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_56" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.652"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.846"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PreviousButton_MouseUp">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_56" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.37"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.084"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_56" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.846"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.652"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="MuteButton_MouseEnter">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="muteBtn_glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.6"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="MuteButton_MouseLeave" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="muteBtn_glow" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="VolumeDownButton_MouseDown" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_73" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.286"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.681"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="VolumeDownButton_MouseUp">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_73" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.681"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.286"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="VolumeUpButton_MouseDown" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_78" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.286"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.681"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="VolumeUpButton_MouseUp">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Path_78" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.681"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.286"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="ChapterArea_Show">
+      <DoubleAnimation Storyboard.TargetName="ChapterArea" Storyboard.TargetProperty="(Canvas.Left)" To="92.76" Duration="0:0:00.30" />
+      <DoubleAnimation Storyboard.TargetName="ChapterArea" Storyboard.TargetProperty="(Canvas.Opacity)" To="1.0" Duration="0:0:00.30" />
+    </Storyboard>
+    <Storyboard x:Name="ChapterArea_Hide">
+      <DoubleAnimation Storyboard.TargetName="ChapterArea" Storyboard.TargetProperty="(Canvas.Left)" To="600" Duration="0:0:00.30" />
+      <DoubleAnimation Storyboard.TargetName="ChapterArea" Storyboard.TargetProperty="(Canvas.Opacity)" To="0.0" Duration="0:0:00.30" />
+    </Storyboard>
+
+    <Storyboard x:Name="ChapterArea_ScrollAnimationStoryboard">
+      <DoubleAnimation x:Name="ChapterArea_ScrollAnimation" Storyboard.TargetName="ChapterArea_Scroll" Storyboard.TargetProperty="(Canvas.Left)" Duration="0:0:0.3" />
+    </Storyboard>
+
+    <Storyboard x:Name="ChapterArea_ScrollItem1_MouseDown">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="ChapterArea_ScrollItem1_MouseUp">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Name="ChapterArea_ScrollItem2_MouseDown">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="ChapterArea_ScrollItem2_MouseUp">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Name="ChapterArea_ScrollItem3_MouseDown">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="ChapterArea_ScrollItem3_MouseUp">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Name="ChapterArea_ScrollItem4_MouseDown">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="ChapterArea_ScrollItem4_MouseUp">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ChapterArea_ScrollItem4" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Name="PlaceholderImage_Show">
+      <DoubleAnimation Storyboard.TargetName="PlaceholderImage" Storyboard.TargetProperty="(UIElement.Opacity)" To="1" Duration="0:0:0.3" />
+    </Storyboard>
+    <Storyboard x:Name="PlaceholderImage_Hide">
+      <DoubleAnimation Storyboard.TargetName="PlaceholderImage" Storyboard.TargetProperty="(UIElement.Opacity)" To="0" Duration="0:0:0.3" />
+    </Storyboard>
+
+    <Storyboard x:Name="BufferingArea_Buffering" BeginTime="0" RepeatBehavior="Forever">
+      <DoubleAnimation Storyboard.TargetName="Path_123" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" To="360" Duration="0:0:02" />
+    </Storyboard>
+
+    <Storyboard x:Name="ChaptersAreaText_MouseEnter">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="chapterIcon_01" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.2"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.7"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="chapterIcon_02" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.2"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.7"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="ChaptersAreaText_MouseLeave" >
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="chapterIcon_01" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.7"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.2"/>
+      </DoubleAnimationUsingKeyFrames>
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="chapterIcon_02" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.7"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.2"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Name="ChapterArea_ScrollNext_MouseEnter">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path11" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.289"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.581"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="ChapterArea_ScrollNext_MouseLeave">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path11" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.581"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.289"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Name="ChapterArea_ScrollPrevious_MouseEnter">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path11_Copy" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.289"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.581"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="ChapterArea_ScrollPrevious_MouseLeave">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="path11_Copy" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Offset)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.581"/>
+        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.289"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Name="PlaySymbol_Show">
+      <DoubleAnimation Storyboard.TargetName='PlaySymbol' Storyboard.TargetProperty='opacity' To='1.0' Duration='0:0:0.3' />
+    </Storyboard>
+    <Storyboard x:Name="PlaySymbol_Hide">
+      <DoubleAnimation Storyboard.TargetName='PlaySymbol' Storyboard.TargetProperty='opacity' To='0.0' Duration='0:0:0.3' />
+    </Storyboard>
+    <Storyboard x:Name="PauseSymbol_Show">
+      <DoubleAnimation Storyboard.TargetName='PauseSymbol' Storyboard.TargetProperty='opacity' To='1.0' Duration='0:0:0.3' />
+    </Storyboard>
+    <Storyboard x:Name="PauseSymbol_Hide">
+      <DoubleAnimation Storyboard.TargetName='PauseSymbol' Storyboard.TargetProperty='opacity' To='0.0' Duration='0:0:0.3' />
+    </Storyboard>
+    <Storyboard x:Name="MuteOffSymbol_Show">
+      <DoubleAnimation Storyboard.TargetName='MuteOffSymbol' Storyboard.TargetProperty='opacity' To='1.0' Duration='0:0:0.3' />
+    </Storyboard>
+    <Storyboard x:Name="MuteOffSymbol_Hide">
+      <DoubleAnimation Storyboard.TargetName='MuteOffSymbol' Storyboard.TargetProperty='opacity' To='0.0' Duration='0:0:0.3' />
+    </Storyboard>
+    <Storyboard x:Name="MuteOnSymbol_Show">
+      <DoubleAnimation Storyboard.TargetName='MuteOnSymbol' Storyboard.TargetProperty='opacity' To='1.0' Duration='0:0:0.3' />
+    </Storyboard>
+    <Storyboard x:Name="MuteOnSymbol_Hide">
+      <DoubleAnimation Storyboard.TargetName='MuteOnSymbol' Storyboard.TargetProperty='opacity' To='0.0' Duration='0:0:0.3' />
+    </Storyboard>
+
+    <Storyboard x:Name="PlayPauseButton_Enable">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PlayPauseButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PlayPauseButton_Disable">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PlayPauseButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.5"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="NextButton_Enable">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="NextButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="NextButton_Disable">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="NextButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.5"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PreviousButton_Enable">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PreviousButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="PreviousButton_Disable">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PreviousButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.5"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="StopButton_Enable">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="StopButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Name="StopButton_Disable">
+      <DoubleAnimationUsingKeyFrames Storyboard.TargetName="StopButton" Storyboard.TargetProperty="(UIElement.Opacity)">
+        <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.5"/>
+      </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+  </Canvas.Resources>
+
+  <Canvas Width="640" Height="480" Canvas.Left="0" Canvas.Top="0">
+    <Canvas.Clip>
+      <RectangleGeometry Rect="0, 0, 640, 480" />
+    </Canvas.Clip>
+    <Rectangle x:Name="Rectangle" Width="600" Height="477.692" Canvas.Left="20.007" Canvas.Top="0.997" Stretch="Fill" Fill="#FF263142"/>
+    <Canvas x:Name="leftEdge" Width="83.01" Height="479.502" Canvas.Left="0.116">
+      <Path x:Name="Path_5" Width="56.125" Height="478.505" Stretch="Fill" Data="F1 M27.000046,479.502 L67.118,478.66866 C88.292,319.86966 88.457,159.829 67.633,0.99697958 L27.000046,0.996979 27.000028,479.502 z" Canvas.Left="26.885" Canvas.Top="0.997">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.17,0.499">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.152" ScaleY="1.152"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="-0.204" Y="0"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF090C11" Offset="0"/>
+            <GradientStop Color="#FF263142" Offset="1"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_10" Width="46.0078" Height="478.505" Stretch="Fill" Data="F1 M 60.633,0.996979L 30.633,0.996979C 51.457,159.829 51.292,320.703 30.118,479.502L 60.118,479.502C 81.292,320.703 81.457,159.829 60.633,0.996979 Z " Canvas.Top="0.997">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="-0.456,0.501">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.43" ScaleY="1.43"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="-0.211" Y="0"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF303030" Offset="0.674"/>
+            <GradientStop Color="#FF737373" Offset="1"/>
+            <GradientStop Color="#FFCDCDCD" Offset="0.805"/>
+            <GradientStop Color="#FFDFDDDD" Offset="0.73"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_12_shadow" Width="31.262" Height="478.505" Stretch="Fill" Data="F1 M62.633,0.996979 L54.833,0.996979 C54.833,0.996979 61.013,39.205 66.069,81.769 66.069,81.769 69.439,98.01 61.013,98.01 58.391,98.01 56.064258,97.937486 53.147,98.01 50.361171,98.079247 46.147309,97.895819 46.968,114.251 46.968,114.251 53.709,289.736 50.338,309.338 50.338,309.338 49.215,324.46 54.271,334.541 54.271,334.541 66.631,360.672 66.631,388.674 66.631,388.674 66.588,414.215&#xa;56.686,479.502 L62.118,479.502 C83.292,320.703 83.457,159.829 62.633,0.996979 z" Stroke="#006D6D6D" Fill="#7F000000" Canvas.Left="18.554" Canvas.Top="0.997"/>
+      <Path x:Name="Path_12" Width="31.262" Height="478.505" Stretch="Fill" Data="F1 M62.633,0.996979 L54.833,0.996979 C54.833,0.996979 61.013,39.205 66.069,81.769 66.069,81.769 69.439,98.01 61.013,98.01 58.391,98.01 56.064258,97.937486 53.147,98.01 50.361171,98.079247 46.147309,97.895819 46.968,114.251 46.968,114.251 53.709,289.736 50.338,309.338 50.338,309.338 49.215,324.46 54.271,334.541 54.271,334.541 66.631,360.672 66.631,388.674 66.631,388.674 66.588,414.215&#xd;&#xa;56.686,479.502 L62.118,479.502 C83.292,320.703 83.457,159.829 62.633,0.996979 z" Stroke="#7F6D6D6D" Canvas.Left="16.746" Canvas.Top="0.997">
+        <Path.Fill>
+          <LinearGradientBrush StartPoint="0.034,0.464" EndPoint="2.188,0.462">
+            <GradientStop Color="#FF4C4C4C" Offset="0"/>
+            <GradientStop Color="#FFBFC0C2" Offset="0.428"/>
+            <GradientStop Color="#FFB6B8BC" Offset="0.701"/>
+            <GradientStop Color="#FF999A9E" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+    </Canvas>
+    <Canvas x:Name="rightEdge" Width="83.01" Height="479.502" RenderTransformOrigin="0.5,0.5" Canvas.Left="557.037">
+      <Canvas.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="-1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="0"/>
+          <TranslateTransform X="0" Y="0"/>
+        </TransformGroup>
+      </Canvas.RenderTransform>
+      <Path x:Name="Path_3" Width="56.125" Height="478.505" Stretch="Fill" Data="F1 M27.000046,479.502 L67.118,478.66867 C88.292,319.86967 88.457,159.829 67.633,0.996979 L27.000046,0.996979 27.000028,479.502 z" Canvas.Left="26.885" Canvas.Top="0.997">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.17,0.499">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.152" ScaleY="1.152"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="-0.204" Y="0"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF090C11" Offset="0"/>
+            <GradientStop Color="#FF263142" Offset="1"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_6" Width="46.0078" Height="478.505" Stretch="Fill" Data="F1 M 60.633,0.996979L 30.633,0.996979C 51.457,159.829 51.292,320.703 30.118,479.502L 60.118,479.502C 81.292,320.703 81.457,159.829 60.633,0.996979 Z " Canvas.Top="0.997">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="-0.456,0.501">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.43" ScaleY="1.43"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="-0.211" Y="0"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF303030" Offset="0.674"/>
+            <GradientStop Color="#FF737373" Offset="1"/>
+            <GradientStop Color="#FFCDCDCD" Offset="0.805"/>
+            <GradientStop Color="#FFDFDDDD" Offset="0.73"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_12_shadow1" Width="31.262" Height="478.505" Stretch="Fill" Data="F1 M62.633,0.996979 L54.833,0.996979 C54.833,0.996979 61.013,39.205 66.069,81.769 66.069,81.769 69.439,98.01 61.013,98.01 58.391,98.01 56.064258,97.937486 53.147,98.01 50.361171,98.079247 46.147309,97.895819 46.968,114.251 46.968,114.251 53.709,289.736 50.338,309.338 50.338,309.338 49.215,324.46 54.271,334.541 54.271,334.541 66.631,360.672 66.631,388.674 66.631,388.674 66.588,414.215&#xa;56.686,479.502 L62.118,479.502 C83.292,320.703 83.457,159.829 62.633,0.996979 z" Stroke="#006D6D6D" Fill="#7F000000" Canvas.Left="18.554" Canvas.Top="0.997"/>
+      <Path x:Name="Path_7" Width="31.262" Height="478.505" Stretch="Fill" Data="F1 M62.633,0.996979 L54.833,0.996979 C54.833,0.996979 61.013,39.205 66.069,81.769 66.069,81.769 69.439,98.01 61.013,98.01 58.391,98.01 56.064258,97.937486 53.147,98.01 50.361171,98.079247 46.147309,97.895819 46.968,114.251 46.968,114.251 53.709,289.736 50.338,309.338 50.338,309.338 49.215,324.46 54.271,334.541 54.271,334.541 66.631,360.672 66.631,388.674 66.631,388.674 66.588,414.215&#xa;56.686,479.502 L62.118,479.502 C83.292,320.703 83.457,159.829 62.633,0.996979 z" Stroke="#7F6D6D6D" Canvas.Left="16.746" Canvas.Top="0.997">
+        <Path.Fill>
+          <LinearGradientBrush StartPoint="0.034,0.464" EndPoint="2.188,0.462">
+            <GradientStop Color="#FF4C4C4C" Offset="0"/>
+            <GradientStop Color="#FFBFC0C2" Offset="0.428"/>
+            <GradientStop Color="#FFB6B8BC" Offset="0.701"/>
+            <GradientStop Color="#FF999A9E" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+    </Canvas>
+    <Path x:Name="Path_4" Width="510" Height="296" Canvas.Left="65" Canvas.Top="95.334" Stretch="Fill" Fill="#FF000000" Data="F1 M 79.623,90.716C 84.962,184.756 85.26,278.796 80.525,372.835L 568.475,372.835C 563.74,278.796 564.038,184.756 569.378,90.716L 79.623,90.716 Z "/>
+
+    <MediaElement x:Name="VideoWindow" Width="510" Height="296" Canvas.Left="65" Canvas.Top="95.334" />
+    <Image x:Name="PlaceholderImage" Width="510" Height="296" Canvas.Left="65" Canvas.Top="95.334" IsHitTestVisible="false" Opacity="0" />
+
+    <Path x:Name="Path_000_shadow" Width="568.387" Height="78.729" Stretch="Fill" Data="F1 M68.333747,86.729 L591.62477,86.729 C594.08677,86.729 601.43579,85.62 608.12679,83.876 L615.1248,32.897 C615.1248,28.493 613.04277,24.922 608.62477,24.922 L53.333747,24.922 C48.915747,24.922 46.750378,28.493 46.750378,32.897 L53.81473,83.763 C59.46873,85.571 65.818747,86.729 68.333747,86.729 z" Opacity="0.6" RenderTransformOrigin="0.5,0.5" Canvas.Left="92.225" Canvas.Top="391.334">
+      <Path.Fill>
+        <LinearGradientBrush EndPoint="0.5,0.814" StartPoint="0.5,0.979">
+          <GradientStop Color="#00000000" Offset="0"/>
+          <GradientStop Color="#FF000000" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Fill>
+      <Path.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="180"/>
+          <TranslateTransform X="-56.386999999999489" Y="0"/>
+        </TransformGroup>
+      </Path.RenderTransform>
+    </Path>
+    <Path x:Name="Path_000_highlight" Width="568.387" Height="78.729" Stretch="Fill" Data="F1 M68.333747,86.729 L591.62477,86.729 C594.08677,86.729 601.43579,85.62 608.12679,83.876 L615.1248,32.897 C615.1248,28.493 613.04277,24.922 608.62477,24.922 L53.333747,24.922 C48.915747,24.922 46.750378,28.493 46.750378,32.897 L53.81473,83.763 C59.46873,85.571 65.818747,86.729 68.333747,86.729 z" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Canvas.Left="92.255" Canvas.Top="398.999">
+      <Path.Fill>
+        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+          <GradientStop Color="#00000000" Offset="0"/>
+          <GradientStop Color="#000D0D0D" Offset="1"/>
+          <GradientStop Color="#FFB7E9FE" Offset="0.098"/>
+          <GradientStop Color="#FFC7EEFF" Offset="0.91"/>
+        </LinearGradientBrush>
+      </Path.Fill>
+      <Path.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="180"/>
+          <TranslateTransform X="-56.386999999999489" Y="0"/>
+        </TransformGroup>
+      </Path.RenderTransform>
+    </Path>
+    <Path x:Name="Path_000" Width="569.887" Height="78.729" Stretch="Fill" Data="F1 M68.333747,86.729 L591.62477,86.729 C594.08677,86.729 602.18577,85.62 608.87677,83.876 L615.87478,32.897 C615.87478,28.493 613.04277,24.922 608.62477,24.922 L53.333747,24.922 C48.915747,24.922 46.000395,28.493 46.000395,32.897 L53.064747,83.763 C58.718747,85.571 65.818747,86.729 68.333747,86.729 z" Opacity="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="93.005" Canvas.Top="400">
+      <Path.Fill>
+        <RadialGradientBrush GradientOrigin="0.5,0.315">
+          <RadialGradientBrush.RelativeTransform>
+            <TransformGroup>
+              <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="2.786" ScaleY="5.424"/>
+              <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+              <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+              <TranslateTransform X="0.002" Y="1.827"/>
+            </TransformGroup>
+          </RadialGradientBrush.RelativeTransform>
+          <GradientStop Color="#FF26374C" Offset="0.66"/>
+          <GradientStop Color="#FF000000" Offset="1"/>
+          <GradientStop Color="#FF2B3B4E" Offset="0.183"/>
+          <GradientStop Color="#FF7899C1" Offset="0.652"/>
+          <GradientStop Color="#FF5A799A" Offset="0.635"/>
+        </RadialGradientBrush>
+      </Path.Fill>
+      <Path.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="180"/>
+          <TranslateTransform X="-57.886999999999489" Y="0"/>
+        </TransformGroup>
+      </Path.RenderTransform>
+    </Path>
+    <Path x:Name="Path_000_contours" Width="563.887" Height="60.784" Stretch="Fill" Data="F1 M68.333747,86.729 L591.62477,86.729 C594.08677,86.729 602.18577,85.62 608.87677,83.876 L612.87485,55.925464 C612.87485,53.709886 470.16235,39.001871 328.32986,39.015533 188.23581,39.029027 49.000328,53.737042 49.000328,55.925464 L53.064747,83.763 C58.718747,85.571 65.818747,86.729 68.333747,86.729 z" Opacity="0.4" RenderTransformOrigin="0.5,0.5" Canvas.Left="90.005" Canvas.Top="382.055">
+      <Path.Fill>
+        <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+          <GradientStop Color="#FF000000" Offset="0"/>
+          <GradientStop Color="#00000000" Offset="0.267"/>
+          <GradientStop Color="#00000000" Offset="0.73"/>
+          <GradientStop Color="#FF000000" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Fill>
+      <Path.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="180"/>
+          <TranslateTransform X="-51.886999999999261" Y="17.944999999999396"/>
+        </TransformGroup>
+      </Path.RenderTransform>
+    </Path>
+    <Path x:Name="Path_0_shadow" Width="566.711" Height="78.729" Stretch="Fill" Data="F1 M59.833386,86.729 L578.5416,86.729 C581.0036,86.729 590.22759,85.62 596.91859,83.876 L603.5416,32.897 C603.5416,28.493 599.9596,24.922 595.5416,24.922 L44.833386,24.922 C40.415386,24.922 36.833386,28.493 36.833386,32.897 L43.314392,83.763 C48.968392,85.571 57.318386,86.729 59.833386,86.729 z" Opacity="0.505" Canvas.Left="36.832" Canvas.Top="16">
+      <Path.Fill>
+        <LinearGradientBrush EndPoint="0.5,0.978" StartPoint="0.5,0.749">
+          <GradientStop Color="#FF000000" Offset="0.736"/>
+          <GradientStop Color="#00000000" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Fill>
+    </Path>
+    <Path x:Name="Path_0" Width="566.711" Height="78.733" Canvas.Left="36.832" Canvas.Top="8" Stretch="Fill" Data="F1 M59.833386,86.729 L578.5416,86.729 C581.0036,86.729 595.99866,86.941748 596.91859,83.876 L603.5416,32.897 C603.5416,28.493 599.9596,24.922 595.5416,24.922 L44.833386,24.922 C40.415386,24.922 36.833386,28.493 36.833386,32.897 L43.314392,83.763 C43.751352,86.745501 57.318386,86.729 59.833386,86.729 z" Opacity="1">
+      <Path.Fill>
+        <RadialGradientBrush GradientOrigin="0.5,0.315">
+          <RadialGradientBrush.RelativeTransform>
+            <TransformGroup>
+              <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="2.387" ScaleY="4.652"/>
+              <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+              <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+              <TranslateTransform X="-0.011" Y="-1.274"/>
+            </TransformGroup>
+          </RadialGradientBrush.RelativeTransform>
+          <GradientStop Color="#FF36455D" Offset="0.66"/>
+          <GradientStop Color="#FF6697C5" Offset="0.254"/>
+          <GradientStop Color="#FF273240" Offset="0.784"/>
+          <GradientStop Color="#FF000000" Offset="1"/>
+        </RadialGradientBrush>
+      </Path.Fill>
+    </Path>
+
+    <Path x:Name="Path_18_timeRing_bottom_inner" Width="272.271" Height="27.922" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#3FFFFFFF" Data="F1 M388.14764,395.525 L132.69053,395.525 C124.97353,395.525 118.71853,401.761 118.71853,409.454 118.71853,417.146 124.97353,423.382 132.69053,423.382 L388.14764,423.382 C395.86364,423.382 402.11964,417.146 402.11964,409.454 402.11964,401.761 395.86364,395.525 388.14764,395.525 z" Opacity="0.525" RenderTransformOrigin="0.5,0.5" Canvas.Left="254.95" Canvas.Top="412.543">
+      <Path.Fill>
+        <LinearGradientBrush EndPoint="0.512,-0.216" StartPoint="0.512,0.876">
+          <GradientStop Color="#FF1A2432" Offset="0"/>
+          <GradientStop Color="#FF3E5773" Offset="0.546"/>
+          <GradientStop Color="#FF6183A8" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Fill>
+      <Path.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="180"/>
+          <TranslateTransform X="0" Y="0"/>
+        </TransformGroup>
+      </Path.RenderTransform>
+    </Path>
+
+    <Path x:Name="Path_18_timeRing_bottom" Width="273.2" Height="29.19" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Data="F1 M377.04751,395.525 L133.017,395.525 C125.3,395.525 119.045,401.761 119.045,409.454 119.045,417.146 125.3,423.382 133.017,423.382 L377.04751,423.382 C384.76351,423.382 391.01951,417.146 391.01951,409.454 391.01951,401.761 384.76351,395.525 377.04751,395.525 z" Fill="#00404851" RenderTransformOrigin="0.5,0.5" Canvas.Left="254.518" Canvas.Top="411.887">
+      <Path.Stroke>
+        <LinearGradientBrush EndPoint="0.525,-0.211" StartPoint="0.525,1.211">
+          <GradientStop Color="#FF000000" Offset="0"/>
+          <GradientStop Color="#0BFFFFFF" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Stroke>
+      <Path.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="180"/>
+          <TranslateTransform X="0" Y="0"/>
+        </TransformGroup>
+      </Path.RenderTransform>
+    </Path>
+
+    <Path x:Name="Path_19" Width="14.415" Height="23.701" Canvas.Left="510.522" Canvas.Top="414.541" Stretch="Fill" Data="F1 M 513.049,397.199L 510.522,397.199L 510.522,420.9L 513.049,420.9C 519.614,420.9 524.937,415.594 524.937,409.05C 524.937,402.506 519.614,397.199 513.049,397.199 Z ">
+      <Path.Fill>
+        <LinearGradientBrush StartPoint="0.387,1.507" EndPoint="0.387,0.031">
+          <GradientStop Color="#4DFFFFFF" Offset="0"/>
+          <GradientStop Color="#FFB6D5FE" Offset="0.320225"/>
+          <GradientStop Color="#FF3E6181" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Fill>
+    </Path>
+    <Path x:Name="Path_20" Width="14.414" Height="23.701" Canvas.Left="257.975" Canvas.Top="414.541" Stretch="Fill" Data="F1 M 272.389,397.199L 269.862,397.199C 263.297,397.199 257.975,402.506 257.975,409.05C 257.975,415.594 263.297,420.9 269.862,420.9L 272.389,420.9L 272.389,397.199 Z ">
+      <Path.Fill>
+        <LinearGradientBrush StartPoint="0.676,1.444" EndPoint="0.676,0.094">
+          <GradientStop Color="#4DFFFFFF" Offset="0"/>
+          <GradientStop Color="#FFB6D5FE" Offset="0.320225"/>
+          <GradientStop Color="#FF3E6181" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Fill>
+    </Path>
+      
+    <Path x:Name="Path_18_buttonRing_bottom" Width="123.884" Height="29.19" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Stroke="#00FFFFFF" Data="F1 M227.84444,395.525 L133.017,395.525 C125.3,395.525 119.045,401.761 119.045,409.454 119.045,417.146 125.3,423.382 133.017,423.382 L227.84444,423.382 C235.56044,423.382 241.81644,417.146 241.81644,409.454 241.81644,401.761 235.56044,395.525 227.84444,395.525 z" Fill="#FF334A65" Canvas.Left="118.378" Canvas.Top="412.2"/>
+
+    <Canvas x:Name="CaptionToggleButton" Width="20.416" Height="12.501" Canvas.Left="534.847" Canvas.Top="71.587" Visibility="Collapsed">
+    <Path Opacity="0.2" Stretch="Fill" Stroke="#FF8B9EB4" x:Name="ccIcon" Width="18.25" Height="12.087" Data="M0.5,0.5 L18.25,0.5 L18.25,11.918 L0.5,11.918 z" Canvas.Left="0" Canvas.Top="0">
+      <Path.Fill>
+        <LinearGradientBrush EndPoint="-0.044,-0.141" StartPoint="0.886,0.98">
+          <GradientStop Color="#FF1A2638" Offset="0"/>
+          <GradientStop Color="#FF5686D5" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Fill>
+    </Path>
+    <Path RenderTransformOrigin="0,0" Fill="#FF35404E" Stretch="Fill" x:Name="cc_type_label" Width="10.691" Height="6.792" Canvas.Left="4.008" Canvas.Top="2.666" Data="M3.132,1.7293329 C4.1479998,1.7293329 4.888,2.129333 5.3520002,2.9293332 L4.4400001,3.5053329 C4.2639999,3.2733331 4.0700002,3.103333 3.858,2.9953332 C3.6459999,2.8873329 3.404,2.833333 3.132,2.833333 C2.628,2.833333 2.2279999,3.0393333 1.932,3.451333 C1.636,3.8633332 1.488,4.4173331 1.488,5.1133332 C1.488,5.4413328 1.53,5.7453332 1.614,6.0253334 C1.698,6.3053331 1.814,6.5473332 1.962,6.7513332 C2.1099999,6.9553332 2.2880001,7.1153331 2.4960001,7.2313333 C2.704,7.347333 2.928,7.405333 3.168,7.405333 C3.4000001,7.405333 3.632,7.347333 3.8640001,7.2313333 C4.0960002,7.1153331 4.2880001,6.9773331 4.4400001,6.8173332 L5.2919998,7.393333 C4.8039999,8.1453333 4.0840001,8.5213327 3.132,8.5213327 C2.74,8.5213327 2.3800001,8.4353333 2.052,8.2633333 C1.724,8.0913334 1.4400001,7.853333 1.2,7.5493331 C0.95999998,7.2453332 0.77399999,6.8853331 0.64200008,6.4693332 C0.50999999,6.0533333 0.44400001,5.6013331 0.44400004,5.1133332 C0.44400001,4.6253328 0.50599998,4.175333 0.63000005,3.7633333 C0.75400001,3.3513331 0.93199998,2.9953332 1.164,2.695333 C1.396,2.3953333 1.678,2.1593332 2.01,1.9873333 C2.342,1.8153329 2.7160001,1.7293329 3.132,1.7293329 z M8.9153328,1.7293329 C9.9313335,1.7293329 10.671333,2.129333 11.135334,2.9293332 L10.223333,3.5053329 C10.047333,3.2733331 9.8533335,3.103333 9.6413336,2.9953332 C9.4293327,2.8873329 9.1873331,2.833333 8.9153328,2.833333 C8.4113331,2.833333 8.0113335,3.0393333 7.7153335,3.451333 C7.4193335,3.8633332 7.2713332,4.4173331 7.2713332,5.1133332 C7.2713332,5.4413328 7.3133335,5.7453332 7.3973331,6.0253334 C7.4813333,6.3053331 7.5973334,6.5473332 7.7453332,6.7513332 C7.8933334,6.9553332 8.0713329,7.1153331 8.2793331,7.2313333 C8.4873333,7.347333 8.7113333,7.405333 8.951333,7.405333 C9.1833334,7.405333 9.4153328,7.347333 9.6473331,7.2313333 C9.8793335,7.1153331 10.071333,6.9773331 10.223333,6.8173332 L11.075333,7.393333 C10.587334,8.1453333 9.8673334,8.5213327 8.9153328,8.5213327 C8.5233335,8.5213327 8.1633339,8.4353333 7.8353333,8.2633333 C7.5073333,8.0913334 7.2233334,7.853333 6.9833336,7.5493331 C6.7433333,7.2453332 6.5573335,6.8853331 6.4253335,6.4693332 C6.2933331,6.0533333 6.2273331,5.6013331 6.2273331,5.1133332 C6.2273331,4.6253328 6.2893333,4.175333 6.4133334,3.7633333 C6.5373335,3.3513331 6.7153335,2.9953332 6.9473333,2.695333 C7.1793332,2.3953333 7.4613333,2.1593332 7.7933331,1.9873333 C8.1253338,1.8153329 8.4993334,1.7293329 8.9153328,1.7293329 z">
+      <Path.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="0"/>
+          <TranslateTransform X="0" Y="0"/>
+        </TransformGroup>
+      </Path.RenderTransform>
+    </Path>
+    </Canvas>
+      
+    <Canvas x:Name="ChapterArea" Width="463.325" Height="116.362" Canvas.Left="640.773" Canvas.Top="10.638" Opacity="0">
+      <Path Width="463.325" Height="116.362" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" Data="F1 M 556.085,208.314C 556.085,213.687 551.689,218.082 546.317,218.082L 102.528,218.082C 97.156,218.082 92.76,213.687 92.76,208.314L 92.76,111.488C 92.76,106.115 97.156,101.72 102.528,101.72L 546.317,101.72C 551.689,101.72 556.085,106.115 556.085,111.488L 556.085,208.314 Z " x:Name="chapterAreaBG">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.499,0.625">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.893" ScaleY="1.893"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="0.003" Y="0.409"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FFC3DFFF" Offset="0.22"/>
+            <GradientStop Color="#FF3E5781" Offset="1"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path Width="458.658" Height="111.695" Canvas.Left="2.333" Canvas.Top="2.333" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#FFFFFFFF" Data="F1 M 102.528,104.72C 98.796,104.72 95.76,107.756 95.76,111.488L 95.76,208.314C 95.76,212.046 98.796,215.082 102.528,215.082L 546.317,215.082C 550.049,215.082 553.085,212.046 553.085,208.314L 553.085,111.488C 553.085,107.756 550.049,104.72 546.317,104.72L 102.528,104.72 Z "/>
+
+      <Canvas Width="392" Height="92.701" Canvas.Left="35.5833" Canvas.Top="11.829">
+        <Canvas.Clip>
+          <RectangleGeometry Rect="0,0,392,92.701" />
+        </Canvas.Clip>
+        <Canvas x:Name="ChapterArea_Scroll" Width="392" Height="92.701" Canvas.Left="0" Canvas.Top="0">
+          <Canvas x:Name="ChapterArea_ScrollItem1" Width="123" Height="92.25" Canvas.Left="3.8333" Canvas.Top="0">
+            <Canvas.RenderTransform>
+              <TranslateTransform />
+            </Canvas.RenderTransform>
+            <Image x:Name="ChapterArea_ScrollItem1_Image" Width="123" Height="92.25" Canvas.Left="0" Canvas.Top="0" />
+          </Canvas>
+          <Canvas x:Name="ChapterArea_ScrollItem2" Width="123" Height="92.25" Canvas.Left="134.5" Canvas.Top="0">
+            <Canvas.RenderTransform>
+              <TranslateTransform />
+            </Canvas.RenderTransform>
+            <Image x:Name="ChapterArea_ScrollItem2_Image" Width="123" Height="92.25" Canvas.Left="0" Canvas.Top="0" />
+          </Canvas>
+          <Canvas x:Name="ChapterArea_ScrollItem3" Width="123" Height="92.25" Canvas.Left="265.1667" Canvas.Top="0">
+            <Canvas.RenderTransform>
+              <TranslateTransform />
+            </Canvas.RenderTransform>
+            <Image x:Name="ChapterArea_ScrollItem3_Image" Width="123" Height="92.25" Canvas.Left="0" Canvas.Top="0" />
+          </Canvas>
+          <Canvas x:Name="ChapterArea_ScrollItem4" Width="123" Height="92.25" Canvas.Left="395.8334" Canvas.Top="0">
+            <Canvas.RenderTransform>
+              <TranslateTransform />
+            </Canvas.RenderTransform>
+            <Image x:Name="ChapterArea_ScrollItem4_Image" Width="123" Height="92.25" Canvas.Left="0" Canvas.Top="0" />
+          </Canvas>
+        </Canvas>
+      </Canvas>      
+      
+      <Canvas x:Name="ChapterArea_ScrollNext" Width="27.7254" Height="28.5833" Canvas.Left="427.076" Canvas.Top="43.889">
+        <Path Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Data="F1 M 533.27,146.276L 520.503,146.276L 520.503,173.526L 533.27,173.526C 540.795,173.526 546.895,167.426 546.895,159.901C 546.895,152.376 540.795,146.276 533.27,146.276 Z " x:Name="path11">
+          <Path.Stroke>
+            <LinearGradientBrush EndPoint="0.849,0.153" StartPoint="0.151,0.847">
+              <GradientStop Color="#FF362810" Offset="0"/>
+              <GradientStop Color="#FFFFFFFF" Offset="1"/>
+              <GradientStop Color="#FFFCE6C2" Offset="0.604"/>
+            </LinearGradientBrush>
+          </Path.Stroke>
+          <Path.Fill>
+            <RadialGradientBrush GradientOrigin="0.499,0.673">
+              <RadialGradientBrush.RelativeTransform>
+                <TransformGroup>
+                  <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.944" ScaleY="2.483"/>
+                  <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                  <RotateTransform Angle="43.397" CenterX="0.5" CenterY="0.5"/>
+                  <TranslateTransform X="-0.467" Y="0.453"/>
+                </TransformGroup>
+              </RadialGradientBrush.RelativeTransform>
+              <GradientStop Color="#FFFFFFFF" Offset="0"/>
+              <GradientStop Color="#FF000000" Offset="1"/>
+              <GradientStop Color="#FFFCE6C2" Offset="0.289"/>
+            </RadialGradientBrush>
+          </Path.Fill>
+        </Path>
+        <Path Width="5.72308" Height="10.757" Canvas.Left="11.545" Canvas.Top="8.913" Stretch="Fill" Fill="#FF1A1A1A" Data="F1 M 531.705,154.522L 537.104,160.08L 531.705,165.279L 531.381,165.279L 531.381,154.522L 531.705,154.522 Z " RenderTransformOrigin="0.5,0.5" x:Name="path12">
+          <Path.RenderTransform>
+            <TransformGroup>
+              <ScaleTransform ScaleX="1" ScaleY="1"/>
+              <SkewTransform AngleX="0" AngleY="0"/>
+              <RotateTransform Angle="0"/>
+              <TranslateTransform X="0" Y="0"/>
+            </TransformGroup>
+          </Path.RenderTransform>
+        </Path>
+      </Canvas>
+
+      <Canvas x:Name="ChapterArea_ScrollPrevious" Width="27.7253" Height="28.5833" Canvas.Left="8.417" Canvas.Top="43.889">
+        <Path Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Data="F1 M 533.27,146.276L 520.503,146.276L 520.503,173.526L 533.27,173.526C 540.795,173.526 546.895,167.426 546.895,159.901C 546.895,152.376 540.795,146.276 533.27,146.276 Z " x:Name="path11_Copy" RenderTransformOrigin="0.5,0.5" Canvas.Left="28">
+          <Path.Stroke>
+            <LinearGradientBrush EndPoint="0.849,0.153" StartPoint="0.151,0.847">
+              <GradientStop Color="#FF362810" Offset="0"/>
+              <GradientStop Color="#FFFFFFFF" Offset="1"/>
+              <GradientStop Color="#FFFCE6C2" Offset="0.604"/>
+            </LinearGradientBrush>
+          </Path.Stroke>
+          <Path.Fill>
+            <RadialGradientBrush GradientOrigin="0.499,0.673">
+              <RadialGradientBrush.RelativeTransform>
+                <TransformGroup>
+                  <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.944" ScaleY="2.483"/>
+                  <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                  <RotateTransform Angle="43.397" CenterX="0.5" CenterY="0.5"/>
+                  <TranslateTransform X="-0.467" Y="0.453"/>
+                </TransformGroup>
+              </RadialGradientBrush.RelativeTransform>
+              <GradientStop Color="#FFFFFFFF" Offset="0"/>
+              <GradientStop Color="#FF000000" Offset="1"/>
+              <GradientStop Color="#FFFCE6C2" Offset="0.289"/>
+            </RadialGradientBrush>
+          </Path.Fill>
+          <Path.RenderTransform>
+            <TransformGroup>
+              <ScaleTransform ScaleX="-1" ScaleY="1"/>
+              <SkewTransform AngleX="0" AngleY="0"/>
+              <RotateTransform Angle="0"/>
+              <TranslateTransform X="0" Y="0"/>
+            </TransformGroup>
+          </Path.RenderTransform>
+        </Path>
+        <Path Width="5.723" Height="10.757" Canvas.Left="10.458" Canvas.Top="8.913" Stretch="Fill" Fill="#FF1A1A1A" Data="F1 M 117.034,154.522L 111.635,160.08L 117.034,165.279L 117.358,165.279L 117.358,154.522L 117.034,154.522 Z " RenderTransformOrigin="0.5,0.5" x:Name="path13">
+          <Path.RenderTransform>
+            <TransformGroup>
+              <ScaleTransform ScaleX="1" ScaleY="1"/>
+              <SkewTransform AngleX="0" AngleY="0"/>
+              <RotateTransform Angle="0"/>
+              <TranslateTransform X="0" Y="0"/>
+            </TransformGroup>
+          </Path.RenderTransform>
+        </Path>
+      </Canvas>
+    </Canvas>
+      
+    <Canvas x:Name="StopButton" Width="16.525" Height="16.524" Canvas.Left="49.574" Canvas.Top="452.545">
+      <Path Opacity="0" Stretch="Fill" Stroke="#00000000" x:Name="stopBtn_glow" Width="30.167" Height="30.167" Canvas.Left="-7.751" Canvas.Top="-7.744" Data="M22.875,11.6875 C22.875,17.866186 17.866186,22.875 11.6875,22.875 C5.5088144,22.875 0.5,17.866186 0.5,11.6875 C0.5,5.5088144 5.5088144,0.5 11.6875,0.5 C17.866186,0.5 22.875,5.5088144 22.875,11.6875 z">
+        <Path.Fill>
+          <RadialGradientBrush>
+            <GradientStop Color="#002E3640" Offset="0.901"/>
+            <GradientStop Color="#FF1D2D3C" Offset="0.546"/>
+            <GradientStop Color="#FFC9E4FC" Offset="0.619"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_43" Width="16.525" Height="16.524" Canvas.Left="-1" Canvas.Top="-1" Stretch="Fill" Data="F1 M 95.933,460.643C 95.933,465.205 92.233,468.904 87.67,468.904C 83.107,468.904 79.408,465.205 79.408,460.643C 79.408,456.079 83.107,452.38 87.67,452.38C 92.233,452.38 95.933,456.079 95.933,460.643 Z ">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.5,0.614">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.946" ScaleY="1.946"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="0" Y="0.49"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FFB2DAFF" Offset="0.278"/>
+            <GradientStop Color="#FF000000" Offset="1"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_44" Width="9.65099" Height="7.104" Canvas.Left="2.766" Canvas.Top="-0.684" Stretch="Fill" Data="F1 M 92.825,456.248C 92.825,458.21 90.665,459.8 87.999,459.8C 85.334,459.8 83.174,458.21 83.174,456.248C 83.174,454.286 85.334,452.696 87.999,452.696C 90.665,452.696 92.825,454.286 92.825,456.248 Z " Opacity="0.5">
+        <Path.Fill>
+          <LinearGradientBrush StartPoint="0.500001,1.04685" EndPoint="0.500001,0.0937908">
+            <GradientStop Color="#FFE62924" Offset="0"/>
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+            <GradientStop Color="#FFFFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path Stretch="Fill" Stroke="#00000000" StrokeThickness="0.5" x:Name="Rectangle_46" Width="6.00001" Height="6" Canvas.Left="4.478" Canvas.Top="4.38" Data="M0,0 L6.00001,0 L6.00001,6 L0,6 z" Fill="#FF0C1A27"/>
+    </Canvas>
+
+    <Canvas x:Name="PlayPauseButton" Width="42.3324" Height="42.3323" Canvas.Left="159.166" Canvas.Top="405.548">
+      <Path x:Name="Path_A" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Data="F1 M 153.833,409.373C 153.833,420.694 144.655,429.872 133.333,429.872C 122.011,429.872 112.833,420.694 112.833,409.373C 112.833,398.051 122.011,388.873 133.333,388.873C 144.655,388.873 153.833,398.051 153.833,409.373 Z ">
+        <Path.Stroke>
+          <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#CC000000" Offset="0"/>
+            <GradientStop Color="#99FFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Stroke>
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.5,0.966">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.215" ScaleY="1.215"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="0" Y="0.008"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FF3E6181" Offset="0.652"/>
+            <GradientStop Color="#FFB6D5FE" Offset="0.084"/>
+            <GradientStop Color="#FF000000" Offset="1"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path Width="42.3324" Height="29.2763" Canvas.Left="0" Canvas.Top="6.594" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Data="F1 M 195.363,395.467L 165.301,395.467C 161.917,399.123 159.833,403.998 159.833,409.373C 159.833,414.812 161.965,419.741 165.42,423.41L 195.244,423.41C 198.699,419.741 200.832,414.812 200.832,409.373C 200.832,403.998 198.747,399.123 195.363,395.467 Z " x:Name="Path_C" Opacity="0">
+        <Path.Fill>
+          <LinearGradientBrush EndPoint="0.5,0.072" StartPoint="0.5,0.9">
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+            <GradientStop Color="#CCFFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+        <Path.Stroke>
+          <LinearGradientBrush EndPoint="0.5,0.977" StartPoint="0.5,-0.065">
+            <GradientStop Color="#99000000" Offset="0"/>
+            <GradientStop Color="#19000000" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Stroke>
+      </Path>
+      <Canvas x:Name="PauseSymbol" Opacity="0" Width="3.78" Height="10.757" Canvas.Left="19.344" Canvas.Top="14.508">
+        <Path Fill="#FFBDBDBD" Stretch="Fill" x:Name="Path_50_highlight" Width="1.5" Height="10.757" Data="M0,0 L0.779984,0 L0.779984,10.757 L0,10.757 z" Canvas.Left="-0.584" Canvas.Top="-0.166"/>
+        <Path Fill="#FF0C1A27" Stretch="Fill" x:Name="Path_50" Width="1.5" Height="10.757" Data="M0,0 L0.779984,0 L0.779984,10.757 L0,10.757 z" Canvas.Left="0" Canvas.Top="0"/>
+        <Path Fill="#FFBDBDBD" Stretch="Fill" x:Name="Path_51_highlight" Width="1.5" Height="10.757" Data="M0,0 L0.779984,0 L0.779984,10.757 L0,10.757 z" Canvas.Left="3.151" Canvas.Top="-0.166"/>
+        <Path Fill="#FF0C1A27" Stretch="Fill" x:Name="Path_51" Width="1.5" Height="10.757" Data="M0,0 L0.779984,0 L0.779984,10.757 L0,10.757 z" Canvas.Left="3.919" Canvas.Top="0"/>
+      </Canvas>
+      <Canvas x:Name="PlaySymbol" Width="5.724" Height="10.757" Canvas.Left="19.31" Canvas.Top="15.223">
+        <Path Width="5.724" Height="10.757" Stretch="Fill" Fill="#FFBDBDBD" Data="F1 M 178.8,403.429L 184.2,408.986L 178.8,414.186L 178.476,414.186L 178.476,403.429L 178.8,403.429 Z " x:Name="Path_D_highlight" Canvas.Left="-0.753" Canvas.Top="-0.664"/>
+        <Path Width="5.724" Height="10.757" Stretch="Fill" Fill="#FF0C1A27" Data="F1 M 178.8,403.429L 184.2,408.986L 178.8,414.186L 178.476,414.186L 178.476,403.429L 178.8,403.429 Z " x:Name="Path_D"/>
+      </Canvas>
+    </Canvas>
+
+    <Canvas x:Name="NextButton" Width="42.3323" Height="42.3323" Canvas.Left="206.165" Canvas.Top="405.548" >
+      <Path x:Name="Path_52" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Data="F1 M 153.833,409.373C 153.833,420.694 144.655,429.872 133.333,429.872C 122.011,429.872 112.833,420.694 112.833,409.373C 112.833,398.051 122.011,388.873 133.333,388.873C 144.655,388.873 153.833,398.051 153.833,409.373 Z ">
+        <Path.Stroke>
+          <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#CC000000" Offset="0"/>
+            <GradientStop Color="#99FFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Stroke>
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.5,0.966">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.215" ScaleY="1.215"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="0" Y="0.008"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FF3E6181" Offset="0.652"/>
+            <GradientStop Color="#FFB6D5FE" Offset="0.084"/>
+            <GradientStop Color="#FF000000" Offset="1"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_53" Width="36.3323" Height="29.2763" Canvas.Left="0" Canvas.Top="6.594" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Data="F1 M 241.831,409.438C 241.831,401.722 235.575,395.467 227.859,395.467L 212.3,395.467C 208.916,399.123 206.832,403.998 206.832,409.373C 206.832,414.812 208.964,419.741 212.419,423.41L 227.859,423.41C 235.575,423.41 241.831,417.155 241.831,409.438 Z " Opacity="0">
+        <Path.Fill>
+          <LinearGradientBrush EndPoint="0.5,0.018" StartPoint="0.5,0.957">
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+            <GradientStop Color="#CCFFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+        <Path.Stroke>
+          <LinearGradientBrush EndPoint="0.5,1.121" StartPoint="0.5,-0.121">
+            <GradientStop Color="#99000000" Offset="0"/>
+            <GradientStop Color="#00000000" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Stroke>
+      </Path>
+      <Path Fill="#FFBDBDBD" Stretch="Fill" x:Name="Path_54_highlight" Width="0.779984" Height="10.757" Data="M0,0 L0.779984,0 L0.779984,10.757 L0,10.757 z" Canvas.Left="16.665" Canvas.Top="15.16"/>
+      <Path Fill="#FF0C1A27" Stretch="Fill" x:Name="Path_54" Width="1.15" Height="10.757" Canvas.Left="17.143" Canvas.Top="15.467" Data="M0,0 L0.779984,0 L0.779984,10.757 L0,10.757 z"/>
+      <Path x:Name="Path_55_highlight" Width="4.37099" Height="10.757" Stretch="Fill" Fill="#FFBDBDBD" Data="F1 M 226.724,403.673L 230.848,409.23L 226.724,414.43L 226.477,414.43L 226.477,403.673L 226.724,403.673 Z " Canvas.Left="19.74" Canvas.Top="14.994"/>
+      <Path x:Name="Path_55" Width="5" Height="10.757" Canvas.Left="20.312" Canvas.Top="15.467" Stretch="Fill" Fill="#FF0C1A27" Data="F1 M 226.724,403.673L 230.848,409.23L 226.724,414.43L 226.477,414.43L 226.477,403.673L 226.724,403.673 Z "/>
+    </Canvas>
+
+    <Canvas x:Name="PreviousButton" Width="42.3333" Height="42.3323" Canvas.Left="112.166" Canvas.Top="405.548" RenderTransformOrigin="0.5,0.5">
+      <Path x:Name="Path_56" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Data="F1 M 153.833,409.373C 153.833,420.694 144.655,429.872 133.333,429.872C 122.011,429.872 112.833,420.694 112.833,409.373C 112.833,398.051 122.011,388.873 133.333,388.873C 144.655,388.873 153.833,398.051 153.833,409.373 Z ">
+        <Path.Stroke>
+          <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#CC000000" Offset="0"/>
+            <GradientStop Color="#99FFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Stroke>
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.5,0.966">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.215" ScaleY="1.215"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="0" Y="0.008"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FF3E6181" Offset="0.652"/>
+            <GradientStop Color="#FFB6D5FE" Offset="0.084"/>
+            <GradientStop Color="#FF000000" Offset="1"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_58" Width="36.3323" Height="29.2763" Canvas.Left="5.966" Canvas.Top="6.594" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Data="F1 M 118.861,409.438C 118.861,401.722 125.117,395.467 132.833,395.467L 148.392,395.467C 151.775,399.123 153.86,403.998 153.86,409.373C 153.86,414.812 151.728,419.741 148.272,423.41L 132.833,423.41C 125.117,423.41 118.861,417.155 118.861,409.438 Z " Opacity="0">
+        <Path.Fill>
+          <LinearGradientBrush EndPoint="0.5,0.012" StartPoint="0.5,0.974">
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+            <GradientStop Color="#CCFFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+        <Path.Stroke>
+          <LinearGradientBrush EndPoint="0.5,-0.121" StartPoint="0.5,1.121">
+            <GradientStop Color="#00000000" Offset="0"/>
+            <GradientStop Color="#7F000000" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Stroke>
+      </Path>
+      <Path Fill="#FFBDBDBD" Stretch="Fill" x:Name="Path_59_highlight" Width="0.779999" Height="10.757" Data="M0,0 L0.779999,0 L0.779999,10.757 L0,10.757 z" Canvas.Left="22.865" Canvas.Top="14.949"/>
+      <Path Fill="#FF0C1A27" Stretch="Fill" x:Name="Path_59" Width="1.155" Height="10.757" Canvas.Left="23.325" Canvas.Top="15.467" Data="M0,0 L0.779999,0 L0.779999,10.757 L0,10.757 z"/>
+      <Path x:Name="Path_60_highlight" Width="5.144" Height="10.757" Stretch="Fill" Fill="#FFBDBDBD" Data="F1 M 134.432,403.673L 130.309,409.23L 134.432,414.43L 134.68,414.43L 134.68,403.673L 134.432,403.673 Z " Canvas.Left="16.252" Canvas.Top="15.052"/>
+      <Path x:Name="Path_60" Width="5" Height="10.757" Canvas.Left="16.566" Canvas.Top="15.467" Stretch="Fill" Fill="#FF0C1A27" Data="F1 M 134.432,403.673L 130.309,409.23L 134.432,414.43L 134.68,414.43L 134.68,403.673L 134.432,403.673 Z "/>
+    </Canvas>
+
+    <Path x:Name="Path_18_buttonRing_top" Width="123.884" Height="29.19" Canvas.Left="118.378" Canvas.Top="412.2" Stretch="Fill" StrokeThickness="1" StrokeLineJoin="Round" Data="F1 M227.84444,395.525 L133.017,395.525 C125.3,395.525 119.045,401.761 119.045,409.454 119.045,417.146 125.3,423.382 133.017,423.382 L227.84444,423.382 C235.56044,423.382 241.81644,417.146 241.81644,409.454 241.81644,401.761 235.56044,395.525 227.84444,395.525 z" Opacity="0.2">
+      <Path.Stroke>
+        <LinearGradientBrush EndPoint="0.5,-0.053" StartPoint="0.5,1.089">
+          <GradientStop Color="#00000000" Offset="0"/>
+          <GradientStop Color="#FF000000" Offset="1"/>
+        </LinearGradientBrush>
+      </Path.Stroke>
+    </Path>
+
+    <Canvas x:Name="MuteButton" Width="16.5249" Height="16.524" Canvas.Left="500.071" Canvas.Top="459.382">
+      <Rectangle Opacity="0" x:Name="MuteOffSymbol" Width="1.003" Height="0.919"/>
+      <Path Opacity="0" Stretch="Fill" Stroke="#00000000" x:Name="muteBtn_glow" Width="25.292" Height="25.292" Data="M22.875,11.6875 C22.875,17.866186 17.866186,22.875 11.6875,22.875 C5.5088144,22.875 0.5,17.866186 0.5,11.6875 C0.5,5.5088144 5.5088144,0.5 11.6875,0.5 C17.866186,0.5 22.875,5.5088144 22.875,11.6875 z" Canvas.Left="-5.375" Canvas.Top="-5.5">
+        <Path.Fill>
+          <RadialGradientBrush>
+            <GradientStop Color="#002E3640" Offset="1"/>
+            <GradientStop Color="#FF1D2D3C" Offset="0.678"/>
+            <GradientStop Color="#FFC9E4FC" Offset="0.744"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_62" Width="16.5249" Height="16.524" Canvas.Left="-1" Canvas.Top="-1" Stretch="Fill" Data="F1 M 558.933,438.643C 558.933,443.205 555.233,446.904 550.67,446.904C 546.107,446.904 542.408,443.205 542.408,438.643C 542.408,434.079 546.107,430.38 550.67,430.38C 555.233,430.38 558.933,434.079 558.933,438.643 Z ">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.499,0.534">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.765" ScaleY="1.765"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="0.012" Y="0.442"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF000000" Offset="1"/>
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FFC2F0FC" Offset="0.282"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_63" Width="9.651" Height="7.104" Canvas.Left="2.766" Canvas.Top="-0.684" Stretch="Fill" Data="F1 M 555.825,434.248C 555.825,436.21 553.665,437.8 550.999,437.8C 548.334,437.8 546.174,436.21 546.174,434.248C 546.174,432.286 548.334,430.696 550.999,430.696C 553.665,430.696 555.825,432.286 555.825,434.248 Z " Opacity="0.5">
+        <Path.Fill>
+          <LinearGradientBrush StartPoint="0.500051,1.04685" EndPoint="0.500051,0.0937908">
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+            <GradientStop Color="#FFFFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_65" Width="6.49493" Height="9.42801" Canvas.Left="3.446" Canvas.Top="2.666" Stretch="Fill" Fill="#E6231F20" Data="F1 M 550.416,436.979L 546.854,436.979L 546.854,440.541L 550.416,440.541L 553.349,443.474L 553.349,434.046L 550.416,436.979 Z "/>
+      <Canvas x:Name="MuteOnSymbol" Width="20.167" Height="20.167" Canvas.Left="-2.904" Canvas.Top="-2.946" Opacity="0">
+        <Ellipse Fill="#00FFFFFF" Stroke="#FFA80000" StrokeThickness="2" x:Name="noSound_cirlce" Width="20.167" Height="20.167"/>
+        <Path Fill="#00FFFFFF" Stretch="Fill" Stroke="#FFA80000" StrokeThickness="2" x:Name="noSound_stroke" Width="12.167" Height="15.5" Data="M556.16667,432.33333 L546,445.83333" Canvas.Left="4.002" Canvas.Top="2.338"/>
+      </Canvas>
+    </Canvas>
+
+    <Canvas x:Name="VolumeDownButton" Width="16.525" Height="16.524" Canvas.Left="522.408" Canvas.Top="458.046">
+      <Path x:Name="Path_73" Width="16.525" Height="16.524" Canvas.Left="-1" Canvas.Top="-1" Stretch="Fill" Data="F1 M 507.933,460.643C 507.933,465.205 504.233,468.904 499.67,468.904C 495.107,468.904 491.408,465.205 491.408,460.643C 491.408,456.079 495.107,452.38 499.67,452.38C 504.233,452.38 507.933,456.079 507.933,460.643 Z ">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.498,0.634">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.745" ScaleY="1.745"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="0.001" Y="0.365"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF000000" Offset="1"/>
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FFFCE6C2" Offset="0.286"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_74" Width="9.651" Height="7.104" Canvas.Left="2.766" Canvas.Top="-0.684" Stretch="Fill" Data="F1 M 504.825,456.248C 504.825,458.21 502.665,459.8 499.999,459.8C 497.334,459.8 495.174,458.21 495.174,456.248C 495.174,454.286 497.334,452.696 499.999,452.696C 502.665,452.696 504.825,454.286 504.825,456.248 Z " Opacity="0.5">
+        <Path.Fill>
+          <LinearGradientBrush StartPoint="0.500054,1.04685" EndPoint="0.500054,0.0937908">
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+            <GradientStop Color="#FFFFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Rectangle x:Name="Rectangle_76" Width="8.14999" Height="1.75" Canvas.Left="3.322" Canvas.Top="6.723" Stretch="Fill" Fill="#FF231F20"/>
+    </Canvas>
+
+    <Canvas x:Name="VolumeUpButton" Width="16.5249" Height="16.524" Canvas.Left="582.408" Canvas.Top="458.046">
+      <Path x:Name="Path_78" Width="16.5249" Height="16.524" Canvas.Left="-1" Canvas.Top="-1" Stretch="Fill" Data="F1 M 567.933,460.643C 567.933,465.205 564.233,468.904 559.67,468.904C 555.107,468.904 551.408,465.205 551.408,460.643C 551.408,456.079 555.107,452.38 559.67,452.38C 564.233,452.38 567.933,456.079 567.933,460.643 Z ">
+        <Path.Fill>
+          <RadialGradientBrush GradientOrigin="0.497,0.591">
+            <RadialGradientBrush.RelativeTransform>
+              <TransformGroup>
+                <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.862" ScaleY="1.862"/>
+                <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                <TranslateTransform X="0.008" Y="0.49"/>
+              </TransformGroup>
+            </RadialGradientBrush.RelativeTransform>
+            <GradientStop Color="#FF000000" Offset="1"/>
+            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+            <GradientStop Color="#FFFCE6C2" Offset="0.286"/>
+          </RadialGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path x:Name="Path_79" Width="9.651" Height="7.104" Canvas.Left="2.766" Canvas.Top="-0.684" Stretch="Fill" Data="F1 M 564.825,456.248C 564.825,458.21 562.665,459.8 559.999,459.8C 557.334,459.8 555.174,458.21 555.174,456.248C 555.174,454.286 557.334,452.696 559.999,452.696C 562.665,452.696 564.825,454.286 564.825,456.248 Z " Opacity="0.5">
+        <Path.Fill>
+          <LinearGradientBrush StartPoint="0.500051,1.04685" EndPoint="0.500051,0.0937908">
+            <GradientStop Color="#00FFFFFF" Offset="0"/>
+            <GradientStop Color="#FFFFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Rectangle Fill="#FF231F20" Stroke="#00000000" x:Name="vol_up_line_02" Width="2.25" Height="8.375" RenderTransformOrigin="0.5,0.5" Canvas.Left="6.25" Canvas.Top="3.188">
+        <Rectangle.RenderTransform>
+          <TransformGroup>
+            <ScaleTransform ScaleX="1" ScaleY="1"/>
+            <SkewTransform AngleX="0" AngleY="0"/>
+            <RotateTransform Angle="90"/>
+            <TranslateTransform X="0" Y="0"/>
+          </TransformGroup>
+        </Rectangle.RenderTransform>
+      </Rectangle>
+      <Rectangle Fill="#FF231F20" Stroke="#00000000" x:Name="vol_up_line_01" Width="2.25" Height="8.375" Canvas.Left="6.25" Canvas.Top="3.188"/>
+    </Canvas>
+
+    <Canvas x:Name="VolumeControl" Width="38.713" Height="20.59" Canvas.Left="540.88" Canvas.Top="455.64">
+
+      <Canvas x:Name="VolumeSliderDecoration" Width="38.713" Height="11.799" Canvas.Top="4.415" Canvas.Left="0" />
+
+      <Path x:Name="VolumeSlider_BG" Width="38" Height="3" Canvas.Top="8.33" Canvas.Left="0" Opacity="1" Stretch="Fill" Data="M0,0 L38.713,0 L38.713,3 L0,3 z">
+        <Path.Fill>
+          <LinearGradientBrush EndPoint="0.5,1.01" StartPoint="0.5,-0.073">
+            <GradientStop Color="#FF0C131B" Offset="0.821"/>
+            <GradientStop Color="#FF3C5573" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+
+      <Path x:Name="VolumeSlider_Highlight" Width="25" Height="3" Canvas.Top="8.247" Canvas.Left="0" Stretch="Fill" Data="M0,0 L38.713,0 L38.713,3 L0,3 z">
+        <Path.Fill>
+          <LinearGradientBrush StartPoint="0.5,0.904" EndPoint="0.5,-0.189">
+            <GradientStop Color="#FFACCCF4" Offset="0"/>
+            <GradientStop Color="#FF24456B" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+
+      <Canvas x:Name="VolumeSlider" Width="38" Height="20.59" Opacity="0" Background="#FFFFFFFF" />
+
+      <Canvas x:Name="VolumeThumb" Width="6.62" Height="18.84" Canvas.Top="1.125" Canvas.Left="22.125">
+        <Path Stretch="Fill" Stroke="#6CFFFFFF" StrokeLineJoin="Round" StrokeThickness="1.33333" x:Name="Path_71" Width="6.74" Height="18.049" Canvas.Left="0" Canvas.Top="0" Data="M0.666665,0.666665 L8.583665,0.666665 L8.583665,21.257635 L0.666665,21.257635 z">
+          <Path.Fill>
+            <RadialGradientBrush GradientOrigin="0.511,0.777">
+              <RadialGradientBrush.RelativeTransform>
+                <TransformGroup>
+                  <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="0.841" ScaleY="1.668"/>
+                  <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                  <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                  <TranslateTransform X="0.011" Y="0.391"/>
+                </TransformGroup>
+              </RadialGradientBrush.RelativeTransform>
+              <GradientStop Color="#FFFFFFFF" Offset="0"/>
+              <GradientStop Color="#FFB6D5FE" Offset="0.256"/>
+              <GradientStop Color="#FF487298" Offset="1"/>
+            </RadialGradientBrush>
+          </Path.Fill>
+        </Path>
+      </Canvas>
+    </Canvas>
+
+    <Canvas x:Name="BufferingArea" Width="640" Height="480" Canvas.Top="0" Visibility="Collapsed" IsHitTestVisible="False">
+      <Path x:Name="Path_115" Width="61.4014" Height="61.4083" Canvas.Left="292.961" Canvas.Top="208.558" Stretch="Fill" StrokeThickness="1.33333" StrokeLineJoin="Round" Stroke="#BD2F5178" Fill="#BD000000" Data="F1 M 353.696,239.263C 353.696,255.852 340.245,269.3 323.656,269.3C 307.077,269.3 293.628,255.852 293.628,239.263C 293.628,222.673 307.077,209.225 323.656,209.225C 340.245,209.225 353.696,222.673 353.696,239.263 Z "/>
+      <Path x:Name="Path_122" Width="50.082" Height="50.092" Canvas.Left="298.621" Canvas.Top="214.217" Stretch="Fill" Fill="#FF263D5B" Data="F1 M 306.69,239.263C 306.69,229.9 314.305,222.285 323.657,222.285C 333.02,222.285 340.635,229.9 340.635,239.263C 340.635,248.624 333.02,256.24 323.657,256.24C 314.305,256.24 306.69,248.624 306.69,239.263 Z M 298.621,239.263C 298.621,253.073 309.857,264.309 323.657,264.309C 330.347,264.309 336.638,261.703 341.367,256.973C 346.098,252.242 348.703,245.953 348.703,239.263C 348.703,232.572 346.098,226.283 341.367,221.553C 336.638,216.822 330.347,214.217 323.657,214.217C 309.857,214.217 298.621,225.451 298.621,239.263 Z "/>
+      <Path x:Name="Path_123" Width="24.964" Height="25.057" Canvas.Left="298.621" Canvas.Top="239.248" Stretch="Fill" RenderTransformOrigin="1,0" Data="F1 M 306.69,239.263L 306.69,239.248L 298.621,239.248L 298.621,239.263C 298.621,253.049 309.818,264.266 323.585,264.305L 323.585,256.236C 314.266,256.197 306.69,248.6 306.69,239.263 Z ">
+        <Path.Fill>
+          <LinearGradientBrush StartPoint="0.801373,0.928042" EndPoint="0.159028,0.00604031">
+            <GradientStop Color="#FF263D5B" Offset="0"/>
+            <GradientStop Color="#FF85DBFF" Offset="0.543967"/>
+            <GradientStop Color="#FFFFFFFF" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+        <Path.RenderTransform>
+          <TransformGroup>
+            <ScaleTransform ScaleX="1" ScaleY="1"/>
+            <SkewTransform AngleX="0" AngleY="0"/>
+            <RotateTransform Angle="0"/>
+            <TranslateTransform X="0" Y="0"/>
+          </TransformGroup>
+        </Path.RenderTransform>
+      </Path>
+
+      <TextBlock x:Name="BufferingText" Canvas.Left="311" Canvas.Top="231.5" Foreground="#FFFFFFFF" Text="0" FontFamily="Arial" FontSize="14"/>
+      <Path x:Name="Path_128" Width="9.3906" Height="8.84375" Canvas.Left="328" Canvas.Top="234.197" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 325.851,236.65C 325.851,235.822 326.023,235.213 326.398,234.807C 326.757,234.4 327.257,234.197 327.898,234.197C 328.538,234.197 329.038,234.4 329.413,234.807C 329.773,235.213 329.96,235.822 329.96,236.65C 329.96,237.494 329.773,238.119 329.413,238.525C 329.038,238.932 328.554,239.119 327.929,239.119C 327.273,239.119 326.757,238.932 326.398,238.525C 326.023,238.119 325.851,237.494 325.851,236.65 Z M 327.242,236.65C 327.242,237.26 327.304,237.666 327.46,237.869C 327.554,238.025 327.71,238.088 327.898,238.088C 328.085,238.088 328.226,238.025 328.335,237.869C 328.46,237.666 328.538,237.26 328.538,236.65C 328.538,236.057 328.46,235.65 328.335,235.432C 328.226,235.275 328.085,235.197 327.898,235.197C 327.71,235.197 327.554,235.275 327.46,235.432C 327.304,235.65 327.242,236.057 327.242,236.65 Z M 329.257,244.025L 327.929,244.025L 332.882,234.197L 334.163,234.197L 329.257,244.025 Z M 332.132,241.572C 332.132,240.744 332.304,240.135 332.679,239.729C 333.038,239.322 333.538,239.119 334.179,239.119C 334.82,239.119 335.32,239.322 335.695,239.729C 336.054,240.135 336.242,240.744 336.242,241.572C 336.242,242.416 336.054,243.041 335.695,243.447C 335.32,243.838 334.82,244.041 334.195,244.041C 333.538,244.041 333.038,243.838 332.679,243.447C 332.304,243.041 332.132,242.416 332.132,241.572 Z M 333.523,241.572C 333.523,242.182 333.585,242.588 333.726,242.791C 333.82,242.947 333.976,243.025 334.163,243.025C 334.351,243.025 334.507,242.947 334.601,242.791C 334.742,242.588 334.82,242.182 334.82,241.572C 334.82,240.979 334.742,240.572 334.617,240.354C 334.507,240.197 334.351,240.119 334.163,240.119C 333.976,240.119 333.82,240.197 333.726,240.354C 333.585,240.572 333.523,240.979 333.523,241.572 Z "/>
+    </Canvas>
+
+    <Canvas x:Name="ChapterToggleButton" Width="41.598" Height="18.008" Canvas.Left="557.335" Canvas.Top="68.66" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+      <Canvas.RenderTransform>
+        <TransformGroup>
+          <ScaleTransform ScaleX="1" ScaleY="1"/>
+          <SkewTransform AngleX="0" AngleY="0"/>
+          <RotateTransform Angle="0"/>
+          <TranslateTransform X="0" Y="0"/>
+        </TransformGroup>
+      </Canvas.RenderTransform>
+      <Path Opacity="0.2" Stretch="Fill" Stroke="#FF8B9EB4" x:Name="chapterIcon_01" Width="12.583" Height="8.334" Canvas.Left="2.171" Canvas.Top="3.09" Data="M0.5,0.5 L18.25,0.5 L18.25,11.918 L0.5,11.918 z">
+        <Path.Fill>
+          <LinearGradientBrush EndPoint="-0.044,-0.141" StartPoint="0.886,0.98">
+            <GradientStop Color="#FF1A2638" Offset="0"/>
+            <GradientStop Color="#FF5686D5" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path Opacity="0.2" Stretch="Fill" Stroke="#FF8B9EB4" x:Name="chapterIcon_02" Width="12.583" Height="8.334" Data="M0.5,0.5 L18.25,0.5 L18.25,11.918 L0.5,11.918 z" Canvas.Left="6.668" Canvas.Top="6.501">
+        <Path.Fill>
+          <LinearGradientBrush EndPoint="-0.044,-0.141" StartPoint="0.886,0.98">
+            <GradientStop Color="#FF1A2638" Offset="0"/>
+            <GradientStop Color="#FF5686D5" Offset="1"/>
+          </LinearGradientBrush>
+        </Path.Fill>
+      </Path>
+      <Path Opacity="0" Fill="#FF161D25" Stretch="Fill" Width="23.25" Height="18.003" Canvas.Left="-0.666" Canvas.Top="0.005" Data="M0.5,0.5 L15.5,0.5 L15.5,116.582 L0.5,116.582 z"/>
+    </Canvas>
+
+    <Canvas x:Name="Timeline" Width="235.567" Height="27.943" Canvas.Left="273.955" Canvas.Top="414.606">
+      <Canvas x:Name="DownloadProgressSlider" Width="235" Height="23.775" Canvas.Top="0.3" Background="#FF304255" />
+      <Rectangle x:Name="TimeSlider_Highlight" Width="0" Height="23.775" Stretch="Fill" Canvas.Top="0.3" Opacity="0.8">
+        <Rectangle.Fill>
+          <LinearGradientBrush StartPoint="0.500001,0.174712" EndPoint="0.500001,1.2683">
+            <GradientStop Color="#FF3F6282" Offset="0"/>
+            <GradientStop Color="#FFAECEF6" Offset="1"/>
+          </LinearGradientBrush>
+        </Rectangle.Fill>
+      </Rectangle>
+      <TextBlock x:Name="TotalTimeText"  Foreground="#FF0F0F0F" Text="00:00:00" FontFamily="Arial" FontSize="14" Canvas.Left="181.88" Canvas.Top="4.669"/>
+      <Canvas x:Name="TimeTextDivider" Width="1.25699" Height="10" Canvas.Left="180.063" Canvas.Top="8.153">
+        <Rectangle x:Name="Rectangle_92" Width="1.25699" Height="10" Stretch="Fill" Fill="#78AAAAAA"/>
+      </Canvas>
+
+      <TextBlock x:Name="CurrentTimeText" Foreground="#FFFFFFFF" Text="00:00:00" FontFamily="Arial" FontSize="14" Canvas.Left="124.763" Canvas.Top="4.669"/>
+      <Canvas x:Name="TimeSlider" Width="235" Height="23.775" Opacity="0" Canvas.Top="0.3" Background="#FFFFFFFF" />
+
+      <Canvas x:Name="TimeThumb" Width="7.91699" Height="27.943" Canvas.Left="227.65">
+        <Path Stretch="Fill" Stroke="#7FFFFFFF" StrokeLineJoin="Round" StrokeThickness="1.33333" x:Name="Rectangle_68" Width="9.25033" Height="29.2763" Canvas.Left="-1.667" Canvas.Top="-2.669" Data="M0.666665,0.666665 L8.583665,0.666665 L8.583665,28.609635 L0.666665,28.609635 z">
+          <Path.Fill>
+            <RadialGradientBrush GradientOrigin="0.507,0.779">
+              <RadialGradientBrush.RelativeTransform>
+                <TransformGroup>
+                  <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="2.498" ScaleY="3.212"/>
+                  <SkewTransform AngleX="0" AngleY="0" CenterX="0.5" CenterY="0.5"/>
+                  <RotateTransform Angle="0" CenterX="0.5" CenterY="0.5"/>
+                  <TranslateTransform X="0.019" Y="-0.126"/>
+                </TransformGroup>
+              </RadialGradientBrush.RelativeTransform>
+              <GradientStop Color="#FF4675A2" Offset="0.451"/>
+              <GradientStop Color="#FFFFFFFF" Offset="0"/>
+              <GradientStop Color="#CC000000" Offset="1"/>
+            </RadialGradientBrush>
+          </Path.Fill>
+        </Path>
+      </Canvas>
+    </Canvas>
+    <Canvas Opacity="0.62" x:Name="CaptionArea" Width="437.427" Height="68.514" Canvas.Left="112.166" Canvas.Top="312" Background="#FFA7A7A7" Visibility="Collapsed" IsHitTestVisible="False">
+      <TextBlock x:Name="CaptionText" Width="437.427" Height="68.514" FontFamily="Arial" FontSize="20" FontStyle="Normal" FontWeight="Bold" Foreground="#FF000000" Text="CaptionText" TextWrapping="Wrap" />
+    </Canvas>
+  </Canvas>
+
+  <Canvas x:Name="FullScreenArea" Width="640" Height="480" Canvas.Left="0" Canvas.Top="0" Visibility="Collapsed" Background="Black">
+    <Canvas x:Name="FullScreenVideoWindow" Width="640" Height="480" Canvas.Left="0" Canvas.Top="0">
+      <Canvas.Background>
+        <VideoBrush SourceName="VideoWindow" Stretch="Uniform" />
+      </Canvas.Background>
+      <Canvas Opacity="0.62" x:Name="FullScreenCaptionArea" Width="437.427" Height="68.514" Canvas.Left="110.166" Canvas.Top="388" Background="#FFA7A7A7" Visibility="Collapsed" IsHitTestVisible="False">
+          <TextBlock x:Name="FullScreenCaptionText" Width="437.427" Height="68.514" FontFamily="Arial" FontSize="20" FontStyle="Normal" FontWeight="Bold" Foreground="#FF000000" Text="FullScreenCaptionText" TextWrapping="Wrap" />
+      </Canvas>
+    </Canvas>
+  </Canvas>
+</Canvas>

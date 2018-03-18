@@ -1,0 +1,18 @@
+﻿[Subject]
+Gallery Notification: (PENDING YOUR APPROVAL) A gallery account has been created
+
+[Body]
+An account has been created in the gallery at {CurrentPageUrlFull}.
+
+YOU OR ANOTHER ADMINISTRATOR MUST APPROVE THIS ACCOUNT BEFORE THE USER CAN LOG ON.
+
+Click here to approve this user:
+
+{ManageUserUrl}
+
+Account name: {UserName}
+E-mail address: {Email}
+
+You are receiving this because your account has been configured to receive a notification when an account is created.
+
+-- Gallery Server Administrator

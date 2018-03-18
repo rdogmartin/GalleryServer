@@ -1,0 +1,55 @@
+[
+  {
+    "outputFileName": "gs/script/bundle.js",
+    "inputFiles": [
+      "gs/script/jsviews.js",
+      "gs/script/jquery.jstree.js",
+      "gs/script/globalize.js",
+      "gs/script/js-cookie.js",
+      "gs/script/jquery.paging.js",
+      "gs/script/jquery.splitter.js",
+      "gs/script/jquery.autosuggest.js",
+      "gs/script/jquery.ui.menubar.js",
+      "gs/script/jquery.rateit.js",
+      "gs/script/jquery.supersized.js",
+      "gs/script/jquery.ui.multiselect.js",
+      "gs/script/jquery.jqcloud.js",
+      "gs/script/jquery.ui.touchpunch.js",
+      "gs/script/jquery.touchwipe.js",
+      "gs/script/jquery.textareafullscreen.js",
+      "gs/script/gallery.js"
+    ]
+  },
+  {
+    "outputFileName": "gs/script/grid.min.js",
+    "inputFiles": [
+      "gs/script/grid.js"
+    ]
+  },
+  {
+    "outputFileName": "gs/script/jquery-migrate.min.js",
+    "inputFiles": [
+      "gs/script/jquery-migrate.js"
+    ]
+  },
+  {
+    "outputFileName": "gs/script/jquery-ui.min.js",
+    "inputFiles": [
+      "gs/script/jquery-ui.js"
+    ]
+  },
+  {
+    "outputFileName": "gs/skins/dark/styles/bundle.css",
+    "inputFiles": [
+      "gs/skins/dark/styles/jquery-ui.css",
+      "gs/skins/dark/styles/gallery.css"
+    ]
+  },
+  {
+    "outputFileName": "gs/skins/light/styles/bundle.css",
+    "inputFiles": [
+      "gs/skins/light/styles/jquery-ui.css",
+      "gs/skins/light/styles/gallery.css"
+    ]
+  }
+]

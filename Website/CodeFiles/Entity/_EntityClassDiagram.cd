@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="GalleryServer.Web.Entity.Album">
+    <Position X="5.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgSAACAUCBAAEAACABAAAAAAICIAAAAGgAAAAEAEAA=</HashCode>
+      <FileName>CodeFiles\Entity\Album.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.MediaItem">
+    <Position X="8.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgICAAAAAACAAEQAAAAAAAEAiAAAAAAAAAEAAAEAAgA=</HashCode>
+      <FileName>CodeFiles\Entity\MediaItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.App">
+    <Position X="2.75" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ABABAACAAABAEAAAAAAAIAAABAAAAAAAAIAAAAQACAA=</HashCode>
+      <FileName>CodeFiles\Entity\App.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.Permissions">
+    <Position X="12.75" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgAAIAAACAAAAAAAAAIIAEACACAAAIAAAAYAAAAI=</HashCode>
+      <FileName>CodeFiles\Entity\Permissions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.DisplayObject">
+    <Position X="5.75" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAEAAAEAAAAABAAAACAAACIEAAAA=</HashCode>
+      <FileName>CodeFiles\Entity\DisplayObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.GalleryData">
+    <Position X="2.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAIAAAAAAAAAAAAAACAAAAAEAAgAAACAAgAAI=</HashCode>
+      <FileName>CodeFiles\Entity\GalleryData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.GalleryItem">
+    <Position X="8.25" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAEAAAAEQACAAAAAEAAAAAAAIACgAAAAAAAgA=</HashCode>
+      <FileName>CodeFiles\Entity\GalleryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.User">
+    <Position X="12.75" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>wABAAAAEACgIAAAAAAAABAAwAoyEAAACAUAIAsAAAIA=</HashCode>
+      <FileName>CodeFiles\Entity\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.MetaItem">
+    <Position X="2.75" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAABBAAAAAAAAAAAAAAAAAEAACAAgQAAAAAA=</HashCode>
+      <FileName>CodeFiles\Entity\MetaItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="GalleryServer.Business.DisplayObjectType">
+    <Position X="10.75" Y="5.25" Width="1.75" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="GalleryServer.Business.MimeTypeCategory">
+    <Position X="10.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="GalleryServer.Business.GalleryObjectType">
+    <Position X="10.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

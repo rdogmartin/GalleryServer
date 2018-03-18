@@ -1,0 +1,12 @@
+﻿[Subject]
+Welcome to the gallery
+
+[Body]
+An account has been successfully created.
+
+Gallery URL: {CurrentPageUrlFull}
+User name: {UserName}
+
+Thanks for joining.
+
+-- Gallery Server Administrator

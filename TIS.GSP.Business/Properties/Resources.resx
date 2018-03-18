@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Album_FullPhysicalPath_Ex_Msg" xml:space="preserve">
+    <value>DirectoryName must be empty for the root album. It was "{0}"</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Album_Inflate_Ex_Msg" xml:space="preserve">
+    <value>Album.Inflate() was invoked on an existing, not inflated album (IsNew = false, IsInflated = false), which should have triggered the Factory.LoadAlbumInstance() method to set IsInflated=true and HasChanges=false. Instead, this album currently has these values: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Album_Remove_Ex_Msg" xml:space="preserve">
+    <value>The specified IGalleryObject is not a child of this album, and thus cannot be removed. Album ID = {0}; Gallery Object ID = {1}; Gallery Object parent album ID = {2}</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="DisplayObject_FileInfo_Ex_Msg" xml:space="preserve">
+    <value>Invalid media asset file location: The media asset {0} is not located in the following directories that are valid for album {1}: {2}; {3}; {4}</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Factory_CreateGalleryServerRoleInstance_Ex_Msg" xml:space="preserve">
+    <value>Cannot create role: A role already exists with the name you entered.</value>
+    <comment>&lt;2016.04.20&gt;</comment>
+  </data>
+  <data name="Factory_LoadAlbumInstance_Ex_Msg" xml:space="preserve">
+    <value>It is not valid to call LoadInstance(IAlbum album) when the album is already inflated and inflateChildMediaObjects=false.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObject_GalleryObjectType_Ex_Msg" xml:space="preserve">
+    <value>Cannot change the GalleryObjectType property of a gallery object once it has been assigned. Current value = {0}; attempted to assign {1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObject_IsInflated_Ex_Msg" xml:space="preserve">
+    <value>This gallery asset is already inflated. It cannot be inflated again.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObject_Parent_Ex_Msg" xml:space="preserve">
+    <value>It is invalid to set the Parent property to null. If no valid object is available, set it to a NullGalleryObject instead.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObject_ValidateSave_Ex_Msg" xml:space="preserve">
+    <value>Cannot save an existing object unless it has been fully inflated from the data store.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObjectCollection_FindById_Ex_Msg" xml:space="preserve">
+    <value>The galleryObjectType parameter must be either GalleryObjectType.Album or GalleryObjectType.MediaObject. The value specified was {0}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GenericMediaObject_Inflate_Ex_Msg" xml:space="preserve">
+    <value>The Factory.LoadGenericMediaObjectInstance(IGalleryObject) method should have set IsInflated=true and HasChanges=false. Instead it currently has these values: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GenericThumbnailImage_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Image.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>A bitmap of a PNG image that can be used as a generic thumbnail image for images. The image is the standard icon used in Windows XP to represent images such as PNG and GIF.</comment>
+  </data>
+  <data name="HelperFunctions_ValidateDirectoryName_Ex_Msg" xml:space="preserve">
+    <value>One or both arguments contain an empty string. dirPath = "{0}"; dirName = "{1}"</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="HelperFunctions_ValidateFileName_Ex_Msg1" xml:space="preserve">
+    <value>One or both arguments contain an empty string. dirPath = "{0}"; fileName = "{1}"</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="HelperFunctions_ValidateFileName_Ex_Msg2" xml:space="preserve">
+    <value>Gallery Server does not support files without an extension. (fileName = "{0}")</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Image_Inflate_Ex_Msg" xml:space="preserve">
+    <value>The Factory.LoadImageInstance(IGalleryObject) method should have set IsInflated=true and HasChanges=false. Instead it currently has these values: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="MimeType_Ctor_Ex_Msg" xml:space="preserve">
+    <value>Invalid MIME type: "{0}". The MIME type must be valid (e.g. "image/jpg", "video/quicktime").</value>
+    <comment>&lt;2016.04.20&gt;</comment>
+  </data>
+  <data name="MimeType_LoadInstances_Ex_Msg" xml:space="preserve">
+    <value>No MIME type found for file extension = {0} and browserId = "default". Verify the configuration file contains an entry at //galleryServerPro/galleryObject/mimeTypes/mimeType that specifies this file extension and browser ID, and make sure it appears BEFORE any mimeType entries that specify a more specific browserId for this file extension.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_CurrentFileIndex_Ex_Msg" xml:space="preserve">
+    <value>CurrentFileIndex must be an integer between 0 and TotalFileCount - 1. Attempted to assign CurrentFileIndex = {0}; TotalFileCount = {1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_TotalFileCount_Ex_Msg" xml:space="preserve">
+    <value>TotalFileCount must be an integer greater than or equal to zero. Attempted to assign TotalFileCount = {0}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Video_Inflate_Ex_Msg" xml:space="preserve">
+    <value>The Factory.LoadVideoInstance(IGalleryObject) method should have set IsInflated=true and HasChanges=false. Instead it currently has these values: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Audio_Inflate_Ex_Msg" xml:space="preserve">
+    <value>The Factory.LoadAudioInstance(IGalleryObject) method should have set IsInflated=true and HasChanges=false. Instead it currently has these values: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Virtual_Album_Title" xml:space="preserve">
+    <value>ALL ALBUMS</value>
+    <comment>&lt;2007.12.08&gt; The title given to an album that exists only as a container for other albums and media assets (for example, to contain search results).</comment>
+  </data>
+  <data name="Metadata_ColorRepresentation_sRGB" xml:space="preserve">
+    <value>sRGB</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ColorRepresentation_Uncalibrated" xml:space="preserve">
+    <value>Uncalibrated</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ExposureCompensation_Suffix" xml:space="preserve">
+    <value>step</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ExposureTime_Units" xml:space="preserve">
+    <value>sec.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_FocalLength_Units" xml:space="preserve">
+    <value>mm</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Height_Units" xml:space="preserve">
+    <value>px</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_SubjectDistance_Units" xml:space="preserve">
+    <value>meters</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Width_Units" xml:space="preserve">
+    <value>px</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_Disabled_File_Type_Msg" xml:space="preserve">
+    <value>Disabled file type</value>
+    <comment>&lt;2008.10.07&gt; This is assigned to the value of the KeyValuePair object added to the ISynchronizationStatus.SkippedMediaObjects list when a file is encountered during synchronization that has a disabled file type. This value ends up being displayed to the user in the web UI at the completion of a synchronization.</comment>
+  </data>
+  <data name="Reduced_Functionality_Mode_Watermark_Text" xml:space="preserve">
+    <value>Trial Version Expired. Enter License Key.</value>
+    <comment>&lt;2016.04.20&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_Hidden_File_Msg" xml:space="preserve">
+    <value>Hidden file</value>
+    <comment>&lt;2008.10.27&gt; This is assigned to the value of the KeyValuePair object added to the ISynchronizationStatus.SkippedMediaObjects list when a file is encountered during synchronization that has the hidden file attribute. This value ends up being displayed to the user in the web UI at the completion of a synchronization.</comment>
+  </data>
+  <data name="DirectoryNotFound_Ex_Msg" xml:space="preserve">
+    <value>The path {0} was not found. Check that the gallery is correctly configured and the path exists. Note: If you create a directory to resolve this error, you may have to restart the IIS application pool to get IIS to discover the directory.</value>
+    <comment>&lt;2010.10.12&gt; This is the message displayed when a directory path cannot be found.</comment>
+  </data>
+  <data name="DotNet_3_Or_Higher_Not_Found_Ex_Msg" xml:space="preserve">
+    <value>Info: The .NET Framework 3.0 or higher is not installed on the server. It is not required but additional functionality, such as improved image metadata extraction, become automatically enabled when it is present.</value>
+    <comment>&lt;2010.04.06&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_Hidden_Directory_Msg" xml:space="preserve">
+    <value>Hidden directory</value>
+    <comment>&lt;2010.10.12&gt; This is assigned to the value of the KeyValuePair object added to the ISynchronizationStatus.SkippedMediaObjects list when a directory is encountered during synchronization that has the hidden attribute. This value ends up being displayed to the user in the web UI at the completion of a synchronization.</comment>
+  </data>
+  <data name="Root_Album_Default_Summary" xml:space="preserve">
+    <value>Welcome to Gallery Server</value>
+    <comment>&lt;2016.04.20&gt; Default summary of root album. Make sure it does not contain an apostrophe (').</comment>
+  </data>
+  <data name="Root_Album_Default_Title" xml:space="preserve">
+    <value>ALL ALBUMS</value>
+    <comment>&lt;2010.10.12&gt; Default title of root album. Make sure it does not contain an apostrophe (').</comment>
+  </data>
+  <data name="Error_Default_Gallery_Object_Album_Invalid_Ex_Msg" xml:space="preserve">
+    <value>Default Gallery Asset Album Invalid: The gallery '{0}' has an album ID specified ({1}) as the default gallery asset and it does not match an existing album. Review this setting in the administration area.</value>
+    <comment>&lt;20XX.XX.XX&gt;</comment>
+  </data>
+  <data name="Error_Default_Gallery_Object_MediaObject_Invalid_Ex_Msg" xml:space="preserve">
+    <value>Default Gallery Asset Media Asset Invalid: The gallery '{0}' has a media asset ID specified ({1}) as the default gallery asset and it does not match an existing media asset. Review this setting in the administration area.</value>
+    <comment>&lt;20XX.XX.XX&gt;</comment>
+  </data>
+  <data name="Error_User_Album_Parent_Invalid_Ex_Msg" xml:space="preserve">
+    <value>User Album Parent Invalid: The gallery '{0}' has an album ID specified ({1}) as the user album container and it does not match an existing album. Review this setting in the administration area.</value>
+    <comment>&lt;2010.10.12&gt; This setting is also in the resource file in the web layer.</comment>
+  </data>
+  <data name="SynchronizationStatus_Restricted_Directory_Msg" xml:space="preserve">
+    <value>Cannot access directory</value>
+    <comment>&lt;2010.11.19&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_Loading_Album_Msg" xml:space="preserve">
+    <value>Loading existing album '{0}'...</value>
+    <comment>&lt;2011.02.21&gt;</comment>
+  </data>
+  <data name="Metadata_KB" xml:space="preserve">
+    <value>KB</value>
+    <comment>&lt;2011.02.21&gt;</comment>
+  </data>
+  <data name="Metadata_meters" xml:space="preserve">
+    <value>meters</value>
+    <comment>&lt;2011.02.21&gt;</comment>
+  </data>
+  <data name="Metadata_ISO_Prefix" xml:space="preserve">
+    <value>ISO-</value>
+    <comment>&lt;2016.04.20&gt;</comment>
+  </data>
+  <data name="GsLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GsLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Audio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Audio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Doc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Doc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Excel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Excel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_PDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_PowerPoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_PowerPoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Video" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Video.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

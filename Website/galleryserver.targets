@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- This MSBuild script runs automatically during a build and can perform the following tasks: 
+  
+      1. Create the light skin CSS file.
+      2. Create a folder containing the compiled web application ready for deployment.
+      3. Create a folder containing the redistributable source files.
+  
+      NOTES
+      1. Changes to this file do not take effect until the project is unloaded and reloaded.
+  -->
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath>$(SolutionDir)\.build</MSBuildCommunityTasksPath>
+
+    <ProductName>GalleryServer</ProductName>
+    <ProductVersion>V4_4_2</ProductVersion>
+
+    <!-- Specify 1 to create the light skin CSS file -->
+    <UpdateSkins>1</UpdateSkins>
+    <!-- Specify 1 to create a copy of the compiled files at bin\V4_0_0_Install -->
+    <CreateCompiledPackage>0</CreateCompiledPackage>
+    <!-- Specify 1 to create a copy of the source files at bin\V4_0_0_Source -->
+    <CreateSourcePackage>0</CreateSourcePackage>
+
+    <CompiledPackageDirectory>$(MSBuildProjectDirectory)\bin\$(ProductVersion)_Install</CompiledPackageDirectory> <!-- e.g. V4_0_0_Install -->
+    <SourcePackageDirectory>$(MSBuildProjectDirectory)\bin\$(ProductVersion)_Source</SourcePackageDirectory> <!-- e.g. V4_0_0_Source -->
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets" />
+
+  <Target Name="AfterBuild">
+    <CallTarget Targets="DeployFiles" />
+  </Target>
+
+  <Target Name="DeployFiles">
+    <CallTarget Targets="CreateLightSkin" Condition="$(UpdateSkins) == 1" />
+    <CallTarget Targets="CreateCompiledPackage" Condition="$(CreateCompiledPackage) == 1" />
+    <CallTarget Targets="CreateSourcePackage" Condition="$(CreateSourcePackage) == 1" />
+
+  </Target>
+
+  <Target Name="CreateLightSkin">
+    <!-- Copy the dark skin CSS file and replace colors with their opposites -->
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\gs\skins\dark\styles\gallery.css" DestinationFolder="$(MSBuildProjectDirectory)\gs\skins\light\styles\" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#000" ReplacementText="#_tmp_fff" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#151515" ReplacementText="#_tmp_f2f2f2" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#353535" ReplacementText="#_tmp_f2f2f2" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#3f3f3f" ReplacementText="#_tmp_b3b3b3" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#4a4a4a" ReplacementText="#_tmp_a7a7a7" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#545454" ReplacementText="#_tmp_a7a7a7" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#747474" ReplacementText="#_tmp_818181" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#818181" ReplacementText="#747474" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#a7a7a7" ReplacementText="#4a4a4a" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#b3b3b3" ReplacementText="#3f3f3f" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#c0c0c0" ReplacementText="#353535" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#ccc" ReplacementText="#353535" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#e6e6e6" ReplacementText="#151515" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#f2f2f2" ReplacementText="#151515" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#fff" ReplacementText="#000" />
+
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#_tmp_fff" ReplacementText="#fff" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#_tmp_f2f2f2" ReplacementText="#f2f2f2" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#_tmp_b3b3b3" ReplacementText="#b3b3b3" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#_tmp_a7a7a7" ReplacementText="#a7a7a7" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#_tmp_818181" ReplacementText="#818181" />
+
+    <!--Swap colors -->
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="(#b2d6a2|#86be6d)" ReplacementText="#_tmp_060" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#ff7171" ReplacementText="#_tmp_c03" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#060" ReplacementText="#86be6d" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#7ac1ff" ReplacementText="#060" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="(#600|#c03)" ReplacementText="#ff7171" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#_tmp_060" ReplacementText="#060" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="#_tmp_c03" ReplacementText="#c03" />
+
+    <!-- Swap arrow-right-open-s.png <=> arrow-right-open-s-o.png -->
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="move-updown-s.png" ReplacementText="move-updown-s-o.png" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="arrow-right-open-s.png" ReplacementText="arrow-right-open-s-o_tmp.png" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="arrow-right-open-s-o.png" ReplacementText="arrow-right-open-s.png" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="arrow-right-open-s-o_tmp.png" ReplacementText="arrow-right-open-s-o.png" />
+
+    <!-- Swap jQuery UI CSS images -->
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="(ui-icons_cccccc_256x240.png|ui-icons_ffffff_256x240.png)" ReplacementText="ui-icons_444444_256x240_tmp.png" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="ui-icons_222222_256x240.png" ReplacementText="ui-icons_ffffff_256x240.png" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="ui-icons_444444_256x240_tmp.png" ReplacementText="ui-icons_444444_256x240.png" />
+
+    <!-- Define custom color conversions -->
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="\.ui-tabs-active \{ background-color: rgb\(63,63,63\)" ReplacementText=".ui-tabs-active { background-color: #ccc" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="\.ui-tabs-panel \{ background-color: rgb\(63,63,63\);" ReplacementText=".ui-tabs-panel { background-color: #ccc;" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="\.album \{ background-color: rgb\(21,21,21\); \}" ReplacementText=".album { background-color: rgb(167,167,167); }" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="2px 2px 0 0 rgb\(167,167,167\), 4px 4px 0 0 #a7a7a7, 6px 6px 0 0 rgb\(167,167,167\); background-color: rgb\(204,204,204\);" ReplacementText="2px 2px 0 0 #e6e6e6, 4px 4px 0 0 #a7a7a7, 6px 6px 0 0 #e6e6e6; background-color: #e6e6e6;" />
+    <!-- box shadow color on thumb images -->
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="\.gsp_ns \.thmb \{ background-color: rgb\(84,84,84\);" ReplacementText=".gsp_ns .thmb { background-color: rgb(242,242,242);" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="\.gsp_ns textarea \{ background-color: rgb\(74,74,74\);" ReplacementText=".gsp_ns textarea { background-color: rgb(255,255,255);" />
+    <FileUpdate Files="$(MSBuildProjectDirectory)\gs\skins\light\styles\gallery.css" Regex="\.gsp_abm_sum_sbi_hdr \{ background-color: rgb\(53,53,53\);" ReplacementText=".gsp_abm_sum_sbi_hdr { background-color: rgb(204,204,204);" />
+  </Target>
+
+  <Target Name="CreateCompiledPackage">
+    <RemoveDir Directories="$(CompiledPackageDirectory)"/>
+    <MakeDir Directories="$(CompiledPackageDirectory)"/>
+    <ItemGroup>
+      <CompiledFiles Include="
+              $(MSBuildProjectDirectory)\**\bin\**\*.dll;
+              $(MSBuildProjectDirectory)\**\bin\**\*.txt;
+              $(MSBuildProjectDirectory)\**\bin\**\*.manifest;
+              $(MSBuildProjectDirectory)\**\App_GlobalResources\*.resx;
+              $(MSBuildProjectDirectory)\**\gs\**;
+              $(MSBuildProjectDirectory)\**\Scripts\**;
+              $(MSBuildProjectDirectory)\**\*.aspx;
+              $(MSBuildProjectDirectory)\*.png;
+              $(MSBuildProjectDirectory)\*.config;"
+        Exclude="
+          $(MSBuildProjectDirectory)\**\*.cs;
+              $(MSBuildProjectDirectory)\**\*.sdf;
+              $(MSBuildProjectDirectory)\App_Data\**;
+              $(MSBuildProjectDirectory)\bin\nl\**;
+              $(MSBuildProjectDirectory)\gs\mediaobjects\**;
+              $(MSBuildProjectDirectory)\Scripts\typings\**;
+              $(MSBuildProjectDirectory)\packages.config;
+          ">
+      </CompiledFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(CompiledFiles)" DestinationFiles="@(CompiledFiles->'$(CompiledPackageDirectory)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\App_Data\install.txt" DestinationFiles="$(CompiledPackageDirectory)\App_Data\install.txt"/>
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\App_Data\Family portrait.jpg" DestinationFiles="$(CompiledPackageDirectory)\App_Data\Family portrait.jpg"/>
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\App_Data\Nature path.jpg" DestinationFiles="$(CompiledPackageDirectory)\App_Data\Nature path.jpg"/>
+    <MakeDir Directories="$(CompiledPackageDirectory)\gs\mediaobjects"/>
+  </Target>
+
+  <Target Name="CreateSourcePackage">
+    <RemoveDir Directories="$(SourcePackageDirectory)"/>
+    <MakeDir Directories="$(SourcePackageDirectory)"/>
+    <ItemGroup>
+      <SourceFiles
+        Include="$(SolutionDir)\**\*.*;"
+        Exclude="
+          $(SolutionDir)\$tf\**;
+          $(SolutionDir)\.vs\**;
+          $(SolutionDir)\packages\**\**;
+          $(SolutionDir)\Website\App_Data\**;
+          $(SolutionDir)\Website\gs\mediaobjects\**;
+          $(SolutionDir)\**\*.psess;
+          $(SolutionDir)\**\*.csdat;
+          $(SolutionDir)\**\*.vsp;
+          $(SolutionDir)\**\*.vspx;
+          $(SolutionDir)\**\*.suo;
+          $(SolutionDir)\**\*.vs10x;
+          $(SolutionDir)\**\*.user;
+          $(SolutionDir)\**\*.vspscc;
+          $(SolutionDir)\**\*.vssscc;
+          $(SolutionDir)\**\bin\**;
+          $(SolutionDir)\**\obj\**;
+          $(SolutionDir)\_ReSharper.TIS.GSP\**;
+          $(SolutionDir)\TIS.GSP.sln.docstates;
+          $(SolutionDir)\TIS.GSP.sln.GhostDoc.xml;
+          $(SolutionDir)\Website\App_Data\GalleryData.sdf;
+          $(SolutionDir)\Website\WebSite.Publish.xml;
+          ">
+      </SourceFiles>
+    </ItemGroup>
+
+    <Copy SourceFiles="@(SourceFiles)" DestinationFiles="@(SourceFiles->'$(SourcePackageDirectory)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+    <Copy SourceFiles="$(SolutionDir)\packages\repositories.config" DestinationFolder="$(SourcePackageDirectory)\packages"/>
+    <Copy SourceFiles="$(SolutionDir)\Website\App_Data\install.txt" DestinationFiles="$(SourcePackageDirectory)\Website\App_Data\install.txt"/>
+    <Copy SourceFiles="$(SolutionDir)\Website\App_Data\Family portrait.jpg" DestinationFiles="$(SourcePackageDirectory)\Website\App_Data\Family portrait.jpg"/>
+    <Copy SourceFiles="$(SolutionDir)\Website\App_Data\Nature path.jpg" DestinationFiles="$(SourcePackageDirectory)\Website\App_Data\Nature path.jpg"/>
+  </Target>
+
+</Project>

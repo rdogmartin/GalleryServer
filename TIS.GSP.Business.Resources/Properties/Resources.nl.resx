@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Album_FullPhysicalPath_Ex_Msg" xml:space="preserve">
+    <value>DirectoryName moeten leeg zijn voor het root-album. Het was "{0}"</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Album_Inflate_Ex_Msg" xml:space="preserve">
+    <value>Album.Inflate() werd uitgevoerd op een bestaand, niet gevuld album (IsNew = false, IsInflated = false), welke de Factory.LoadAlbumInstance() method zou moeten hebben geinstrueerd om IsInflated=true en HasChanges=false in te stellen. In plaats daarvan heeft dit album momenteel deze waarden: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Album_Remove_Ex_Msg" xml:space="preserve">
+    <value>Het opgegeven IGalleryObject is geen child-object van dit album, en kan derhalve niet worden verwijderd. Album ID = {0}; Gallery Object ID = {1}; Gallery Object parent album ID = {2}</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="DisplayObject_FileInfo_Ex_Msg" xml:space="preserve">
+    <value>Ongeldige media object bestands locatie: Het media object {0} is niet geplaatst in de volgende directories die geldig zijn voor het album {1}: {2}; {3}; {4}</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Factory_CreateGalleryServerRoleInstance_Ex_Msg" xml:space="preserve">
+    <value>De gallery server role kan niet worden aangemaakt: Er bestaat al een role met de opgegeven naam.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Factory_LoadAlbumInstance_Ex_Msg" xml:space="preserve">
+    <value>Het is niet toegestaan om LoadInstance(IAlbum album) aan te roepen wanneer een album reeds is gevuld en wanneer inflateChildMediaObjects=false.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Factory_LoadRootAlbumInstance_Ex_Msg" xml:space="preserve">
+    <value>Het root album kan niet worden gevonden. Er moet een album bestaan waarbij AlbumParentID = 0 en is geassocieerd met deze gallery (GalleryId={0}).</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObject_GalleryObjectType_Ex_Msg" xml:space="preserve">
+    <value>De eigenschappen van GalleryObjectType kunnen niet worden gewijzigd van een gallery object wanneer het reeds is toegewezen. Huidige waarde = {0}; werd gepoogd toe te wijzen {1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObject_IsInflated_Ex_Msg" xml:space="preserve">
+    <value>Dit gallery object is reeds gevuld. Het kan niet opnieuw worden gevuld.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObject_Parent_Ex_Msg" xml:space="preserve">
+    <value>Het is niet toegestaan om de Parent property de waarde null te geven. Wanneer geen geldig object beschikbaar is, wijzig deze dan in plaats daarvan in NullGalleryObject.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObject_ValidateSave_Ex_Msg" xml:space="preserve">
+    <value>Een bestaand object kan niet worden bewaard zolang het niet volledig is gevuld vanuit de data opslag.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GalleryObjectCollection_FindById_Ex_Msg" xml:space="preserve">
+    <value>De galleryObjectType parameter moet zijn GalleryObjectType.Album ofr GalleryObjectType.MediaObject. De geselecteerde waarde was {0}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="GenericMediaObject_Inflate_Ex_Msg" xml:space="preserve">
+    <value>De Factory.LoadGenericMediaObjectInstance(IGalleryObject) method zou de waarden IsInflated=true en HasChanges=false moeten hebben ingesteld. In plaats daarvan heeft het momenteel de volgende waarden: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GenericThumbnailImage_Audio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Audio.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Doc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Doc.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Excel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Excel.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Image.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>A bitmap of a PNG image that can be used as a generic thumbnail image for images. The image is the standard icon used in Windows XP to represent images such as PNG and GIF.</comment>
+  </data>
+  <data name="GenericThumbnailImage_PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_PDF.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_PowerPoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_PowerPoint.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Unknown.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenericThumbnailImage_Video" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GenericThumbnailImage_Video.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HelperFunctions_ValidateDirectoryName_Ex_Msg" xml:space="preserve">
+    <value>Eén of beide argumenten bevatten een lege waarde. dirPath = "{0}"; dirName = "{1}"</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="HelperFunctions_ValidateFileName_Ex_Msg1" xml:space="preserve">
+    <value>Eén of beide argumenten bevatten een lege waarde. dirPath = "{0}"; fileName = "{1}"</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="HelperFunctions_ValidateFileName_Ex_Msg2" xml:space="preserve">
+    <value>Gallery Server ondersteunt geen bestanden zonder bestandsextentie. (fileName = "{0}")</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Image_Inflate_Ex_Msg" xml:space="preserve">
+    <value>De Factory.LoadImageInstance(IGalleryObject) method zou de waarden IsInflated=true en HasChanges=false moeten hebben ingesteld. In plaats daarvan heeft het momenteel de volgende waarden: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="MimeType_Ctor_Ex_Msg" xml:space="preserve">
+    <value>Ongeldige MIME type string gevonden in GalleryServer.Business.MimeType.ValidateMimeType(). De MIME type moet geldig zijn (bijv. "image/jpg", "video/quicktime"). De doorgegeven waarde was "{0}".</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="MimeType_Ctor_Ex_Msg2" xml:space="preserve">
+    <value>Ongeldig browserId. De MimeType constructor vereist dat de browserId parameter de waarde "default" heeft. Andere browser types kunnen worden toegevoegd na de uiteindelijke uitvoering van het object door de Add method van de private _browserMimeTypes woordenlijst. De opgegeven browserId was {0}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="MimeType_GetFullTypeForBrowser_Ex_Msg" xml:space="preserve">
+    <value>De parameter "browserIds" moet mininaal één item bevatten, maar er werden 0 items doorgegeven.</value>
+    <comment>&lt;2009.XX.XX&gt;</comment>
+  </data>
+  <data name="MimeType_GetFullTypeForBrowser_Ex_Msg2" xml:space="preserve">
+    <value>Er werd geen browser MIME type gevonden die overeenkomt met de opgegeven browser IDs. Dit mag nooit voorkomen, want Request.Browser.Browsers zou in elk geval een entry genaamd "default" moeten bevatten, en elk MIME type in de Gallery Server configuratie file zou een entry met browserId="default" moeten bevatten, dus er zou altijd minimaal een overeenkomst moeten zijn voor de standaard browser. Controleer de configuratie file op verkeerde of ontbrekende MIME type entries. File extension = {0}; MIME type = {1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="MimeType_LoadInstances_Ex_Msg" xml:space="preserve">
+    <value>Er werd geen MIME type gevonden voor file extension = {0} en browserId = "default". Controleer of de configuratie file contains een onderdeel opt //galleryServerPro/galleryObject/mimeTypes/mimeType bevat dat deze extentie en browser ID beschrijft, en verzeker u ervan dat het is geplaatst VOORAFGAAND  aan enige mimeType entries die een meer specifieke browserId bevatten voor deze bestands extentie.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_CurrentFileIndex_Ex_Msg" xml:space="preserve">
+    <value>CurrentFileIndex moet een integer tussen 0 enTotalFileCount - 1 zijn. Geprobeerd werd om CurrentFileIndex = {0}; TotalFileCount = {1} toe te passen.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_TotalFileCount_Ex_Msg" xml:space="preserve">
+    <value>TotalFileCount moet een integer groter dan of gelijk aan nul zijn. Geprobeerd werd om TotalFileCount = {0} toe te passen.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Video_Inflate_Ex_Msg" xml:space="preserve">
+    <value>De Factory.LoadVideoInstance(IGalleryObject) method zou de waarde IsInflated=true en HasChanges=false moeten hebben ingesteld. In plaats daarvan heeft het de volgende waarden: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Audio_Inflate_Ex_Msg" xml:space="preserve">
+    <value>De Factory.LoadAudioInstance(IGalleryObject) method zou de waarden IsInflated=true en HasChanges=false hebben moeten instellen. In plaats daarvan heeft het momenteel de volgende waarden: IsInflated={0}; HasChanges={1}.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Virtual_Album_Title" xml:space="preserve">
+    <value>All beschikbare albums</value>
+    <comment>&lt;2007.12.08&gt; The title given to an album that exists only as a container for other albums and media objects (for example, to contain search results).</comment>
+  </data>
+  <data name="Metadata_Author" xml:space="preserve">
+    <value>Auteur</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_CameraModel" xml:space="preserve">
+    <value>Camera model</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ColorRepresentation" xml:space="preserve">
+    <value>Color vertegenwoordiging</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ColorRepresentation_sRGB" xml:space="preserve">
+    <value>sRGB</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ColorRepresentation_Uncalibrated" xml:space="preserve">
+    <value>Niet gecalibreerd</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Comment" xml:space="preserve">
+    <value>Commentaar</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Copyright" xml:space="preserve">
+    <value>Copyright</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_DatePictureTaken" xml:space="preserve">
+    <value>Date opname</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Description" xml:space="preserve">
+    <value>Omschrijving</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Dimensions" xml:space="preserve">
+    <value>Afmetingen (pixels)</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_EquipmentManufacturer" xml:space="preserve">
+    <value>Camera fabrikant</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ExposureCompensation" xml:space="preserve">
+    <value>Belichtingscompensatie</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ExposureCompensation_Suffix" xml:space="preserve">
+    <value>stap</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ExposureProgram" xml:space="preserve">
+    <value>Belichtings programma</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ExposureTime" xml:space="preserve">
+    <value>Belichtings tijd</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_ExposureTime_Units" xml:space="preserve">
+    <value>sec.</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_FlashMode" xml:space="preserve">
+    <value>Flits modus</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_FNumber" xml:space="preserve">
+    <value>F-stop</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_FocalLength" xml:space="preserve">
+    <value>Brandpuntsafstand</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_FocalLength_Units" xml:space="preserve">
+    <value>mm</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Height" xml:space="preserve">
+    <value>Hoogte</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Height_Units" xml:space="preserve">
+    <value>px</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_HorizontalResolution" xml:space="preserve">
+    <value>Horizontale resolutie</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_IsoSpeed" xml:space="preserve">
+    <value>ISO snelheid</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Keywords" xml:space="preserve">
+    <value>Sleutelwoorden</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_LensAperture" xml:space="preserve">
+    <value>Diafragma</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_LightSource" xml:space="preserve">
+    <value>Licht bron</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_MeteringMode" xml:space="preserve">
+    <value>Belichtings modus</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Rating" xml:space="preserve">
+    <value>Waardering (uit 5)</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Subject" xml:space="preserve">
+    <value>Onderwerp</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_SubjectDistance" xml:space="preserve">
+    <value>Onderwerp afstand</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_SubjectDistance_Units" xml:space="preserve">
+    <value>meters</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Title" xml:space="preserve">
+    <value>Titel</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_VerticalResolution" xml:space="preserve">
+    <value>Verticale resolutie</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Width" xml:space="preserve">
+    <value>Breedte</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="Metadata_Width_Units" xml:space="preserve">
+    <value>px</value>
+    <comment>&lt;2007.12.08&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_Disabled_File_Type_Msg" xml:space="preserve">
+    <value>Uitgeschakeld bestands type</value>
+    <comment>&lt;2008.10.17&gt;</comment>
+  </data>
+  <data name="Reduced_Functionality_Mode_Watermark_Text" xml:space="preserve">
+    <value>Verminderde functionaliteit modus. Voer een license key in.</value>
+    <comment>&lt;2008.10.17&gt;</comment>
+  </data>
+  <data name="SynchronizationStatus_Hidden_File_Msg" xml:space="preserve">
+    <value>Verborgen bestand</value>
+    <comment>&lt;2008.10.27&gt; This is assigned to the value of the KeyValuePair object added to the ISynchronizationStatus.SkippedMediaObjects list when a file is encountered during synchronization that has the hidden file attribute. This value ends up being displayed to the user in the web UI at the completion of a synchronization.</comment>
+  </data>
+</root>

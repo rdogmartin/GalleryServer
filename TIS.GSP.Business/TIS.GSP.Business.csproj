@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD3EAF7D-B964-4BAF-BE4D-E2844B4C7A33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GalleryServer.Business</RootNamespace>
+    <AssemblyName>GalleryServer.Business</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>3009</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionResult.cs" />
+    <Compile Include="AddMediaObjectSettings.cs" />
+    <Compile Include="AddMetaEventArgs.cs" />
+    <Compile Include="Album.cs" />
+    <Compile Include="AlbumDeleteBehavior.cs" />
+    <Compile Include="AlbumDeleteValidator.cs" />
+    <Compile Include="Entity\LicenseServerResult.cs" />
+    <Compile Include="Entity\TagCacheItem.cs" />
+    <Compile Include="Entity\VersionKey.cs" />
+    <Compile Include="MediaLoadOptions.cs" />
+    <Compile Include="AlbumProfile.cs" />
+    <Compile Include="AlbumProfileCollection.cs" />
+    <Compile Include="CacheItemAlbum.cs" />
+    <Compile Include="CacheController.cs" />
+    <Compile Include="ClientMessageOptions.cs" />
+    <Compile Include="CacheItemDisplayObject.cs" />
+    <Compile Include="DisplayObjectCreator.cs" />
+    <Compile Include="DbManager.cs" />
+    <Compile Include="Entity\Tag.cs" />
+    <Compile Include="CacheItemMedia.cs" />
+    <Compile Include="AlbumLoadOptions.cs" />
+    <Compile Include="GlobalConstants.cs" />
+    <Compile Include="FeedFormatterOptions.cs" />
+    <Compile Include="CacheItemMetaItem.cs" />
+    <Compile Include="VideoOriginalCreator.cs" />
+    <Compile Include="MediaObjectProfile.cs" />
+    <Compile Include="MediaObjectProfileCollection.cs" />
+    <Compile Include="MediaQueueItem.cs" />
+    <Compile Include="Metadata\MetaValue.cs" />
+    <Compile Include="TagSearcher.cs" />
+    <Compile Include="TagSearchOptions.cs" />
+    <Compile Include="GalleryObjectSearcher.cs" />
+    <Compile Include="GalleryObjectSearchOptions.cs" />
+    <Compile Include="Metadata\AlbumMetadataReadWriter.cs" />
+    <Compile Include="AlbumSaveBehavior.cs" />
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="Audio.cs" />
+    <Compile Include="BackupFile.cs" />
+    <Compile Include="MediaTemplate.cs" />
+    <Compile Include="MediaTemplateCollection.cs" />
+    <Compile Include="AudioOptimizedCreator.cs" />
+    <Compile Include="MediaEncoderSettingsCollection.cs" />
+    <Compile Include="MediaConversionQueue.cs" />
+    <Compile Include="MediaConversionSettings.cs" />
+    <Compile Include="MediaEncoderSettings.cs" />
+    <Compile Include="Metadata\AudioMetadataReadWriter.cs" />
+    <Compile Include="Metadata\GenericMetadataReadWriter.cs" />
+    <Compile Include="Metadata\ExternalMetadataReadWriter.cs" />
+    <Compile Include="Metadata\VideoMetadataReadWriter.cs" />
+    <Compile Include="Metadata\GalleryObjectMetadataReadWriter.cs" />
+    <Compile Include="Metadata\ImageMetadataReadWriter.cs" />
+    <Compile Include="Metadata\MediaObjectMetadataReadWriter.cs" />
+    <Compile Include="Metadata\WpfMetadata.cs" />
+    <Compile Include="NullObjects\NullWpfMetadata.cs" />
+    <Compile Include="VideoOptimizedCreator.cs" />
+    <Compile Include="Metadata\Gps.cs" />
+    <Compile Include="UiTemplate.cs" />
+    <Compile Include="UiTemplateCollection.cs" />
+    <Compile Include="Metadata\MetadataDefinitionCollection.cs" />
+    <Compile Include="GalleryControlSettings.cs" />
+    <Compile Include="GalleryControlSettingsCollection.cs" />
+    <Compile Include="ImageMagick.cs" />
+    <Compile Include="FFmpeg.cs" />
+    <Compile Include="License.cs" />
+    <Compile Include="Metadata\MetadataDefinition.cs" />
+    <Compile Include="VideoThumbnailCreator.cs" />
+    <Compile Include="MimeTypeCollection.cs" />
+    <Compile Include="UserGalleryProfileCollection.cs" />
+    <Compile Include="GallerySettingsCollection.cs" />
+    <Compile Include="GalleryCollection.cs" />
+    <Compile Include="GallerySettings.cs" />
+    <Compile Include="ExternalThumbnailCreator.cs" />
+    <Compile Include="Declarations.cs" />
+    <Compile Include="ExternalMediaObject.cs" />
+    <Compile Include="Gallery.cs" />
+    <Compile Include="GalleryServerRoleCollection.cs" />
+    <Compile Include="DisplayObject.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Fraction.cs" />
+    <Compile Include="GalleryObjectCollection.cs" />
+    <Compile Include="Metadata\GalleryObjectMetadataItemCollection.cs" />
+    <Compile Include="GalleryServerRole.cs" />
+    <Compile Include="GenericMediaObject.cs" />
+    <Compile Include="GenericThumbnailCreator.cs" />
+    <Compile Include="HelperFunctions.cs" />
+    <Compile Include="HtmlValidator.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="ImageHelper.cs" />
+    <Compile Include="ImageOptimizedCreator.cs" />
+    <Compile Include="Metadata\GalleryObjectMetadataItem.cs" />
+    <Compile Include="ImageOriginalCreator.cs" />
+    <Compile Include="IntegerCollection.cs" />
+    <Compile Include="MediaObjectDeleteBehavior.cs" />
+    <Compile Include="MediaObjectSaveBehavior.cs" />
+    <Compile Include="GalleryObject.cs" />
+    <Compile Include="ImageThumbnailCreator.cs" />
+    <Compile Include="UserAccount.cs" />
+    <Compile Include="Metadata\MetadataItem.cs" />
+    <Compile Include="MimeType.cs" />
+    <Compile Include="NullObjects\NullDisplayObject.cs" />
+    <Compile Include="NullObjects\NullDisplayObjectCreator.cs" />
+    <Compile Include="NullObjects\NullGalleryObject.cs" />
+    <Compile Include="NullObjects\NullMimeType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityManager.cs" />
+    <Compile Include="SynchronizationManager.cs" />
+    <Compile Include="SynchronizationStatus.cs" />
+    <Compile Include="UserAccountCollection.cs" />
+    <Compile Include="UserGalleryProfile.cs" />
+    <Compile Include="UserProfile.cs" />
+    <Compile Include="Video.cs" />
+    <Compile Include="Watermark.cs" />
+    <Compile Include="ZipUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TIS.GSP.Business.Interfaces\TIS.GSP.Business.Interfaces.csproj">
+      <Project>{20DFE2A2-2532-4AFE-8B4B-5BE8E3F8492F}</Project>
+      <Name>TIS.GSP.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Data\TIS.GSP.Data.csproj">
+      <Project>{aa1b10a2-bbd4-4a3e-a02e-fae1db598d76}</Project>
+      <Name>TIS.GSP.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TIS.GSP.Events\TIS.GSP.Events.csproj">
+      <Project>{FC3B5E2D-E0AB-47FC-A126-64AA48982947}</Project>
+      <Name>TIS.GSP.Events</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagrams\ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagrams\GalleryObjectMetadata.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\GenericThumbnailImage_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GsLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_PDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_PowerPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenericThumbnailImage_Unknown.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

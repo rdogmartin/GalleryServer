@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="GalleryServer.Web.Entity.Resource">
+    <Position X="7.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>jsQZfunUaRxIoVox5ZehRsMlI8v62rh/fqVKbfOZDSo=</HashCode>
+      <FileName>CodeFiles\Entity\Resource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GalleryServer.Web.Entity.Settings">
+    <Position X="3.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>iAEKIRAAAIAARkQAjAjqAAAChKAGgGAAAgCoFARBAIg=</HashCode>
+      <FileName>CodeFiles\Entity\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

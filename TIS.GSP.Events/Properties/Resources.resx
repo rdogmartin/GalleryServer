@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationNotInitialized_Ex_Msg" xml:space="preserve">
+    <value>Gallery Server has not been properly initialized. This can happen when the initialization code that must run during application startup does not successfully complete, perhaps due to a failure to connect to the data store or another exception. For the web version of Gallery Server, the startup code is invoked from any of the application entry points: the constructor of the GalleryPage class (GalleryPage.cs), the static constructor of the web services class (Gallery.asmx.cs), or one of the HTTP handlers (getmedia.ashx, gettreeviewxml.ashx). This error can often be resolved by restarting the application.</value>
+  </data>
+  <data name="CannotMoveDirectoryException_Ex_msg" xml:space="preserve">
+    <value>Cannot move album: The operating system won't allow the directory containing the album to be moved. This can occur when the web server user account has insufficient permissions, or the directory contents are being displayed in another window.</value>
+  </data>
+  <data name="CannotTransferAlbumToNestedDirectoryException_Ex_msg" xml:space="preserve">
+    <value>You cannot move or copy an album to itself or to one of its child albums. No assets were transferred.</value>
+  </data>
+  <data name="DefaultDirectoryPath" xml:space="preserve">
+    <value>&lt;no directory specified&gt;</value>
+  </data>
+  <data name="DefaultFilename" xml:space="preserve">
+    <value>&lt;no file specified&gt;</value>
+  </data>
+  <data name="InvalidAlbum_Ex_Msg" xml:space="preserve">
+    <value>Invalid Album: An Album ID was omitted or, if specified, does not represent a valid album.</value>
+  </data>
+  <data name="InvalidAlbum_Ex_Msg2" xml:space="preserve">
+    <value>Invalid Album ID: {0} does not represent a valid album.</value>
+  </data>
+  <data name="InvalidGalleryServerRole_Ex_Msg" xml:space="preserve">
+    <value>Invalid Gallery Server Role: The role does not exist in the data store or one is being created with invalid parameters.</value>
+  </data>
+  <data name="InvalidUser_Ex_Msg" xml:space="preserve">
+    <value>Invalid User: The user does not exist in the data store or one is being created with invalid parameters.</value>
+  </data>
+  <data name="InvalidMediaObjectsDirectory_Ex_Msg" xml:space="preserve">
+    <value>Invalid media asset directory: Gallery Server cannot find or does not have permission to access the media object directory. Verify that the setting corresponds to a valid directory and that the web application has read, write and modify permission to this location.</value>
+  </data>
+  <data name="InvalidMediaObjectsDirectory_Ex_Msg2" xml:space="preserve">
+    <value>Invalid media asset directory: Gallery Server cannot find or does not have permission to access the media object directory "{0}". Verify that the setting corresponds to a valid directory and that the web application has read, write and modify permission to this location.</value>
+  </data>
+  <data name="InvalidMediaObject_Ex_Msg" xml:space="preserve">
+    <value>Invalid Media Object: A media object ID was omitted or, if specified, does not represent a valid media object.</value>
+  </data>
+  <data name="InvalidMediaObject_Ex_Msg2" xml:space="preserve">
+    <value>Invalid Media Object ID: {0} does not represent a valid media object.</value>
+  </data>
+  <data name="SynchronizationInProgress_Ex_Msg" xml:space="preserve">
+    <value>A synchronization is already in progress.</value>
+  </data>
+  <data name="SynchronizationTerminationRequested_Ex_Msg" xml:space="preserve">
+    <value>The end user has requested the cancellation of a currently executing synchronization. The synchronization has been canceled per the request.</value>
+  </data>
+  <data name="UnexpectedFormData_Ex_Msg" xml:space="preserve">
+    <value>Invalid Form Data: The form data for this web page contains unexpected data.</value>
+  </data>
+  <data name="UnexpectedQueryString_Ex_Msg" xml:space="preserve">
+    <value>Invalid Query String: The query string contains unexpected data.</value>
+  </data>
+  <data name="UnsupportedImageType_Ex_Msg" xml:space="preserve">
+    <value>Unsupported image: The .NET Framework is unable to load an image file into the System.Drawing.Bitmap class. This is probably because it is corrupted, not an image supported by the .NET Framework, or the server does not have enough memory to process the image.</value>
+  </data>
+  <data name="UnsupportedImageType_Ex_Msg2" xml:space="preserve">
+    <value>Unsupported image: the file {0} cannot be loaded into the .NET Framework's System.Drawing.Bitmap class. This is probably because it is corrupted, not an image supported by the .NET Framework, or the server does not have enough memory to process the image.</value>
+  </data>
+  <data name="UnsupportedMediaObjectType_Ex_Msg" xml:space="preserve">
+    <value>The gallery does not allow files of this type to be added to the gallery.</value>
+  </data>
+  <data name="GallerySecurity_Ex_Msg" xml:space="preserve">
+    <value>You do not have authorization to perform the requested action. This could be because of limited permissions granted to anonymous users or, if you are logged in, you do not belong to a role that authorizes the requested action, or none of the roles to which you belong allow the action for the requested album.</value>
+  </data>
+  <data name="Business_Ex_Msg" xml:space="preserve">
+    <value>An error has occurred in the GalleryServer.Business namespace.</value>
+  </data>
+  <data name="Data_Ex_Msg" xml:space="preserve">
+    <value>An error has occurred in the GalleryServer.Data namespace.</value>
+  </data>
+  <data name="Web_Ex_Msg" xml:space="preserve">
+    <value>An error has occurred in the GalleryServer.Web namespace.</value>
+  </data>
+  <data name="UnsupportedMediaObjectType_Ex_Msg2" xml:space="preserve">
+    <value>Files of this type ({0}) are not allowed to be added to the gallery.</value>
+  </data>
+  <data name="CannotWriteToDirectory_Ex_Msg" xml:space="preserve">
+    <value>Gallery Server cannot write to a directory.</value>
+  </data>
+  <data name="CannotWriteToDirectory_Ex_Msg2" xml:space="preserve">
+    <value>Gallery Server cannot write to the directory "{0}".</value>
+  </data>
+  <data name="CannotReadFromDirectory_Ex_Msg" xml:space="preserve">
+    <value>Gallery Server cannot read from a directory. This may be due to insufficient permissions. Check that the directory exists and that the IIS application pool has read permission for it.</value>
+  </data>
+  <data name="CannotReadFromDirectory_Ex_Msg2" xml:space="preserve">
+    <value>Gallery Server cannot read from the directory "{0}". This may be due to insufficient permissions. Check that the directory exists and that the web application has read permission for it.</value>
+  </data>
+  <data name="Cannot_Send_Email_Lbl" xml:space="preserve">
+    <value>Cannot send e-mail</value>
+  </data>
+  <data name="Email_Subject_Prefix_When_Ex_Type_Present" xml:space="preserve">
+    <value>Error:</value>
+    <comment>The text to prefix with the exception type for use as an e-mail subject. Applies only when the exception type is known.</comment>
+  </data>
+  <data name="Email_Subject_When_No_Ex_Type_Present" xml:space="preserve">
+    <value>Error Report</value>
+    <comment>The subject to use in an e-mail when the exception type is unknown</comment>
+  </data>
+  <data name="Err_AppErrorId_Lbl" xml:space="preserve">
+    <value>App Event ID</value>
+  </data>
+  <data name="Err_EventType_Lbl" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Err_Cookies_Lbl" xml:space="preserve">
+    <value>Cookies</value>
+  </data>
+  <data name="Err_ExceptionData_Lbl" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Err_ExceptionType_Lbl" xml:space="preserve">
+    <value>Exception Type</value>
+  </data>
+  <data name="Err_FormVariables_Lbl" xml:space="preserve">
+    <value>Form Variables</value>
+  </data>
+  <data name="Err_GalleryId_Lbl" xml:space="preserve">
+    <value>Gallery ID</value>
+  </data>
+  <data name="Err_InnerExData_Lbl" xml:space="preserve">
+    <value>Inner Ex Data</value>
+  </data>
+  <data name="Err_InnerExMessage_Lbl" xml:space="preserve">
+    <value>Inner Ex Message</value>
+  </data>
+  <data name="Err_InnerExSource_Lbl" xml:space="preserve">
+    <value>Inner Ex Source</value>
+  </data>
+  <data name="Err_InnerExStackTrace_Lbl" xml:space="preserve">
+    <value>Inner Ex Stack Trace</value>
+  </data>
+  <data name="Err_InnerExTargetSite_Lbl" xml:space="preserve">
+    <value>Inner Ex Target Site</value>
+  </data>
+  <data name="Err_InnerExType_Lbl" xml:space="preserve">
+    <value>Inner Ex Type</value>
+  </data>
+  <data name="Err_Message_Lbl" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Err_Missing_Data_Txt" xml:space="preserve">
+    <value>&lt;unknown&gt;</value>
+    <comment>The text to use when a field is empty, such as Exception.TargetSite</comment>
+  </data>
+  <data name="Err_Msg_Label" xml:space="preserve">
+    <value>Error:</value>
+  </data>
+  <data name="Err_No_Data_Txt" xml:space="preserve">
+    <value>&lt;none&gt;</value>
+    <comment>The text to use when no data exist, such as Form Variables</comment>
+  </data>
+  <data name="Err_ServerVariables_Lbl" xml:space="preserve">
+    <value>Server Variables</value>
+  </data>
+  <data name="Err_SessionVariables_Lbl" xml:space="preserve">
+    <value>Session Variables</value>
+  </data>
+  <data name="Err_Source_Lbl" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Err_StackTrace_Lbl" xml:space="preserve">
+    <value>Stack Trace</value>
+  </data>
+  <data name="Err_Summary" xml:space="preserve">
+    <value>Event Summary</value>
+  </data>
+  <data name="Err_TargetSite_Lbl" xml:space="preserve">
+    <value>Target Site</value>
+  </data>
+  <data name="Err_Timestamp_Lbl" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
+  <data name="Err_Url_Lbl" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Err_Email_Body_Prefix" xml:space="preserve">
+    <value>This error report was generated by Gallery Server.</value>
+  </data>
+  <data name="Err_HttpUserAgent_Lbl" xml:space="preserve">
+    <value>HTTP User Agent</value>
+  </data>
+  <data name="CannotDeleteAlbum_Ex_Msg" xml:space="preserve">
+    <value>Cannot delete album</value>
+  </data>
+  <data name="CannotDeleteAlbum_Ex_Msg2" xml:space="preserve">
+    <value>Cannot delete album: The album {0} cannot be deleted.</value>
+  </data>
+  <data name="InvalidLicenseException_Ex_Msg" xml:space="preserve">
+    <value>Gallery Server does not have a valid license or you are attempting to perform an action that violates the current license. You can purchase a license at www.galleryserverpro.com.</value>
+  </data>
+  <data name="InvalidGallery_Ex_Msg" xml:space="preserve">
+    <value>Invalid Gallery: A Gallery ID was omitted or, if specified, does not represent a valid gallery.</value>
+  </data>
+  <data name="InvalidGallery_Ex_Msg2" xml:space="preserve">
+    <value>Invalid Gallery ID: {0} does not represent a valid gallery.</value>
+  </data>
+</root>
