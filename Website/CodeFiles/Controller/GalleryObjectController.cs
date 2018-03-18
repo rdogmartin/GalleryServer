@@ -153,8 +153,7 @@ namespace GalleryServer.Web.Controller
         /// <param name="editedFilePath">The full path to the edited file. Ex: "C:\Dev\GS\Dev-Main\Website\App_Data\_Temp\85b74137-d795-40a5-8b93-bf31de0b0ca3.jpg"</param>
         /// <returns>An instance of <see cref="ActionResult" />.</returns>
         /// <exception cref="InvalidMediaObjectException">Thrown when a media asset is not found in the data store having ID <paramref name="mediaAssetId" />.</exception>
-        /// <exception cref="GallerySecurityException">Thrown when user is not authorized to edit the media asset and when the current
-        /// license does not support this functionality.</exception>
+        /// <exception cref="GallerySecurityException">Thrown when user is not authorized to edit the media asset.</exception>
         public static ActionResult ReplaceWithEditedImage(int mediaAssetId, string editedFilePath)
         {
             var mediaAsset = Factory.LoadMediaObjectInstance(new MediaLoadOptions(mediaAssetId) { IsWritable = true });
@@ -184,11 +183,6 @@ namespace GalleryServer.Web.Controller
             if (Factory.LoadGallerySetting(mediaAsset.GalleryId).MediaObjectPathIsReadOnly)
             {
                 throw new GallerySecurityException(Resources.GalleryServer.Task_Modify_Asset_Cannot_Modify_MediaPathIsReadOnly);
-            }
-
-            if (AppSetting.Instance.License.LicenseType <= LicenseLevel.Free)
-            {
-                throw new GallerySecurityException("The image editor requires Gallery Server Home & Nonprofit or higher.");
             }
 
             // Grab a reference to the original file name so we can delete it later.
@@ -846,11 +840,6 @@ namespace GalleryServer.Web.Controller
             {
                 IGalleryObjectMetadataItem md = metadataItems[i];
 
-                var metaDef = metaDefs.Find(md.MetadataItemName);
-
-                // The HTML editor requires the trial version or Home & Nonprofit or higher.
-                var editMode = (metaDef.UserEditMode == PropertyEditorMode.TinyMCEHtmlEditor && AppSetting.Instance.License.LicenseType < LicenseLevel.HomeNonprofit ? PropertyEditorMode.PlainTextEditor : metaDef.UserEditMode);
-
                 metaItems[i] = new MetaItem
                 {
                     Id = md.MediaObjectMetadataId,
@@ -860,7 +849,7 @@ namespace GalleryServer.Web.Controller
                     Desc = md.Description,
                     Value = md.Value,
                     //IsEditable = metaDef.IsEditable,
-                    EditMode = editMode
+                    EditMode = metaDefs.Find(md.MetadataItemName).UserEditMode
                 };
 
                 if (md.MetadataItemName == MetadataItemName.Rating)
@@ -1894,13 +1883,8 @@ namespace GalleryServer.Web.Controller
             {
                 var gs = Factory.LoadGallerySetting(mediaAsset.GalleryId);
                 bool requiresWatermark = false;
-                bool applyWatermark = gs.ApplyWatermark;
 
-                if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired)
-                {
-                    requiresWatermark = true;
-                }
-                else if (applyWatermark)
+                if (gs.ApplyWatermark)
                 {
                     // If the user belongs to a role with watermarks set to visible, then show it; otherwise don't show the watermark.
                     if (!Utils.IsUserAuthorized(SecurityActions.HideWatermark, RoleController.GetGalleryServerRolesForUser(), mediaAsset.Parent.Id, mediaAsset.GalleryId, mediaAsset.IsPrivate, ((IAlbum)mediaAsset.Parent).IsVirtualAlbum))

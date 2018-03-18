@@ -566,15 +566,6 @@ if ($lp.length > 0) {
       asDataSchema.SettingValue = "3.2.0";
 
       ctx.SaveChanges();
-
-      // Task 674: Add/update Enterprise UI templates introduced in 3.2.0
-      // [2016-02-17] The templates have been upgraded for 4.0, so this no longer applies. Skip it. The 4.0 migration code will insert them.
-      //var pkRow = ctx.AppSettings.Single(a => a.SettingName == "ProductKey");
-
-      //if (pkRow.SettingValue == Constants.LicenseKeyEnterprise)
-      //{
-      //  SeedController.InsertAdditionalUiTemplates(ctx);
-      //}
     }
 
     /// <summary>

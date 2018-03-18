@@ -523,37 +523,7 @@ namespace GalleryServer.Web.Controller
         /// </summary>
         private static void ValidateActiveDirectoryRequirements()
         {
-            ValidateActiveDirectoryMeetsLicenseRequirements();
-
             ValidateActiveDirectoryRoleProviderRequirements();
-        }
-
-        /// <summary>
-        /// Verify that if the Active Directory membership or role provider is being used, a qualifying license has been entered or the user is in a
-        /// trial/trial expired situation. If an incompatible license is found, switch the license type to <see cref="LicenseLevel.TrialExpired" />.
-        /// This will trigger the trial expired behavior (watermark and read-only admin settings). Also update the reason, which will be displayed
-        /// on the site settings page.
-        /// </summary>
-        private static void ValidateActiveDirectoryMeetsLicenseRequirements()
-        {
-            // OK if we're in the free trial, trial expired. NOT OK for FREE and Home & Nonprofit editions
-            var invalidActiveDirectoryLicenses = new[] { LicenseLevel.Free, LicenseLevel.HomeNonprofit };
-
-            if (invalidActiveDirectoryLicenses.Contains(AppSetting.Instance.License.LicenseType))
-            {
-                if (UserController.MembershipGsp.GetType().ToString() == GlobalConstants.ActiveDirectoryMembershipProviderName)
-                {
-                    AppSetting.Instance.License.LicenseType = LicenseLevel.TrialExpired;
-                    AppSetting.Instance.License.IsValid = false;
-                    AppSetting.Instance.License.KeyInvalidReason = "The Active Directory Membership Provider requires Gallery Server Enterprise or higher. Enter a qualifying license key to enable this feature.";
-                }
-                else if (RoleController.RoleGsp.GetType().ToString() == GlobalConstants.ActiveDirectoryRoleProviderName)
-                {
-                    AppSetting.Instance.License.LicenseType = LicenseLevel.TrialExpired;
-                    AppSetting.Instance.License.IsValid = false;
-                    AppSetting.Instance.License.KeyInvalidReason = "The Active Directory Role Provider requires Gallery Server Enterprise or higher. Enter a qualifying license key to enable this feature.";
-                }
-            }
         }
 
         /// <summary>
@@ -783,7 +753,6 @@ namespace GalleryServer.Web.Controller
                 TopRatedUrl = Utils.GetTopRatedUrl(),
                 HostUrl = Utils.GetHostUrl(),
                 AllowGalleryAdminToManageUsersAndRoles = AppSetting.Instance.AllowGalleryAdminToManageUsersAndRoles,
-                License = AppSetting.Instance.License.LicenseType,
                 IsDebugEnabled = Utils.IsDebugEnabled
             };
         }

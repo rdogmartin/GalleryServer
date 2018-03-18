@@ -228,19 +228,6 @@ namespace GalleryServer.Web.Pages.Admin
     {
       AdminPageTitle = Resources.GalleryServer.Admin_Albums_General_Page_Header;
 
-      if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = Resources.GalleryServer.Admin_Site_Settings_ProductKey_NotEntered_Label,
-          Message = Resources.GalleryServer.Admin_Need_Product_Key_Msg2,
-          Style = MessageStyle.Info
-        };
-
-        OkButtonBottom.Enabled = false;
-        OkButtonTop.Enabled = false;
-      }
-
       DataBindControlsFirstTime();
     }
 

@@ -1,1 +1,0 @@
---This file is required when creating the initial Gallery Server administrator. It is automatically deleted once the first administrator has been created.

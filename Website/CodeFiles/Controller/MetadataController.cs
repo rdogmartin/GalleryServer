@@ -57,9 +57,6 @@ namespace GalleryServer.Web.Controller
 
       var metaDef = Factory.LoadGallerySetting(go.GalleryId).MetadataDisplaySettings.Find(md.MetadataItemName);
 
-      // The HTML editor requires the trial version or Home & Nonprofit or higher.
-      var editMode = (metaDef.UserEditMode == PropertyEditorMode.TinyMCEHtmlEditor && AppSetting.Instance.License.LicenseType < LicenseLevel.HomeNonprofit ? PropertyEditorMode.PlainTextEditor : metaDef.UserEditMode);
-
       return new Entity.MetaItem
       {
         Id = md.MediaObjectMetadataId,
@@ -69,7 +66,7 @@ namespace GalleryServer.Web.Controller
         Desc = md.Description,
         Value = md.Value,
         //IsEditable = metaDef.IsEditable,
-        EditMode = editMode
+        EditMode = metaDef.UserEditMode
       };
     }
 
@@ -363,11 +360,6 @@ namespace GalleryServer.Web.Controller
     /// <param name="galleryId">The gallery ID.</param>
     public static void WriteItemForGalleryAsync(MetadataItemName metaName, int galleryId)
     {
-      if (AppSetting.Instance.License.LicenseType < LicenseLevel.Enterprise)
-      {
-        throw new Exception("Batch metadata writing to the media files requires Gallery Server Enterprise or higher. To unlock this feature, enter a qualifying license key.");
-      }
-
       var userName = Utils.UserName;
       var album = Factory.LoadRootAlbumInstance(galleryId);
       var gallerySettings = Factory.LoadGallerySetting(galleryId);
@@ -583,9 +575,6 @@ namespace GalleryServer.Web.Controller
 
         var metaDef = Factory.LoadGallerySetting(galleryId).MetadataDisplaySettings.Find(tagName);
 
-        // The HTML editor requires the trial version or Home & Nonprofit or higher.
-        var editMode = (metaDef.UserEditMode == PropertyEditorMode.TinyMCEHtmlEditor && AppSetting.Instance.License.LicenseType < LicenseLevel.HomeNonprofit ? PropertyEditorMode.PlainTextEditor : metaDef.UserEditMode);
-
         tagMi = new Entity.MetaItem
         {
           Id = int.MinValue,
@@ -595,7 +584,7 @@ namespace GalleryServer.Web.Controller
           Desc = tagName.ToString(),
           Value = String.Empty,
           //IsEditable = metaDef.IsEditable,
-          EditMode = editMode
+          EditMode = metaDef.UserEditMode
         };
 
         Array.Resize(ref meta, meta.Count() + 1);

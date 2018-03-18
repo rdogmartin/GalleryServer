@@ -105,8 +105,7 @@ namespace GalleryServer.Business.Interfaces
 
     /// <summary>
     /// Gets or sets a value indicating whether to persist this meta item to the media file during a save operation. Defaults to 
-    /// <see cref="IMetadataDefinition.PersistToFile" /> when not specified. Always returns <c>false</c> when the current license
-    /// is <see cref="LicenseLevel.Free" /> or <see cref="LicenseLevel.TrialExpired" />.
+    /// <see cref="IMetadataDefinition.PersistToFile" /> when not specified.
     /// </summary>
     /// <value><c>true</c> if this meta item should be persisted to the media file; otherwise, <c>false</c>.</value>
     bool PersistToFile { get; set; }

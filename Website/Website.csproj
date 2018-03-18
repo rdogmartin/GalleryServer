@@ -143,7 +143,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App_GlobalResources\gs-ftr-logo.png" />
     <Content Include="App_Data\Family portrait.jpg" />
     <Content Include="App_Data\Nature path.jpg" />
     <Content Include="App_Data\install.txt" />

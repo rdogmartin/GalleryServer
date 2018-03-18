@@ -113,16 +113,7 @@ namespace GalleryServer.Web.gs.pages.admin
 
       OkButtonIsVisible = false;
 
-      if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = Resources.GalleryServer.Admin_Site_Settings_ProductKey_NotEntered_Label,
-          Message = Resources.GalleryServer.Admin_Need_Product_Key_Msg2,
-          Style = MessageStyle.Info
-        };
-      }
-      else if (string.IsNullOrWhiteSpace(AppSetting.Instance.FFmpegPath))
+      if (string.IsNullOrWhiteSpace(AppSetting.Instance.FFmpegPath))
       {
         ClientMessage = new ClientMessageOptions
         {

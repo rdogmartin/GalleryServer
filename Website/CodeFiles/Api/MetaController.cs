@@ -305,22 +305,6 @@ namespace GalleryServer.Web.Api
 
 		#region Functions
 
-		///// <summary>
-		///// Verifies the application is running an Enterprise License, throwing a <see cref="GallerySecurityException" />
-		///// if it is not.
-		///// </summary>
-		///// <exception cref="GallerySecurityException">Thrown when the application is not running an Enterprise License.
-		///// </exception>
-		//private static void ValidateEnterpriseLicense()
-		//{
-		//	if (AppSetting.Instance.License.LicenseType != LicenseLevel.Enterprise)
-		//	{
-		//		AppEventController.LogEvent("Attempt to use a feature that requires an Enterprise License.", null, EventType.Warning);
-
-		//		throw new GallerySecurityException("Attempt to use a feature that requires an Enterprise License.");
-		//	}
-		//}
-
 		// WARNING: Given the current API, there is no way to verify the user has permission to 
 		// view the specified meta ID, so we'll comment out this method to ensure it isn't used.
 		///// <summary>

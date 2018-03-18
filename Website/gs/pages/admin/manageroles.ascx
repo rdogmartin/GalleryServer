@@ -386,9 +386,6 @@
         
           if (!gspRoleData.IsNew)
             $("input.gsp_roleDeleteBtn", roleHeader).show().click(roleDeleteClick);
-        
-          if (<%= (GalleryServer.Business.AppSetting.Instance.License.LicenseType == GalleryServer.Business.LicenseLevel.TrialExpired).ToString().ToLowerInvariant() %>)
-          $("input", roleHeader).prop('disabled', true).attr('title', 'Disabled - Enter a license key to restore functionality');
         };
       
         bindOptions();

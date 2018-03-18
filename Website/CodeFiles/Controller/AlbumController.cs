@@ -753,11 +753,6 @@ namespace GalleryServer.Web.Controller
         /// <returns>System.String.</returns>
         public static string GetRssUrl(IAlbum album)
         {
-            if (AppSetting.Instance.License.LicenseType < LicenseLevel.Enterprise)
-            {
-                return null;
-            }
-
             switch (album.VirtualAlbumType)
             {
                 case VirtualAlbumType.NotVirtual:

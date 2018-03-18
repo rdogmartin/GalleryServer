@@ -173,10 +173,6 @@
     <value>Unsuccessful login...</value>
     <comment>&lt;2007.12.08&gt; Displayed when user tries to log in but user name or password is incorrect.</comment>
   </data>
-  <data name="Footer_Logo_Tooltip" xml:space="preserve">
-    <value>Powered by Gallery Server {0}: Digital Asset Management and Web Gallery Software</value>
-    <comment>&lt;2016.04.20&gt; The string that appears in the footer of every Gallery Server page.</comment>
-  </data>
   <data name="Default_Task_Cancel_Button_Text" xml:space="preserve">
     <value>Cancel</value>
     <comment>&lt;2007.12.08&gt; The default caption on the Cancel Button on task pages (pages in the task directory.) This value may be overwritten by the page.</comment>
@@ -1810,41 +1806,9 @@
     <value>Welcome to Gallery Server</value>
     <comment>&lt;2016.04.20&gt;</comment>
   </data>
-  <data name="Admin_In_Trial_Period_Msg" xml:space="preserve">
-    <value>You are going to love your new gallery! Just so you know, in {0} days your gallery will go into reduced functionality mode. You can get back to normal by entering a &lt;a href="https://galleryserverpro.com/buy/"&gt;license key&lt;/a&gt;. Until then, enjoy!</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
-  <data name="Admin_Need_Product_Key_Msg" xml:space="preserve">
-    <value>A license key is required to restore full functionality. &lt;a href="https://galleryserverpro.com/buy/" title="Get a license key"&gt;Get one here&lt;/a&gt;.</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
-  <data name="Admin_Need_Product_Key_Hdr" xml:space="preserve">
-    <value>Attention</value>
-    <comment>&lt;2013.06.01&gt;</comment>
-  </data>
-  <data name="Admin_Save_ProductKey_Success_Hdr" xml:space="preserve">
-    <value>License Key Successful</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
-  <data name="Admin_Save_ProductKey_Success_Msg" xml:space="preserve">
-    <value>The license key has been successfully entered, and your web site is fully operational. Enjoy your gallery!</value>
-    <comment>&lt;2010.10.12&gt;</comment>
-  </data>
   <data name="Admin_Backup_Restore_Cannot_Restore_File_Label" xml:space="preserve">
     <value>The following error occurred while restoring the data: </value>
     <comment>&lt;2008.10.17&gt;</comment>
-  </data>
-  <data name="Admin_Site_Settings_ProductKey_Correct_Label" xml:space="preserve">
-    <value>Valid license key</value>
-    <comment>&lt;2010.10.12&gt;</comment>
-  </data>
-  <data name="Admin_Site_Settings_ProductKey_NotEntered_Label" xml:space="preserve">
-    <value>A license key has not been entered</value>
-    <comment>&lt;2010.10.12&gt;</comment>
-  </data>
-  <data name="Admin_Need_Product_Key_Msg2" xml:space="preserve">
-    <value>Attention: A license key is required to restore full functionality. Get one &lt;a href="https://galleryserverpro.com/buy/" title="Get a license key"&gt;here&lt;/a&gt; and enter it on the Site Settings page.</value>
-    <comment>&lt;2016.04.20&gt;</comment>
   </data>
   <data name="Task_Synch_Album_Title_Prefix_Text" xml:space="preserve">
     <value>Album:</value>
@@ -4053,10 +4017,6 @@
   <data name="Admin_Templates_Cannot_Modify_Default_Tmpl_Msg" xml:space="preserve">
     <value>Cannot persist changes: You cannot modify or delete the default template.</value>
     <comment>&lt;2013.06.01&gt;</comment>
-  </data>
-  <data name="Admin_Templates_Cannot_Save_Tmpl_Insufficient_License_Msg" xml:space="preserve">
-    <value>&lt;p&gt;Cannot persist changes: You must be running Gallery Server Enterprise or higher to edit UI templates. Enter a qualifying license key to enable this feature.&lt;/p&gt;&lt;p&gt;You can, however, switch templates by enabling or disabling albums on the Target Albums tab.&lt;/p&gt;</value>
-    <comment>&lt;2016.04.20&gt;</comment>
   </data>
   <data name="Admin_Media_Templates_Cannot_Delete_Default_Tmpl_Msg" xml:space="preserve">
     <value>Cannot delete: You cannot delete the default template unless you first delete the other templates for this MIME type.</value>

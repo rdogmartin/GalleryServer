@@ -58,18 +58,6 @@ namespace GalleryServer.Web.Pages.Admin
 			}
 		}
 
-		/// <summary>
-		/// Gets a value indicating whether the user is allowed to save changes on this page.
-		/// </summary>
-		/// <value><c>true</c> if saving is enabled; otherwise, <c>false</c>.</value>
-		private static bool SavingIsEnabled
-		{
-			get
-			{
-				return (AppSetting.Instance.License.IsValid);
-			}
-		}
-
 		#endregion
 
 		#region Protected Events
@@ -189,22 +177,6 @@ namespace GalleryServer.Web.Pages.Admin
 		private void ConfigureControlsFirstTime()
 		{
 			AdminPageTitle = Resources.GalleryServer.Admin_Gallery_Settings_General_Page_Header;
-
-			OkButtonBottom.Enabled = SavingIsEnabled;
-			OkButtonTop.Enabled = SavingIsEnabled;
-
-			if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired)
-			{
-				ClientMessage = new ClientMessageOptions
-													{
-														Title = Resources.GalleryServer.Admin_Site_Settings_ProductKey_NotEntered_Label,
-														Message = Resources.GalleryServer.Admin_Need_Product_Key_Msg2,
-														Style = MessageStyle.Info
-													};
-
-				OkButtonBottom.Enabled = false;
-				OkButtonTop.Enabled = false;
-			}
 
 			this.wwDataBinder.DataBind();
 

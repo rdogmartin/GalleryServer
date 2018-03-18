@@ -1970,15 +1970,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You are going to love your new gallery! Just so you know, in {0} days your gallery will go into reduced functionality mode. You can get back to normal by entering a &lt;a href=&quot;https://galleryserverpro.com/buy/&quot;&gt;license key&lt;/a&gt;. Until then, enjoy!.
-        /// </summary>
-        internal static string Admin_In_Trial_Period_Msg {
-            get {
-                return ResourceManager.GetString("Admin_In_Trial_Period_Msg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;This permission allows a user to add an album. Note: When moving or copying an album, users must have this permission on the destination album.&lt;/p&gt;&lt;p&gt;When a user moves or copies an album, any media assets within the album are also transferred regardless of whether the user has Add media asset permission on the destination album.&lt;/p&gt;.
         /// </summary>
         internal static string Admin_Manage_Roles_AddAlbum_Bdy {
@@ -3699,51 +3690,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention.
-        /// </summary>
-        internal static string Admin_Need_Product_Key_Hdr {
-            get {
-                return ResourceManager.GetString("Admin_Need_Product_Key_Hdr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A license key is required to restore full functionality. &lt;a href=&quot;https://galleryserverpro.com/buy/&quot; title=&quot;Get a license key&quot;&gt;Get one here&lt;/a&gt;..
-        /// </summary>
-        internal static string Admin_Need_Product_Key_Msg {
-            get {
-                return ResourceManager.GetString("Admin_Need_Product_Key_Msg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Attention: A license key is required to restore full functionality. Get one &lt;a href=&quot;https://galleryserverpro.com/buy/&quot; title=&quot;Get a license key&quot;&gt;here&lt;/a&gt; and enter it on the Site Settings page..
-        /// </summary>
-        internal static string Admin_Need_Product_Key_Msg2 {
-            get {
-                return ResourceManager.GetString("Admin_Need_Product_Key_Msg2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to License Key Successful.
-        /// </summary>
-        internal static string Admin_Save_ProductKey_Success_Hdr {
-            get {
-                return ResourceManager.GetString("Admin_Save_ProductKey_Success_Hdr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The license key has been successfully entered, and your web site is fully operational. Enjoy your gallery!.
-        /// </summary>
-        internal static string Admin_Save_ProductKey_Success_Msg {
-            get {
-                return ResourceManager.GetString("Admin_Save_ProductKey_Success_Msg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Save Successful.
         /// </summary>
         internal static string Admin_Save_Success_Hdr {
@@ -4113,29 +4059,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Valid license key.
-        /// </summary>
-        internal static string Admin_Site_Settings_ProductKey_Correct_Label {
-            get {
-                return ResourceManager.GetString("Admin_Site_Settings_ProductKey_Correct_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Version.
         /// </summary>
         internal static string Admin_Site_Settings_ProductKey_Hdr {
             get {
                 return ResourceManager.GetString("Admin_Site_Settings_ProductKey_Hdr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A license key has not been entered.
-        /// </summary>
-        internal static string Admin_Site_Settings_ProductKey_NotEntered_Label {
-            get {
-                return ResourceManager.GetString("Admin_Site_Settings_ProductKey_NotEntered_Label", resourceCulture);
             }
         }
         
@@ -4217,15 +4145,6 @@ namespace Resources {
         internal static string Admin_Templates_Cannot_Save_No_Tmpl_Msg {
             get {
                 return ResourceManager.GetString("Admin_Templates_Cannot_Save_No_Tmpl_Msg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;Cannot persist changes: You must be running Gallery Server Enterprise or higher to edit UI templates. Enter a qualifying license key to enable this feature.&lt;/p&gt;&lt;p&gt;You can, however, switch templates by enabling or disabling albums on the Target Albums tab.&lt;/p&gt;.
-        /// </summary>
-        internal static string Admin_Templates_Cannot_Save_Tmpl_Insufficient_License_Msg {
-            get {
-                return ResourceManager.GetString("Admin_Templates_Cannot_Save_Tmpl_Insufficient_License_Msg", resourceCulture);
             }
         }
         
@@ -7916,15 +7835,6 @@ namespace Resources {
         internal static string Error_User_Album_Parent_Invalid_Ex_Msg {
             get {
                 return ResourceManager.GetString("Error_User_Album_Parent_Invalid_Ex_Msg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Powered by Gallery Server {0}: Digital Asset Management and Web Gallery Software.
-        /// </summary>
-        internal static string Footer_Logo_Tooltip {
-            get {
-                return ResourceManager.GetString("Footer_Logo_Tooltip", resourceCulture);
             }
         }
         

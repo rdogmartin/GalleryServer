@@ -102,9 +102,7 @@
     <Compile Include="Album.cs" />
     <Compile Include="AlbumDeleteBehavior.cs" />
     <Compile Include="AlbumDeleteValidator.cs" />
-    <Compile Include="Entity\LicenseServerResult.cs" />
     <Compile Include="Entity\TagCacheItem.cs" />
-    <Compile Include="Entity\VersionKey.cs" />
     <Compile Include="MediaLoadOptions.cs" />
     <Compile Include="AlbumProfile.cs" />
     <Compile Include="AlbumProfileCollection.cs" />

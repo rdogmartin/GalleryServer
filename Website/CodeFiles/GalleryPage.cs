@@ -1277,26 +1277,6 @@ namespace GalleryServer.Web.Pages
             get { return _uiTemplates ?? (_uiTemplates = new UiTemplateCollection(GalleryController.GetUiTemplates().Where(t => t.GalleryId == GalleryId))); }
         }
 
-        /// <summary>
-        /// Gets the Gallery Server logo.
-        /// </summary>
-        /// <value>An instance of <see cref="LiteralControl" />.</value>
-        protected LiteralControl GsLogo
-        {
-            get
-            {
-                var tooltip = String.Format(CultureInfo.CurrentCulture, Resources.GalleryServer.Footer_Logo_Tooltip, Utils.GetGalleryServerVersion());
-
-                return new LiteralControl(String.Format(CultureInfo.InvariantCulture, @"<footer class='gsp_addtopmargin5 gsp_footer'>
-        <a href='https://galleryserverpro.com' title='{0}'>
-         <img src='{1}' alt='{0}' />
-        </a>
-       </footer>",
-                                                        tooltip,
-                                                        Page.ClientScript.GetWebResourceUrl(this.GetType().BaseType, "GalleryServer.Web.App_GlobalResources.gs-ftr-logo.png")));
-            }
-        }
-
         #endregion
 
         #region Public Events
@@ -1394,13 +1374,13 @@ namespace GalleryServer.Web.Pages
                 aid = _album.Id;
             }
             // Then look for a request for the rated objects in the query string.
-            else if (navEnabled && Utils.IsQueryStringParameterPresent("rating") && AppSetting.Instance.License.LicenseType >= LicenseLevel.HomeNonprofit)
+            else if (navEnabled && Utils.IsQueryStringParameterPresent("rating"))
             {
                 _album = GalleryObjectController.GetRatedMediaObjects(Utils.GetQueryStringParameterString("rating"), Utils.GetQueryStringParameterInt32("top"), GalleryControl.GalleryId, GetGalleryObjectFilter(GalleryObjectType.MediaObject));
                 aid = _album.Id;
             }
             // Then look for a request for the latest objects in the query string.
-            else if (navEnabled && Utils.IsQueryStringParameterPresent("latest") && AppSetting.Instance.License.LicenseType >= LicenseLevel.HomeNonprofit)
+            else if (navEnabled && Utils.IsQueryStringParameterPresent("latest"))
             {
                 _album = GalleryObjectController.GetMostRecentlyAddedGalleryObjects(Utils.GetQueryStringParameterInt32("latest"), GalleryControl.GalleryId, GetGalleryObjectFilter(GalleryObjectType.MediaObject));
                 aid = _album.Id;

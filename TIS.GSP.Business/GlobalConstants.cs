@@ -92,23 +92,6 @@ namespace GalleryServer.Business
     public const string V4SchemaUpdateRequiredFileName = "v4_schema_update_required.txt";
 
     /// <summary>
-    /// Gets the name of the file containing the version key. This is a file distributed with commercial versions that indicates
-    /// the version and license type a user has purchased. It is expected that users will place this file in the App_Data directory
-    /// after the initial purchase. Upgrade packages should include new version key files automatically. Ex: "version_key.txt"
-    /// </summary>
-    public const string VersionKeyFileName = "version_key.txt";
-
-    /// <summary>
-    /// Gets the URTL to the license server. When app is compiled in DEBUG mode, returns the URL to the dev license server; otherwise
-    /// returns the prod license server. Ex: "http://dev.galleryserverpro.com/woocommerce/", "https://galleryserverpro.com/woocommerce/"
-    /// </summary>
-#if DEBUG
-    public const string LicenseServerUrl = "http://dev.galleryserverpro.com/woocommerce/";
-#else
-    public const string LicenseServerUrl = "https://galleryserverpro.com/woocommerce/";
-#endif
-
-    /// <summary>
     /// Gets the instance ID to use when the license activation algorithm was unable to reach the license server. The instance ID is
     /// a string stored in <see cref="AppSetting.InstanceId" /> and is required when deactivating a license.
     /// </summary>

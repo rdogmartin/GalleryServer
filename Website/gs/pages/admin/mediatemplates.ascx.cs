@@ -264,47 +264,11 @@ namespace GalleryServer.Web.Pages.Admin
       BindMediaTemplate();
 
       AdminPageTitle = Resources.GalleryServer.Admin_Media_Templates_Page_Header;
-
-      if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = Resources.GalleryServer.Admin_Site_Settings_ProductKey_NotEntered_Label,
-          Message = Resources.GalleryServer.Admin_Need_Product_Key_Msg2,
-          Style = MessageStyle.Info
-        };
-
-        btnSave.Enabled = btnCancel.Enabled = btnDelete.Enabled = false;
-      }
-      else if (AppSetting.Instance.License.LicenseType == LicenseLevel.Trial)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = "Media Template Editor enabled during trial",
-          Message = "<p>During the trial period, the Media Template editor is fully functional.</p><p>When the trial is over, you will need Gallery Server Enterprise or higher to make changes on this page.</p>",
-          Style = MessageStyle.Info
-        };
-
-        btnDelete.Enabled = false;
-      }
-      else if (AppSetting.Instance.License.LicenseType < LicenseLevel.Enterprise)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = "Gallery Server Enterprise required",
-          Message = "The Media Template Editor requires Gallery Server Enterprise or higher. To unlock this feature, enter a qualifying license key.",
-          Style = MessageStyle.Info
-        };
-
-        btnSave.Enabled = btnCancel.Enabled = btnDelete.Enabled = false;
-      }
     }
 
     private void ConfigureControlsEveryTime()
     {
       this.PageTitle = Resources.GalleryServer.Admin_Media_Templates_Page_Header;
-
-      btnDelete.Enabled = AppSetting.Instance.License.LicenseType >= LicenseLevel.Enterprise;
 
       CurrentMediaTemplate = GetSelectedMediaTemplate();
     }

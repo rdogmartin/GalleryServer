@@ -124,49 +124,6 @@ namespace GalleryServer.Web.Pages.Admin
     {
       AdminPageTitle = Resources.GalleryServer.Admin_Media_Objects_Metadata_Page_Header;
 
-      if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = Resources.GalleryServer.Admin_Site_Settings_ProductKey_NotEntered_Label,
-          Message = Resources.GalleryServer.Admin_Need_Product_Key_Msg2,
-          Style = MessageStyle.Info
-        };
-
-        OkButtonBottom.Enabled = false;
-        OkButtonTop.Enabled = false;
-      }
-      else if (AppSetting.Instance.License.LicenseType == LicenseLevel.Free)
-      {
-        // If there are settings that apply only to higher editions, give user message.
-        var htmlEditorInUse = GallerySettings.MetadataDisplaySettings.Any(md => md.UserEditMode == PropertyEditorMode.TinyMCEHtmlEditor);
-        var metaWriteModeInUse = GallerySettings.MetadataDisplaySettings.Any(md => md.PersistToFile.GetValueOrDefault());
-
-        if (htmlEditorInUse || metaWriteModeInUse)
-        {
-          var msg = "<p>The settings listed below require the Home & Nonprofit or higher edition and have been automatically disabled. To make this message disappear, enter a qualifying license key or adjust the settings to be compatible with the free version.</p><ul class='gsp_addleftmargin5'>";
-
-          if (htmlEditorInUse)
-          {
-            msg += "<li>The HTML editor is specified for one or more properties. Refer to the 'Editable' column in the table below.</li>";
-          }
-
-          if (metaWriteModeInUse)
-          {
-            msg += "<li>Metadata file writing is enabled for one or more properties. Refer to the 'Write' column in the table below.</li>";
-          }
-
-          msg += "</ul>";
-
-          ClientMessage = new ClientMessageOptions
-          {
-            Title = "Some settings not compatible with the free version",
-            Message = msg,
-            Style = MessageStyle.Info
-          };
-        }
-      }
-
       BindMetadata();
 
       this.wwDataBinder.DataBind();

@@ -1063,20 +1063,6 @@ module Gs {
             task_addobjects,
             task_synchronize
         }
-
-        /**
-         * Specifies a Gallery Server license. Maps to LicenseLevel enumeration on the server. Some UI templates refer to the 
-         * numerical value of the enumeration, so if you change the value, check the UI templates.
-         */
-        export enum LicenseLevel {
-            NotSet = 0,
-            TrialExpired = 1,
-            Free = 2,
-            HomeNonprofit = 3,
-            Enterprise = 4,
-            EnterpriseUltimate = 5,
-            Trial = 6
-        }
     }
 
     interface QueryStringParms {
@@ -1143,15 +1129,13 @@ module Gs {
         AppUrl: string;
 
         /**
-        * Gets the URL to the list of recently added media objects. Requires trial mode or a Home & Nonprofit edition or higher license;
-        * otherwise it will be null. Ex: http://site.com/gallery/default.aspx?latest=50
+        * Gets the URL to the list of recently added media objects. Ex: http://site.com/gallery/default.aspx?latest=50
         * @property {string} LatestUrl
         */
         LatestUrl: string;
 
         /**
-        * Gets the URL to the list of top rated media objects. Requires trial mode or a Home & Nonprofit edition or higher license;
-        * otherwise it will be null. Ex: http://site.com/gallery/default.aspx?latest=50
+        * Gets the URL to the list of top rated media objects. Ex: http://site.com/gallery/default.aspx?latest=50
         * @property {string} TopRatedUrl
         */
         TopRatedUrl: string;
@@ -1160,11 +1144,6 @@ module Gs {
          * Gets a value indicating whether gallery administrators are allowed to create, edit, and delete users and roles.
          */
         AllowGalleryAdminToManageUsersAndRoles: boolean;
-
-        /**
-         *  Gets the license applied to the current application.
-         */
-        License: Enums.LicenseLevel;
 
         /**
          * Gets a value indicating whether the app is in debug mode. That is, it returns true when
@@ -1523,7 +1502,7 @@ module Gs {
         VirtualType: Enums.VirtualAlbumType;
 
         /**
-        * Gets or sets the RSS URL for the album. Will be null when an RSS URL is not valid (eg. for virtual root albums or when not running an Enterprise license.)
+        * Gets or sets the RSS URL for the album. Will be null when an RSS URL is not valid (eg. for virtual root albums)
         * @property {string} RssUrl
         */
         RssUrl: string;
@@ -3489,23 +3468,20 @@ module Gs {
             };
 
             tinyMCE.init(tinyMcePlainTextOptions);
+            
+            // Set up the HTML editor.
+            const tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
 
-            if (this.data.App.License >= Enums.LicenseLevel.HomeNonprofit) {
-                // Don't bother setting up the HTML editor for expired trials and the free version. This code won't do anything anyway since
-                // the server won't send any meta properties with editMode=3 (HTML editor).
-                const tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
+            tinyMceHtmlOptions.selector = `#${this.data.Settings.MediaClientId} section[data-editMode=3]`;
+            tinyMceHtmlOptions.plugins = ['code autolink image link textcolor placeholder'];
+            tinyMceHtmlOptions.image_advtab = true; // Add advanced tab to image editor
+            tinyMceHtmlOptions.verify_html = false; // Use Gallery Server's scrubber. When verify_html is ommitted or set to true, tinyMCE strips out invalid elements, but only on the client. 
+            tinyMceHtmlOptions.toolbar1 = 'formatselect fontsizeselect forecolor backcolor image';
+            tinyMceHtmlOptions.toolbar2 = 'undo redo | code bold italic link | alignleft aligncenter alignright | bullist numlist indent';
 
-                tinyMceHtmlOptions.selector = `#${this.data.Settings.MediaClientId} section[data-editMode=3]`;
-                tinyMceHtmlOptions.plugins = ['code autolink image link textcolor placeholder'];
-                tinyMceHtmlOptions.image_advtab = true; // Add advanced tab to image editor
-                tinyMceHtmlOptions.verify_html = false; // Use Gallery Server's scrubber. When verify_html is ommitted or set to true, tinyMCE strips out invalid elements, but only on the client. 
-                tinyMceHtmlOptions.toolbar1 = 'formatselect fontsizeselect forecolor backcolor image';
-                tinyMceHtmlOptions.toolbar2 = 'undo redo | code bold italic link | alignleft aligncenter alignright | bullist numlist indent';
+            delete tinyMceHtmlOptions.forced_root_block; // Remove forced_root_block setting to force it to inherit default value
 
-                delete tinyMceHtmlOptions.forced_root_block; // Remove forced_root_block setting to force it to inherit default value
-
-                tinyMCE.init(tinyMceHtmlOptions);
-            }
+            tinyMCE.init(tinyMceHtmlOptions);
         }
 
         private animateMediaObject() {
@@ -4466,22 +4442,19 @@ module Gs {
 
             tinyMCE.init(tinyMcePlainTextOptions);
 
-            if (this.data.App.License >= Enums.LicenseLevel.HomeNonprofit) {
-                // Don't bother setting up the HTML editor for expired trials and the free version. This code won't do anything anyway since
-                // the server won't send any meta properties with editMode=3 (HTML editor).
-                const tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
+            // Set up the HTML editor.
+            const tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
 
-                tinyMceHtmlOptions.selector = `#${this.data.Settings.RightPaneClientId} tr[data-editMode=3] section`;
-                tinyMceHtmlOptions.plugins = ['code autolink image link textcolor placeholder'];
-                tinyMceHtmlOptions.image_advtab = true; // Add advanced tab to image editor
-                tinyMceHtmlOptions.verify_html = false; // Use Gallery Server's scrubber. When verify_html is ommitted or set to true, tinyMCE strips out invalid elements, but only on the client. 
-                tinyMceHtmlOptions.toolbar1 = 'formatselect fontsizeselect forecolor backcolor image';
-                tinyMceHtmlOptions.toolbar2 = 'undo redo | code bold italic link | alignleft aligncenter alignright | bullist numlist indent';
+            tinyMceHtmlOptions.selector = `#${this.data.Settings.RightPaneClientId} tr[data-editMode=3] section`;
+            tinyMceHtmlOptions.plugins = ['code autolink image link textcolor placeholder'];
+            tinyMceHtmlOptions.image_advtab = true; // Add advanced tab to image editor
+            tinyMceHtmlOptions.verify_html = false; // Use Gallery Server's scrubber. When verify_html is ommitted or set to true, tinyMCE strips out invalid elements, but only on the client. 
+            tinyMceHtmlOptions.toolbar1 = 'formatselect fontsizeselect forecolor backcolor image';
+            tinyMceHtmlOptions.toolbar2 = 'undo redo | code bold italic link | alignleft aligncenter alignright | bullist numlist indent';
 
-                delete tinyMceHtmlOptions.forced_root_block; // Remove forced_root_block setting to force it to inherit default value
+            delete tinyMceHtmlOptions.forced_root_block; // Remove forced_root_block setting to force it to inherit default value
 
-                tinyMCE.init(tinyMceHtmlOptions);
-            }
+            tinyMCE.init(tinyMceHtmlOptions);
 
             // Get the tag value, stripping off trailing count if present. Ex: If tag="Animal (3)", change it to "Animal".
             // The parameter 'e' is expected to be a jQuery reference to the li element containing the tag.

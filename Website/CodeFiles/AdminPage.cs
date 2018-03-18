@@ -302,8 +302,6 @@ namespace GalleryServer.Web.Pages
 			AddUserControls();
 
 			ConfigureControls();
-
-			AddFooter();
 		}
 
 		//protected void AdminPage_BeforeHeaderControlsAdded(object sender, EventArgs e)
@@ -368,19 +366,6 @@ namespace GalleryServer.Web.Pages
 				string url = Utils.RemoveQueryStringParameter(Request.Url.PathAndQuery, "aid");
 
 				Utils.Redirect(url);
-			}
-		}
-
-		private void AddFooter()
-		{
-			// Add the GS version info to the end
-			if (this.AdminFooterPlaceHolder != null)
-			{
-				var license = AppSetting.Instance.License.LicenseType;
-				if (license == LicenseLevel.NotSet || license == LicenseLevel.Free)
-					AdminFooterPlaceHolder.Controls.Add(GsLogo);
-				
-				AdminFooterPlaceHolder.Controls.Add(new LiteralControl(string.Format("<p class='gsp_textcenter'>Gallery Server {0}</p>", Utils.GetGalleryServerVersion())));
 			}
 		}
 

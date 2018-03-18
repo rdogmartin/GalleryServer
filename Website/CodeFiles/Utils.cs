@@ -789,25 +789,24 @@ namespace GalleryServer.Web
 
         /// <summary>
         /// Gets the URL to the list of recently added media objects. Ex: http://site.com/gallery/default.aspx?latest=50
-        /// Requires gallery to be running in trial mode or under a Home &amp; Nonprofit edition or higher license; otherwise it returns null.
         /// </summary>
         /// <returns>Returns the URL to the recently added media objects.</returns>
         public static string GetLatestUrl()
         {
-            if (AppSetting.Instance.License.LicenseType >= LicenseLevel.HomeNonprofit)
-                return AddQueryStringParameter(GetCurrentPageUrl(), "latest=50");
-            else
-                return null;
+            return AddQueryStringParameter(GetCurrentPageUrl(), "latest=50");
         }
 
         /// <summary>
         /// Gets the URL to the list of top rated media objects. Ex: http://site.com/gallery/default.aspx?latest=50
-        /// Requires gallery to be running in trial mode or under a Home &amp; Nonprofit edition or higher license; otherwise it returns null.
+        /// Requires gallery to be using SQL Server (SQL CE throws an error); otherwise it returns null.
         /// </summary>
         /// <returns>Returns the URL to the top rated media objects.</returns>
+        /// <remarks>
+        /// See <see cref="GalleryObjectSearcher.GetRatedMediaObjects" /> for more information about why SQL CE is not supported.
+        /// </remarks>
         public static string GetTopRatedUrl()
         {
-            if (AppSetting.Instance.License.LicenseType >= LicenseLevel.HomeNonprofit && AppSetting.Instance.ProviderDataStore != ProviderDataStore.SqlCe)
+            if (AppSetting.Instance.ProviderDataStore != ProviderDataStore.SqlCe)
                 return AddQueryStringParameter(GetCurrentPageUrl(), "rating=highest&top=50");
             else
                 return null;

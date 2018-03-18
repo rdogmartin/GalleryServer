@@ -267,8 +267,6 @@ namespace GalleryServer.Web.Pages.Admin
 
       this.tvUC.RequiredSecurityPermissions = SecurityActions.AdministerSite | SecurityActions.AdministerGallery;
 
-      btnDelete.Enabled = AppSetting.Instance.License.LicenseType >= LicenseLevel.Enterprise;
-
       CurrentUiTemplate = GetSelectedJQueryTemplate();
     }
 
@@ -284,40 +282,6 @@ namespace GalleryServer.Web.Pages.Admin
       BindUiTemplate();
 
       AdminPageTitle = Resources.GalleryServer.Admin_UiTemplates_Page_Header;
-
-      if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = Resources.GalleryServer.Admin_Site_Settings_ProductKey_NotEntered_Label,
-          Message = Resources.GalleryServer.Admin_Need_Product_Key_Msg2,
-          Style = MessageStyle.Info
-        };
-
-        btnSave.Enabled = btnCancel.Enabled = btnDelete.Enabled = false;
-      }
-      else if (AppSetting.Instance.License.LicenseType == LicenseLevel.Trial)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = "Gallery Server Enterprise required for some features",
-          Message = "<p>During the trial period, the UI Template editor is fully functional.</p><p>When the trial is over, you can continue switching templates by enabling/disabling albums on the Target Albums tab. But you will need Gallery Server Enterprise or higher to edit the HTML or JavaScript on this page.</p>",
-          Style = MessageStyle.Info
-        };
-
-        btnDelete.Enabled = false;
-      }
-      else if (AppSetting.Instance.License.LicenseType < LicenseLevel.Enterprise)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = "Gallery Server Enterprise required for some features",
-          Message = "<p>You must have Gallery Server Enterprise or higher to edit the HTML or JavaScript on this page. To unlock this feature, enter a qualifying license key.</p><p>You can, however, switch templates by enabling or disabling albums on the Target Albums tab.</p>",
-          Style = MessageStyle.Info
-        };
-
-        btnDelete.Enabled = false;
-      }
     }
 
     private void BindDropDownLists()
@@ -482,20 +446,7 @@ namespace GalleryServer.Web.Pages.Admin
         }
       }
 
-      // TEST 2: This must be trial version or Enterprise or higher if saving changes to the HTML and/or JavaScript
-      if (AppSetting.Instance.License.LicenseType < LicenseLevel.Enterprise)
-      {
-        var htmlHasChanged = !CurrentUiTemplate.HtmlTemplate.Equals(txtTemplate.Text, StringComparison.Ordinal);
-        var scriptHasChanged = !CurrentUiTemplate.ScriptTemplate.Equals(txtScript.Text, StringComparison.Ordinal);
-
-        if (htmlHasChanged || scriptHasChanged)
-        {
-          invalidReason = Resources.GalleryServer.Admin_Templates_Cannot_Save_Tmpl_Insufficient_License_Msg;
-          return false;
-        }
-      }
-
-      // TEST 3: Verify no other template has the same name in this category.
+      // TEST 2: Verify no other template has the same name in this category.
       var tmpl = (from t in UiTemplates
                   where t.TemplateType == CurrentUiTemplate.TemplateType &&
                   t.GalleryId == GalleryId &&
@@ -509,7 +460,7 @@ namespace GalleryServer.Web.Pages.Admin
         return false;
       }
 
-      // TEST 4: Verify user isn't removing the last template from the root album.
+      // TEST 3: Verify user isn't removing the last template from the root album.
       var rootAlbumId = Factory.LoadRootAlbumInstance(GalleryId).Id;
 
       var curTmplNotAssignedToRootAlbum = !tvUC.SelectedAlbumIds.Contains(rootAlbumId); // Need to use tvUC.SelectedAlbumIds instead of CurrentUiTemplate.RootAlbumIds because CurrentUiTemplate has not yet been unbound
@@ -521,7 +472,7 @@ namespace GalleryServer.Web.Pages.Admin
         return false;
       }
 
-      // TEST 5: The default template cannot be renamed to something else.
+      // TEST 4: The default template cannot be renamed to something else.
       if (CurrentUiTemplate.Name.Equals("Default", StringComparison.OrdinalIgnoreCase) && !txtTemplateName.Text.Equals("Default", StringComparison.OrdinalIgnoreCase))
       {
         invalidReason = Resources.GalleryServer.Admin_Templates_Cannot_Save_No_Default_Tmpl_Msg;

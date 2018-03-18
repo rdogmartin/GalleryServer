@@ -93,14 +93,6 @@ namespace GalleryServer.Web.Pages
           {
             _centerPane.Controls.Add(MediaView);
           }
-
-          // Add the GS logo, if needed
-          var exludeLogoLicenses = new[] { LicenseLevel.Enterprise, LicenseLevel.EnterpriseUltimate, LicenseLevel.HomeNonprofit };
-
-          if (!exludeLogoLicenses.Contains(AppSetting.Instance.License.LicenseType))
-          {
-            _centerPane.Controls.Add(GsLogo);
-          }
         }
 
         return _centerPane;

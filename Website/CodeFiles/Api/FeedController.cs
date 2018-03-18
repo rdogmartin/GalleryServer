@@ -517,8 +517,6 @@ namespace GalleryServer.Web.Api
 
             options.DestinationPageUrl = album.FeedFormatterOptions.DestinationUrl; // Ex: "/dev/gs/default.aspx"
 
-            ValidateEnterpriseLicense(album);
-
             return Task.Factory.StartNew(() => BuildSyndicationFeed(album, writeStream, content.Headers.ContentType.MediaType, options, isAuthenticated));
         }
 
@@ -548,23 +546,6 @@ namespace GalleryServer.Web.Api
                     var rssFormatter = new Rss20FeedFormatter(feed);
                     rssFormatter.WriteTo(writer);
                 }
-            }
-        }
-
-        /// <summary>
-        /// Verifies the application is running an Enterprise License, throwing a <see cref="GallerySecurityException" />
-        /// if it is not.
-        /// </summary>
-        /// <param name="album">The album.</param>
-        /// <exception cref="GallerySecurityException">Thrown when the application is not running an Enterprise License.
-        /// </exception>
-        private static void ValidateEnterpriseLicense(IAlbum album)
-        {
-            if (AppSetting.Instance.License.LicenseType < LicenseLevel.Enterprise)
-            {
-                AppEventController.LogEvent("RSS/Atom feeds require an Enterprise License.", album.GalleryId, EventType.Warning);
-
-                throw new GallerySecurityException("RSS/Atom feeds require an Enterprise License.");
             }
         }
     }

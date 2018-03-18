@@ -73,11 +73,6 @@ namespace GalleryServer.Web.Entity
     public bool AllowGalleryAdminToManageUsersAndRoles { get; set; }
 
     /// <summary>
-    /// Gets the license applied to the current application.
-    /// </summary>
-    public Business.LicenseLevel License { get; set; }
-
-    /// <summary>
     /// Gets a value indicating whether the app is in debug mode. That is, it returns <c>true</c> when 
     /// debug = "true" in web.config and returns <c>false</c> when debug = "false".
     /// </summary>

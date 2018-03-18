@@ -308,47 +308,6 @@ namespace GalleryServer.Web.Pages.Admin
       AdminPageTitle = Resources.GalleryServer.Admin_Gallery_Manager_Page_Header;
 
       OkButtonIsVisible = false;
-      var isReadOnly = false;
-
-      if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired)
-      {
-        ClientMessage = new ClientMessageOptions
-                          {
-                            Title = Resources.GalleryServer.Admin_Site_Settings_ProductKey_NotEntered_Label,
-                            Message = Resources.GalleryServer.Admin_Need_Product_Key_Msg2,
-                            Style = MessageStyle.Info
-                          };
-
-        isReadOnly = true;
-      }
-      else if (AppSetting.Instance.License.LicenseType == LicenseLevel.Trial)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = "Gallery Manager enabled during trial",
-          Message = "<p>During the trial period, the Gallery Manager is fully functional.</p><p>When the trial is over, you will need Gallery Server Enterprise or higher to make changes on this page.</p>",
-          Style = MessageStyle.Info
-        };
-      }
-      else if (AppSetting.Instance.License.LicenseType < LicenseLevel.Enterprise)
-      {
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = "Gallery Server Enterprise required",
-          Message = "The Gallery Manager requires Gallery Server Enterprise or higher. To unlock this feature, enter a qualifying license key.",
-          Style = MessageStyle.Info
-        };
-
-        isReadOnly = true;
-      }
-
-      if (isReadOnly)
-      {
-        lbChangeGallery.Visible = false;
-
-        gvGalleries.Columns[0].Visible = false;
-        gvGalleries.ShowFooter = false;
-      }
 
       DataBindGalleriesComboBox();
 

@@ -684,9 +684,6 @@
                 bindNewUser();
             else
                 bindExistingUser();
-                
-            if (<%= (GalleryServer.Business.AppSetting.Instance.License.LicenseType == GalleryServer.Business.LicenseLevel.TrialExpired).ToString().ToLowerInvariant() %>)
-            $("input", userHeader).prop('disabled', true).attr('title', 'Disabled - Enter a license key to restore functionality');
         };
         
         var configTooltips = function () {

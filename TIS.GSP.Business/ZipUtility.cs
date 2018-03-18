@@ -857,7 +857,7 @@ namespace GalleryServer.Business
       bool applyWatermarkConfig = Factory.LoadGallerySetting(album.GalleryId).ApplyWatermark;
       bool userHasNoWatermarkPermission = SecurityManager.IsUserAuthorized(SecurityActions.HideWatermark, this._roles, album.Id, album.GalleryId, this._isAuthenticated, false, album.IsVirtualAlbum);
 
-      if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired || (applyWatermarkConfig && !userHasNoWatermarkPermission))
+      if (applyWatermarkConfig && !userHasNoWatermarkPermission)
       {
         applyWatermark = true;
       }

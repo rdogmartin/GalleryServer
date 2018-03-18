@@ -510,11 +510,7 @@ namespace GalleryServer.Web.Handler
                 bool applyWatermarkToThumbnails = GallerySettings.ApplyWatermarkToThumbnails;
                 bool isThumbnail = (_displayType == DisplayObjectType.Thumbnail);
 
-                if (AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired && !isThumbnail)
-                {
-                    requiresWatermark = true;
-                }
-                else if ((applyWatermark && !isThumbnail) || (applyWatermark && applyWatermarkToThumbnails && isThumbnail))
+                if ((applyWatermark && !isThumbnail) || (applyWatermark && applyWatermarkToThumbnails && isThumbnail))
                 {
                     // If the user belongs to a role with watermarks set to visible, then show it; otherwise don't show the watermark.
                     if (!Utils.IsUserAuthorized(SecurityActions.HideWatermark, RoleController.GetGalleryServerRolesForUser(), MediaObject.Parent.Id, GalleryId, MediaObject.IsPrivate, ((IAlbum)MediaObject.Parent).IsVirtualAlbum))

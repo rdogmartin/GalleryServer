@@ -92,12 +92,6 @@
                 
                 $(".gsp_m_write_btn", $('#<%= cid %>')).click(function (e) {
                     // User clicked the write metadata button. Send ajax request.
-                    var license = Gs.Vars['<%= cid %>'].gsData.App.License;
-                    if (license < 4) {
-                        Gs.Msg.show("Gallery Server Enterprise required", "Batch metadata writing to the media files requires Gallery Server Enterprise or higher. To unlock this feature, enter a qualifying license key.", { msgType: 'info', autoCloseDelay: 0 });
-                        return;
-                    }
-
                     if (Gs.Vars['<%= cid %>'].gsData.Settings.IsReadOnlyGallery) {
                         Gs.Msg.show("Metadata file writing canceled", "You cannot modify the original media files when the gallery is read only. This setting is configured on the Media Settings page.", { msgType: 'info', autoCloseDelay: 0 });
                         return;
@@ -158,11 +152,9 @@
 
                             "MetadataSync": function (row, cell, value, columnDef, dataContext) {
                                 // Note: The format() function is a custom function defined in gallery.ts.
-                                var license = Gs.Vars['<%= cid %>'].gsData.App.License;
-                                var showLock = license < 4 || license === 6; // Show lock for trial version or any license below Enterprise
                                 var isWritable = (dataContext.PersistToFile == null || dataContext.PersistToFile);
 
-                                var writeBtnHtml = "<a href='javascript:void(0)' data-id='{0}' class='{1} gs_adm_m_btn gsp_m_write_btn gs_rel' title='Write database metadata to the media files for all writable assets in the gallery'><span class='fa fa-lg fa-sign-out fa-rotate-270'></span>{2}</a>&nbsp;".format(value, isWritable ? "" : "gsp_hide ", showLock ? "<span class='fa fa-lock gsp_gold' title='Requires Gallery Server Enterprise or higher'></span>" : "");
+                                var writeBtnHtml = "<a href='javascript:void(0)' data-id='{0}' class='{1} gs_adm_m_btn gsp_m_write_btn gs_rel' title='Write database metadata to the media files for all writable assets in the gallery'><span class='fa fa-lg fa-sign-out fa-rotate-270'></span></a>&nbsp;".format(value, isWritable ? "" : "gsp_hide");
 
                                 var extractBtnHtml = "<a href='javascript:void(0)' data-id='" + value + "' class='gs_adm_m_btn gsp_m_extract_btn' title='Re-extract metadata for all assets in the gallery'><span class='fa fa-lg fa-sign-in fa-rotate-90'></span></a>";
 
@@ -190,12 +182,7 @@
                                     case 2:
                                         return '<span class="fa fa-lg fa-check-circle gsp_msgfriendly" title="Editing enabled"></span><span class="fa fa-fw fa-lg fa-pencil gsp_addleftpadding4 gs_edit_icon" title="Plain text editor"></span>';
                                     case 3:
-                                        var license = Gs.Vars['<%= cid %>'].gsData.App.License;
-                                        var showLock = (license < 3 || license === 6); // Show lock for trial version or any license below Home & Nonprofit
-                                        var lockIcon = "<span class='fa fa-lock gsp_gold' style='font-size:75%;' title='The HTML editor requires Gallery Server Home &amp; Nonprofit or higher'></span>";
-                                        var htmlIcon = '<span class="fa fa-lg fa-check-circle gsp_msgfriendly" title="Editing enabled"></span><span class="fa fa-fw fa-lg fa-code gsp_addleftpadding4 gs_edit_icon" title="HTML editor"></span>';
-
-                                        return showLock ? htmlIcon + lockIcon : htmlIcon;
+                                        return '<span class="fa fa-lg fa-check-circle gsp_msgfriendly" title="Editing enabled"></span><span class="fa fa-fw fa-lg fa-code gsp_addleftpadding4 gs_edit_icon" title="HTML editor"></span>';
                                     default:
                                         return '<span class="fa fa-lg fa-check-circle gsp_msgfriendly gsp_invisible" title="Editing enabled"></span><span class="fa fa-fw fa-lg fa-pencil gsp_addleftpadding4 gsp_invisible gs_edit_icon"></span>';
                                 }
