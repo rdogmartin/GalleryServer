@@ -3,3 +3,14 @@
 ################################################################################
 
 /.vs
+/Website/App_Data/GalleryData.sdf
+/Website/bin
+/Website/obj
+/Website/gs/mediaobjects
+/packages
+/TIS.GSP.Business/bin
+/TIS.GSP.Business/obj
+/TIS.GSP.Business.Interfaces/bin
+/TIS.GSP.Business.Resources/obj
+/TIS.GSP.Data/bin
+/TIS.GSP.Events/bin
