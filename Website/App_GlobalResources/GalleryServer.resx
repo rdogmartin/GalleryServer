@@ -1173,10 +1173,6 @@
     <value>Version:</value>
     <comment>&lt;2016.04.20&gt;</comment>
   </data>
-  <data name="Admin_Site_Settings_GSP_Home_Page" xml:space="preserve">
-    <value>Check &lt;a href="https://galleryserverpro.com/" title="Go to Gallery Server home page"&gt;galleryserverpro.com&lt;/a&gt; for a more recent version.</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
   <data name="Admin_Gallery_Settings_WebsiteTitleUrl_Label" xml:space="preserve">
     <value>Gallery title URL:</value>
     <comment>&lt;2010.10.12&gt;</comment>
@@ -1810,10 +1806,6 @@
     <value>Note: More than {0} files were skipped. The first {0} are shown below.</value>
     <comment>&lt;2008.10.17&gt;</comment>
   </data>
-  <data name="Admin_Site_Settings_ProductKey_Label" xml:space="preserve">
-    <value>License key:</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
   <data name="Site_Welcome_Msg" xml:space="preserve">
     <value>Welcome to Gallery Server</value>
     <comment>&lt;2016.04.20&gt;</comment>
@@ -1837,18 +1829,6 @@
   <data name="Admin_Save_ProductKey_Success_Msg" xml:space="preserve">
     <value>The license key has been successfully entered, and your web site is fully operational. Enjoy your gallery!</value>
     <comment>&lt;2010.10.12&gt;</comment>
-  </data>
-  <data name="Admin_Save_ProductKey_Incorrect_Hdr" xml:space="preserve">
-    <value>License Validation Issue</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
-  <data name="Cfg_productKey_Bdy" xml:space="preserve">
-    <value>&lt;p&gt;Gallery Server is fully functional for 30 days. After this trial period, the administration settings become read-only and a watermark is applied to all images. Full functionality can be restored at any time by entering a license key.&lt;/p&gt;&lt;p&gt;The license key starts with the characters "GS-" and is e-mailed to you after your purchase. Note that this is different than the version key, which is a text file you place in the App_Data directory.&lt;/p&gt;&lt;p&gt;&lt;a href="https://galleryserverpro.com/buy/" title="Get a license key for Gallery Server"&gt;Get a license key now&lt;/a&gt;&lt;/p&gt;</value>
-    <comment>&lt;2017.12.08&gt;</comment>
-  </data>
-  <data name="Cfg_productKey_Hdr" xml:space="preserve">
-    <value>License key</value>
-    <comment>&lt;2016.04.20&gt;</comment>
   </data>
   <data name="Admin_Backup_Restore_Cannot_Restore_File_Label" xml:space="preserve">
     <value>The following error occurred while restoring the data: </value>
@@ -1967,7 +1947,7 @@
     <comment>&lt;2010.10.12&gt;</comment>
   </data>
   <data name="Admin_Site_Settings_ProductKey_Hdr" xml:space="preserve">
-    <value>License</value>
+    <value>Version</value>
     <comment>&lt;2016.04.20&gt;</comment>
   </data>
   <data name="Admin_Gallery_Settings_ShowErrorDetails_Label" xml:space="preserve">
@@ -5236,18 +5216,6 @@
   </data>
   <data name="Admin_MediaObjects_SlideShowLoop_Tt" xml:space="preserve">
     <value>When enabled, the slideshow loops indefinitely</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
-  <data name="Admin_Site_Settings_LicenseEmail_Label" xml:space="preserve">
-    <value>License e-mail:</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
-  <data name="Cfg_licenseEmail_Bdy" xml:space="preserve">
-    <value>&lt;p&gt;Enter the e-mail address you used when you purchased Gallery Server.&lt;/p&gt;</value>
-    <comment>&lt;2016.04.20&gt;</comment>
-  </data>
-  <data name="Cfg_licenseEmail_Hdr" xml:space="preserve">
-    <value>License e-mail</value>
     <comment>&lt;2016.04.20&gt;</comment>
   </data>
   <data name="RbnOrg" xml:space="preserve">

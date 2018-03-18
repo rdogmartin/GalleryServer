@@ -159,7 +159,6 @@
     <Compile Include="GalleryControlSettingsCollection.cs" />
     <Compile Include="ImageMagick.cs" />
     <Compile Include="FFmpeg.cs" />
-    <Compile Include="License.cs" />
     <Compile Include="Metadata\MetadataDefinition.cs" />
     <Compile Include="VideoThumbnailCreator.cs" />
     <Compile Include="MimeTypeCollection.cs" />

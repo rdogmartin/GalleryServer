@@ -21,43 +21,11 @@ namespace GalleryServer.Web.Pages.Admin
     #region Private Fields
 
     private AppSettingsEntity _appSettingUpdateable;
-    private ILicense _license;
     private static readonly object _sharedLock = new object();
 
     #endregion
 
     #region Properties
-
-    /// <summary>
-    /// Gets or sets the license for the current application.
-    /// </summary>
-    /// <value>The license.</value>
-    public ILicense License
-    {
-      get
-      {
-        if (_license == null)
-        {
-          // Make a copy of the singleton license and return that.
-          var curLicense = AppSettings.License;
-
-          _license = new License()
-          {
-            LicenseEmail = curLicense.LicenseEmail,
-            LicenseKey = curLicense.LicenseKey,
-            InstallDate = curLicense.InstallDate,
-            IsValid = curLicense.IsValid,
-            KeyInvalidReason = curLicense.KeyInvalidReason,
-            LicenseType = curLicense.LicenseType,
-            InstanceId = curLicense.InstanceId,
-            Version = curLicense.Version
-          };
-        }
-
-        return _license;
-      }
-      set { _license = value; }
-    }
 
     /// <summary>
     /// Gets an updateable instance of the current application settings.
@@ -73,8 +41,6 @@ namespace GalleryServer.Web.Pages.Admin
 
           _appSettingUpdateable = new AppSettingsEntity
           {
-            LicenseEmail = app.LicenseEmail,
-            LicenseKey = app.LicenseKey,
             Skin = app.Skin,
             EnableCache = app.EnableCache,
             AllowGalleryAdminToManageUsersAndRoles = app.AllowGalleryAdminToManageUsersAndRoles,
@@ -187,28 +153,6 @@ namespace GalleryServer.Web.Pages.Admin
     /// <value><c>true</c> if skin path has changed; otherwise, <c>false</c>.</value>
     private bool SkinPathHasChanged { get; set; }
 
-    /// <summary>
-    /// Gets the CSS classes to use for the license message icon.
-    /// </summary>
-    protected string LicenseKeyIconCssClass
-    {
-      get
-      {
-        if (String.IsNullOrEmpty(License.LicenseKey))
-        {
-          return "gsp_msgfriendly fa-arrow-right";
-        }
-        else if (License.IsValid)
-        {
-          return "gsp_msgfriendly fa-check-circle";
-        }
-        else
-        {
-          return "gsp_msgwarning fa-exclamation-circle";
-        }
-      }
-    }
-
     #endregion
 
     #region Protected Events
@@ -308,58 +252,6 @@ namespace GalleryServer.Web.Pages.Admin
     protected void lbCompactDb_Click(object sender, EventArgs e)
     {
       CompactAndRepairSqlCe();
-    }
-
-    /// <summary>
-    /// Handles the OnClick event of the hlDeactivate control.
-    /// </summary>
-    /// <param name="sender">The source of the event.</param>
-    /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-    protected void hlDeactivate_OnClick(object sender, EventArgs e)
-    {
-      if (License.Deactivate())
-      {
-        // Recalculate the license status. Expected to be either Trial or TrialExpired.
-        License.Inflate();
-
-        AppSetting.Instance.License = License;
-
-        lock (_sharedLock)
-        {
-          AppSetting.Instance.LicenseEmail = License.LicenseEmail;
-          AppSetting.Instance.LicenseKey = License.LicenseKey;
-          AppSetting.Instance.InstanceId = License.InstanceId;
-
-          AppSetting.Instance.Save();
-        }
-
-        AppSettingsUpdateable.LicenseEmail = License.LicenseEmail;
-        AppSettingsUpdateable.LicenseKey = License.LicenseKey;
-
-        this.wwDataBinder.DataBind();
-
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = "Deactivation Successful",
-          Message = "The license key has been deactivated in this installation and can be used in another location.",
-          Style = MessageStyle.Success,
-          AutoCloseDelay = 0
-        };
-      }
-      else
-      {
-        wwDataBinder.AddBindingError(License.KeyInvalidReason, txtLicenseKey);
-
-        ClientMessage = new ClientMessageOptions
-        {
-          Title = Resources.GalleryServer.Admin_Save_ProductKey_Incorrect_Hdr,
-          Message = Utils.HtmlEncode(wwDataBinder.BindingErrors.ToString()),
-          Style = MessageStyle.Error,
-          AutoCloseDelay = 0
-        };
-      }
-
-      UpdateUI();
     }
 
     /// <summary>
@@ -574,95 +466,12 @@ namespace GalleryServer.Web.Pages.Admin
 
     private void ConfigureVersionText()
     {
-      var licenceType = (AppSettings.License.LicenseType == LicenseLevel.NotSet ? String.Empty : AppSettings.License.LicenseType.GetDescription());
-
-      lblVersion.Text = String.Concat(licenceType, " ", Utils.GetGalleryServerVersion());
-    }
-
-    private void DetermineMessage()
-    {
-      if (ClientMessage == null)
-      {
-        if (License.LicenseType == LicenseLevel.Trial)
-        {
-          int daysLeftInTrial = (License.InstallDate.AddDays(GlobalConstants.TrialNumberOfDays) - DateTime.Today).Days;
-
-          ClientMessage = new ClientMessageOptions
-          {
-            Title = Resources.GalleryServer.Site_Welcome_Msg,
-            Message = String.Format(CultureInfo.CurrentCulture, Resources.GalleryServer.Admin_In_Trial_Period_Msg, daysLeftInTrial),
-            Style = MessageStyle.Success,
-            AutoCloseDelay = 0
-          };
-        }
-        else if (License.LicenseType == LicenseLevel.TrialExpired)
-        {
-          ClientMessage = new ClientMessageOptions
-          {
-            Title = Resources.GalleryServer.Admin_Need_Product_Key_Hdr,
-            Message = Resources.GalleryServer.Admin_Need_Product_Key_Msg,
-            Style = MessageStyle.Warning,
-            AutoCloseDelay = 0
-          };
-        }
-      }
+      lblVersion.Text = String.Concat("Gallery Server ", Utils.GetGalleryServerVersion());
     }
 
     private void UpdateUI()
     {
-      hlDeactivate.Visible = (License.IsValid && License.LicenseType >= LicenseLevel.Free && License.LicenseType != LicenseLevel.Trial);
-
       ConfigureVersionText();
-      UpdateProductKeyValidationMessage();
-      DetermineMessage();
-    }
-
-    private void UpdateProductKeyValidationMessage()
-    {
-      if (String.IsNullOrEmpty(License.LicenseKey))
-      {
-        lblProductKeyValidationMsg.Text = Resources.GalleryServer.Admin_Site_Settings_ProductKey_NotEntered_Label;
-        lblProductKeyValidationMsg.CssClass = "gsp_msgfriendly";
-      }
-      else if (License.IsValid)
-      {
-        lblProductKeyValidationMsg.Text = Resources.GalleryServer.Admin_Site_Settings_ProductKey_Correct_Label;
-        lblProductKeyValidationMsg.CssClass = "gsp_msgfriendly";
-      }
-      else
-      {
-        lblProductKeyValidationMsg.Text = License.KeyInvalidReason;
-        lblProductKeyValidationMsg.CssClass = "gsp_msgwarning";
-      }
-    }
-
-    /// <summary>
-    /// Verify the license key is valid and displays to the user the results of the validation. The <see cref="License" />
-    /// property is updated with the results of the validation.
-    /// </summary>
-    /// <param name="licenseEmail">The license email.</param>
-    /// <param name="licenseKey">The license key to validate.</param>
-    private void ActivateLicenseKey(string licenseEmail, string licenseKey)
-    {
-      License.Activate(licenseEmail, licenseKey, Utils.GetAppUrl());
-
-      if (!string.IsNullOrEmpty(licenseKey))
-      {
-        if (License.IsValid)
-        {
-          ClientMessage = new ClientMessageOptions
-          {
-            Title = Resources.GalleryServer.Admin_Save_ProductKey_Success_Hdr,
-            Message = Resources.GalleryServer.Admin_Save_ProductKey_Success_Msg,
-            Style = MessageStyle.Success,
-            AutoCloseDelay = 0
-          };
-        }
-        else
-        {
-          wwDataBinder.AddBindingError(License.KeyInvalidReason, txtLicenseKey);
-        }
-      }
     }
 
     private void SaveSettings()
@@ -683,48 +492,9 @@ namespace GalleryServer.Web.Pages.Admin
 
       SkinPathHasChanged = (!AppSetting.Instance.Skin.Equals(AppSettingsUpdateable.Skin, StringComparison.OrdinalIgnoreCase));
 
-      // Handle license changes
-      var shouldUpdateLicenseInfo = false;
-      var licenseKey = AppSettingsUpdateable.LicenseKey.Trim();
-      var licenseEmail = AppSettingsUpdateable.LicenseEmail.Trim();
-
-      if (AppSetting.Instance.LicenseKey != licenseKey || AppSetting.Instance.LicenseEmail != licenseEmail)
-      {
-        // The license key or email associated with the license changed. Revalidate license.
-        ActivateLicenseKey(licenseEmail, licenseKey);
-
-        if (wwDataBinder.BindingErrors.Count > 0)
-        {
-          ClientMessage = new ClientMessageOptions
-          {
-            Title = Resources.GalleryServer.Admin_Save_ProductKey_Incorrect_Hdr,
-            Message = wwDataBinder.BindingErrors.ToString(),
-            Style = MessageStyle.Error,
-            AutoCloseDelay = 0
-          };
-
-          UpdateUI();
-          return;
-        }
-
-        if (String.IsNullOrEmpty(licenseKey) || License.IsValid)
-        {
-          AppSetting.Instance.License = License;
-        }
-
-        shouldUpdateLicenseInfo = true;
-      }
-
       lock (_sharedLock)
       {
         var app = AppSetting.Instance;
-
-        if (shouldUpdateLicenseInfo)
-        {
-          app.LicenseEmail = app.License.LicenseEmail;
-          app.LicenseKey = app.License.LicenseKey;
-          app.InstanceId = app.License.InstanceId;
-        }
 
         app.Skin = AppSettingsUpdateable.Skin;
         app.JQueryScriptPath = AppSettingsUpdateable.JQueryScriptPath;
@@ -856,16 +626,6 @@ namespace GalleryServer.Web.Pages.Admin
   /// </summary>
   public class AppSettingsEntity
   {
-    /// <summary>
-    /// Gets or sets the license key.
-    /// </summary>
-    /// <value>The license key.</value>
-    public string LicenseKey { get; set; }
-    /// <summary>
-    /// Gets or sets the license email.
-    /// </summary>
-    /// <value>The license email.</value>
-    public string LicenseEmail { get; set; }
     /// <summary>
     /// Gets or sets the skin.
     /// </summary>

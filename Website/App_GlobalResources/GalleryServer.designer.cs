@@ -19,7 +19,7 @@ namespace Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option or rebuild the Visual Studio project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Web.Application.StronglyTypedResourceProxyBuilder", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Web.Application.StronglyTypedResourceProxyBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class GalleryServer {
@@ -3726,15 +3726,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to License Validation Issue.
-        /// </summary>
-        internal static string Admin_Save_ProductKey_Incorrect_Hdr {
-            get {
-                return ResourceManager.GetString("Admin_Save_ProductKey_Incorrect_Hdr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to License Key Successful.
         /// </summary>
         internal static string Admin_Save_ProductKey_Success_Hdr {
@@ -4023,15 +4014,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Check &lt;a href=&quot;https://galleryserverpro.com/&quot; title=&quot;Go to Gallery Server home page&quot;&gt;galleryserverpro.com&lt;/a&gt; for a more recent version..
-        /// </summary>
-        internal static string Admin_Site_Settings_GSP_Home_Page {
-            get {
-                return ResourceManager.GetString("Admin_Site_Settings_GSP_Home_Page", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to IIS app pool identity:.
         /// </summary>
         internal static string Admin_Site_Settings_IisAppPoolIdentity_Label {
@@ -4104,15 +4086,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to License e-mail:.
-        /// </summary>
-        internal static string Admin_Site_Settings_LicenseEmail_Label {
-            get {
-                return ResourceManager.GetString("Admin_Site_Settings_LicenseEmail_Label", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Max number of error items to keep in log.
         /// </summary>
         internal static string Admin_Site_Settings_MaxNumberErrorItems_Label {
@@ -4149,20 +4122,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to License.
+        ///   Looks up a localized string similar to Version.
         /// </summary>
         internal static string Admin_Site_Settings_ProductKey_Hdr {
             get {
                 return ResourceManager.GetString("Admin_Site_Settings_ProductKey_Hdr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to License key:.
-        /// </summary>
-        internal static string Admin_Site_Settings_ProductKey_Label {
-            get {
-                return ResourceManager.GetString("Admin_Site_Settings_ProductKey_Label", resourceCulture);
             }
         }
         
@@ -6390,24 +6354,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;Enter the e-mail address you used when you purchased Gallery Server.&lt;/p&gt;.
-        /// </summary>
-        internal static string Cfg_licenseEmail_Bdy {
-            get {
-                return ResourceManager.GetString("Cfg_licenseEmail_Bdy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to License e-mail.
-        /// </summary>
-        internal static string Cfg_licenseEmail_Hdr {
-            get {
-                return ResourceManager.GetString("Cfg_licenseEmail_Hdr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;The maximum number of characters to display when showing the title of an album or media asset in thumbnail view.&lt;/p&gt;.
         /// </summary>
         internal static string Cfg_maxAlbumThumbnailTitleDisplayLength_Bdy {
@@ -6800,24 +6746,6 @@ namespace Resources {
         internal static string Cfg_pageSize_Hdr {
             get {
                 return ResourceManager.GetString("Cfg_pageSize_Hdr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;Gallery Server is fully functional for 30 days. After this trial period, the administration settings become read-only and a watermark is applied to all images. Full functionality can be restored at any time by entering a license key.&lt;/p&gt;&lt;p&gt;The license key starts with the characters &quot;GS-&quot; and is e-mailed to you after your purchase. Note that this is different than the version key, which is a text file you place in the App_Data directory.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://galleryserverpro.com/buy/&quot; title=&quot;Get a licen [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Cfg_productKey_Bdy {
-            get {
-                return ResourceManager.GetString("Cfg_productKey_Bdy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to License key.
-        /// </summary>
-        internal static string Cfg_productKey_Hdr {
-            get {
-                return ResourceManager.GetString("Cfg_productKey_Hdr", resourceCulture);
             }
         }
         

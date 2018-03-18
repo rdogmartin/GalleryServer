@@ -977,51 +977,6 @@ namespace GalleryServer.Business
   }
 
   /// <summary>
-  /// Specifies the level of the license Gallery Server is running under. Maps to the LicenseLevel enumeration defined
-  /// in gallery.ts.
-  /// </summary>
-  /// <remarks>Some UI templates refer to the numerical value of the enumeration, so if you change the value, check the 
-  /// UI templates. The license is stored in GalleryServer.Web.Entity.App.License.</remarks>
-  public enum LicenseLevel
-  {
-    /// <summary>
-    /// Specifies that no license level has been assigned.
-    /// </summary>
-    [Description("Not Set")]
-    NotSet = 0,
-    /// <summary>
-    /// Specifies that the free trial period has expired and admin has not yet entered a valid license key.
-    /// </summary>
-    [Description("Free Trial Expired")]
-    TrialExpired = 1,
-    /// <summary>
-    /// Specifies the free version.
-    /// </summary>
-    [Description("Gallery Server Free")]
-    Free = 2,
-    /// <summary>
-    /// Specifies the Home &amp; Nonprofit version.
-    /// </summary>
-    [Description("Gallery Server Home & Nonprofit")]
-    HomeNonprofit = 3,
-    /// <summary>
-    /// Specifies the Enterprise version.
-    /// </summary>
-    [Description("Gallery Server Enterprise")]
-    Enterprise = 4,
-    /// <summary>
-    /// Specifies the Enterprise Ultimate version.
-    /// </summary>
-    [Description("Gallery Server Enterprise Ultimate")]
-    EnterpriseUltimate = 5,
-    /// <summary>
-    /// Specifies that no application is in the free trial period.
-    /// </summary>
-    [Description("Free Trial")]
-    Trial = 6
-  }
-
-  /// <summary>
   /// Specifies the type of database used to store data for the application
   /// </summary>
   public enum ProviderDataStore

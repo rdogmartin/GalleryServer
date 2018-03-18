@@ -121,32 +121,6 @@ namespace GalleryServer.Business.Interfaces
     string RoleProviderName { get; set; }
 
     /// <summary>
-    /// Gets or sets the license for the current application.
-    /// </summary>
-    /// <value>The license for the current application.</value>
-    ILicense License { get; set; }
-
-    /// <summary>
-    /// Gets or sets the license key for this installation of Gallery Server.
-    /// </summary>
-    string LicenseKey { get; set; }
-
-    /// <summary>
-    /// Gets or sets the email used to purchase the license key for this installation of Gallery Server.
-    /// </summary>
-    string LicenseEmail { get; set; }
-
-    /// <summary>
-    /// Gets or sets the version key for this installation of Gallery Server.
-    /// </summary>
-    string VersionKey { get; set; }
-
-    /// <summary>
-    /// Gets or sets the instance ID assigned by the license activation server. Required in order to deactivate a license at a particular installation.
-    /// </summary>
-    string InstanceId { get; set; }
-
-    /// <summary>
     /// Gets or sets a value indicating whether to store objects in a cache for quicker retrieval. This significantly improves
     /// performance, but cannot be used in web farms because the cache is local to each server and there is not a cross-server 
     /// mechanism to expire the cache.</summary>

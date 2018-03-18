@@ -49,60 +49,6 @@ namespace GalleryServer.Web.Pages.Admin {
         protected global::System.Web.UI.WebControls.Literal l3;
         
         /// <summary>
-        /// lblLicenseEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLicenseEmail;
-        
-        /// <summary>
-        /// txtLicenseEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLicenseEmail;
-        
-        /// <summary>
-        /// lblProductKey control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProductKey;
-        
-        /// <summary>
-        /// txtLicenseKey control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLicenseKey;
-        
-        /// <summary>
-        /// hlDeactivate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton hlDeactivate;
-        
-        /// <summary>
-        /// lblProductKeyValidationMsg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProductKeyValidationMsg;
-        
-        /// <summary>
         /// l1 control.
         /// </summary>
         /// <remarks>
@@ -119,15 +65,6 @@ namespace GalleryServer.Web.Pages.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblVersion;
-        
-        /// <summary>
-        /// l2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal l2;
         
         /// <summary>
         /// l4 control.
@@ -668,24 +605,6 @@ namespace GalleryServer.Web.Pages.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::GalleryServer.WebControls.wwDataBinder wwDataBinder;
-        
-        /// <summary>
-        /// wbi1a control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::GalleryServer.WebControls.wwDataBindingItem wbi1a;
-        
-        /// <summary>
-        /// wbi1b control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::GalleryServer.WebControls.wwDataBindingItem wbi1b;
         
         /// <summary>
         /// wbi1 control.

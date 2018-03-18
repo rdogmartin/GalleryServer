@@ -101,7 +101,6 @@
     <Compile Include="IMediaTemplate.cs" />
     <Compile Include="IMediaTemplateCollection.cs" />
     <Compile Include="IGalleryControlSetting.cs" />
-    <Compile Include="ILicense.cs" />
     <Compile Include="IMetadataReadWriter.cs" />
     <Compile Include="IMimeTypeCollection.cs" />
     <Compile Include="IUserGalleryProfileCollection.cs" />

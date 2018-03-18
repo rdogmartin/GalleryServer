@@ -31,7 +31,6 @@ namespace GalleryServer.Business
         private string _jQueryUiScriptPath;
         private string _membershipProviderName;
         private string _roleProviderName;
-        private ILicense _license;
         private bool _enableCache;
         private bool _allowGalleryAdminToManageUsersAndRoles;
         private bool _allowGalleryAdminViewAllUsersAndRoles;
@@ -154,8 +153,6 @@ namespace GalleryServer.Business
                 {
                     // Any time we change the encryption key, we need to update the install date. Normally this only happens once when the app is first installed.
                     InstallDateEncrypted = HelperFunctions.Encrypt(DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture));
-
-                    RefreshLicense();
                 }
             }
         }
@@ -368,31 +365,6 @@ namespace GalleryServer.Business
             set
             {
                 _roleProviderName = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the license for the current application.
-        /// </summary>
-        /// <value>The license for the current application.</value>
-        public ILicense License
-        {
-            get
-            {
-                if (!this._isInitialized)
-                {
-                    throw new Events.CustomExceptions.ApplicationNotInitializedException();
-                }
-
-                return _license;
-            }
-            set
-            {
-                _license = value;
-
-                LicenseKey = _license.LicenseKey;
-
-                Factory.ClearWatermarkCache(); //Changing the license key might cause a different watermark to be rendered
             }
         }
 
@@ -909,10 +881,6 @@ namespace GalleryServer.Business
             this._ffmpegPath = (File.Exists(ffmpegPath) ? ffmpegPath : String.Empty);
 
             this._isInitialized = true;
-
-            // License validation has to come after we set _isInitialized to true because the InstallDate property accesses the encryption key, which
-            // throws ApplicationNotInitializedException when that field is false.
-            RefreshLicense();
         }
 
         /// <summary>
@@ -1041,61 +1009,6 @@ namespace GalleryServer.Business
         private static Version GetDotNetFrameworkVersion()
         {
             return new Version(Environment.Version.ToString(2));
-        }
-
-        ///// <summary>
-        ///// Gets the date/time when the first gallery in the database was created. For practical purposes we can consider this the date 
-        ///// the application was installed. If no galleries have been created (which may happen the first time we run the app), just
-        ///// return today's date.
-        ///// </summary>
-        ///// <returns>Returns a <see cref="DateTime" /> representing when the first gallery in the database was created.</returns>
-        //private static DateTime GetFirstGalleryInstallationDate()
-        //{
-        //  DateTime firstGalleryInstallDate = DateTime.Today;
-
-        //  foreach (IGallery gallery in Factory.LoadGalleries())
-        //  {
-        //    if (gallery.CreationDate < firstGalleryInstallDate)
-        //    {
-        //      firstGalleryInstallDate = gallery.CreationDate;
-        //    }
-        //  }
-
-        //  return firstGalleryInstallDate;
-        //}
-
-        ///// <summary>
-        ///// Verifies the application is correctly configured based on the current license type. Specifically, it verifies that
-        ///// additional UI templates are present for Enterprise license holders.
-        ///// </summary>
-        //private void ValidateLicenseTypeConfiguration()
-        //{
-        //  if (License.LicenseType == LicenseLevel.Enterprise)
-        //  {
-        //    SeedController.InsertEnterpriseTemplates();
-
-        //    // Force a reload of galleries, which causes IGallery.Configure to run, which adds the new UI templates to each gallery
-        //    Factory.ClearGalleryCache();
-
-        //    CacheController.RemoveCache(CacheItem.UiTemplates);
-        //  }
-        //}
-
-        /// <summary>
-        /// Update the <see cref="License" /> based on the current <see cref="LicenseKey" /> and <see cref="InstallDate" />. Call this method when either value
-        /// changes.
-        /// </summary>
-        private void RefreshLicense()
-        {
-            this._license = new License
-            {
-                LicenseEmail = LicenseEmail,
-                LicenseKey = LicenseKey,
-                InstallDate = InstallDate,
-                InstanceId = InstanceId
-            };
-
-            _license.Inflate();
         }
 
         #endregion

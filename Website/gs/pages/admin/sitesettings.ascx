@@ -15,24 +15,9 @@
                 </span>
             </div>
             <div class="gsp_single_tab_bdy gsp_dropshadow3">
-                <p class="gsp_addtopmargin5">
-                    <asp:Label ID="lblLicenseEmail" runat="server" Text="<%$ Resources:GalleryServer, Admin_Site_Settings_LicenseEmail_Label %>" />&nbsp;
-          <asp:TextBox ID="txtLicenseEmail" runat="server" TextMode="Email" CssClass="gsp_textbox" />
-                </p>
-                <p class="gsp_addtopmargin5">
-                    <asp:Label ID="lblProductKey" runat="server" Text="<%$ Resources:GalleryServer, Admin_Site_Settings_ProductKey_Label %>" />&nbsp;
-          <asp:TextBox ID="txtLicenseKey" runat="server" CssClass="gsp_textbox" />&nbsp;<asp:LinkButton id="hlDeactivate" runat="server" Text="Deactivate" OnClick="hlDeactivate_OnClick"></asp:LinkButton>
-                </p>
-                <p class="gsp_nopadding">
-                    <span class="gs_a_ss_lk_lbl_ico fa fa-lg"></span>
-                    <asp:Label ID="lblProductKeyValidationMsg" runat="server" CssClass="gsp_msgfriendly" />
-                </p>
                 <p class="gsp_bold">
                     <asp:Literal ID="l1" runat="server" Text="<%$ Resources:GalleryServer, Admin_Site_Settings_GSP_Hdr %>" />
                     <asp:Label ID="lblVersion" runat="server" CssClass="gsp_msgfriendly" />
-                </p>
-                <p class="gsp_addtopmargin5">
-                    <asp:Literal ID="l2" runat="server" Text="<%$ Resources:GalleryServer, Admin_Site_Settings_GSP_Home_Page %>" />
                 </p>
             </div>
         </div>
@@ -299,12 +284,6 @@
     <tis:wwDataBinder ID="wwDataBinder" runat="server" OnBeforeUnbindControl="wwDataBinder_BeforeUnbindControl"
         OnAfterBindControl="wwDataBinder_AfterBindControl" OnValidateControl="wwDataBinder_ValidateControl">
         <DataBindingItems>
-            <tis:wwDataBindingItem ID="wbi1a" runat="server" ControlId="txtLicenseEmail" BindingSource="AppSettingsUpdateable"
-                BindingSourceMember="LicenseEmail" UserFieldName="<%$ Resources:GalleryServer, Admin_Site_Settings_LicenseEmail_Label %>"
-                IsRequired="False" />
-            <tis:wwDataBindingItem ID="wbi1b" runat="server" ControlId="txtLicenseKey" BindingSource="AppSettingsUpdateable"
-                BindingSourceMember="LicenseKey" UserFieldName="<%$ Resources:GalleryServer, Admin_Site_Settings_ProductKey_Label %>"
-                IsRequired="False" />
             <tis:wwDataBindingItem ID="wbi1" runat="server" BindingSource="AppSettingsUpdateable"
                 BindingSourceMember="EnableCache" ControlId="chkEnableCache" BindingProperty="Checked"
                 UserFieldName="<%$ Resources:GalleryServer, Admin_Site_Settings_EnableCache_Label %>" />
@@ -378,7 +357,6 @@
             var $scope;
             var clientId = '<%= cid %>';
             var imageMagickPathResolved = '<%= AppSettings.ImageMagickPathResolved.JsEncode() %>';
-            var licenseKeyLblIconCssClass = '<%= LicenseKeyIconCssClass %>';
 
             var updateUi = function () {
                 var txtMaxErrItems = $('#<%= txtMaxErrorItems.ClientID %>');
@@ -390,8 +368,6 @@
             var configControls = function () {
                 $('#<%= chkAutoTrimLog.ClientID %>').click(updateUi);
 
-                $('.gs_a_ss_lk_lbl_ico', $scope).addClass(licenseKeyLblIconCssClass);
-
                 if (imageMagickPathResolved.length > 0) {
                     $('.gs_a_ss_im_vry', $('#<%= cid %>')).addClass('fa-check-circle gsp_msgfriendly').attr('title', 'ImageMagick found at ' + imageMagickPathResolved);
                 } else {
@@ -400,15 +376,6 @@
             };
 
             var configTooltips = function () {
-                $('#<%= lblLicenseEmail.ClientID %>').gsTooltip({
-                    title: '<%= Resources.GalleryServer.Cfg_licenseEmail_Hdr.JsEncode() %>',
-                    content: '<%= Resources.GalleryServer.Cfg_licenseEmail_Bdy.JsEncode() %>'
-                });
-
-                $('#<%= lblProductKey.ClientID %>').gsTooltip({
-                    title: '<%= Resources.GalleryServer.Cfg_productKey_Hdr.JsEncode() %>',
-                    content: '<%= Resources.GalleryServer.Cfg_productKey_Bdy.JsEncode() %>'
-                });
 
                 $('#<%= chkEnableCache.ClientID %>').gsTooltip({
                     title: '<%= Resources.GalleryServer.Cfg_enableCache_Hdr.JsEncode() %>',

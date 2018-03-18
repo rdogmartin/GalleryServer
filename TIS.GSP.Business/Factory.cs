@@ -2177,7 +2177,7 @@ namespace GalleryServer.Business
             if (!_watermarks.TryGetValue(galleryId, out watermark))
             {
                 // A watermark object for the gallery was not found. Create it and add it to the dictionary.
-                Watermark tempWatermark = AppSetting.Instance.License.LicenseType == LicenseLevel.TrialExpired ? Watermark.GetReducedFunctionalityModeWatermark(galleryId) : Watermark.GetUserSpecifiedWatermark(galleryId);
+                Watermark tempWatermark = Watermark.GetUserSpecifiedWatermark(galleryId);
 
                 _watermarks.TryAdd(galleryId, tempWatermark);
 
