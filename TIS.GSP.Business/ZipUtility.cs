@@ -347,7 +347,14 @@ namespace GalleryServer.Business
         case DisplayObjectType.Thumbnail:
           return mediaObject.Thumbnail.FileNamePhysicalPath;
         case DisplayObjectType.Optimized:
-          return mediaObject.Optimized.FileNamePhysicalPath;
+          if (string.IsNullOrWhiteSpace(mediaObject.Optimized.FileNamePhysicalPath))
+          {
+            return mediaObject.Original.FileNamePhysicalPath;
+          }
+          else
+          {
+            return mediaObject.Optimized.FileNamePhysicalPath;
+          }
         case DisplayObjectType.Original:
           return mediaObject.Original.FileNamePhysicalPath;
         default:
