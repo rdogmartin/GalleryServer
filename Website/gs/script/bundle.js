@@ -21323,7 +21323,7 @@ var Gs;
     * A container for functions that can be used throughout the Gs module.
     * @class Utils
     */
-    var Utils = (function () {
+    var Utils = /** @class */ (function () {
         function Utils() {
         }
         /**
@@ -21983,6 +21983,7 @@ var Gs;
         * Specifies the size of a display object. This is the client-side version of the DisplayObjectType enumeration defined on the server.
         * @enum ViewSize
         */
+        var ViewSize;
         (function (ViewSize) {
             /**
             * Gets the Unknown view size.
@@ -22004,8 +22005,7 @@ var Gs;
             * Gets the External view size.
             */
             ViewSize[ViewSize["External"] = 4] = "External";
-        })(Enums.ViewSize || (Enums.ViewSize = {}));
-        var ViewSize = Enums.ViewSize;
+        })(ViewSize = Enums.ViewSize || (Enums.ViewSize = {}));
         ;
         /**
         * Specifies the category to which this mime type belongs. This usually corresponds to the first portion of the full mime type description.
@@ -22013,6 +22013,7 @@ var Gs;
         * not represented by the others. This is the client-side version of the MimeTypeCategory enumeration defined on the server.
         * @enum MimeType
         */
+        var MimeType;
         (function (MimeType) {
             /**
             * Gets the NotSet mime type name, which indicates that no assignment has been made.
@@ -22034,8 +22035,7 @@ var Gs;
             * Gets the Audio mime type name.
             */
             MimeType[MimeType["Audio"] = 4] = "Audio";
-        })(Enums.MimeType || (Enums.MimeType = {}));
-        var MimeType = Enums.MimeType;
+        })(MimeType = Enums.MimeType || (Enums.MimeType = {}));
         ;
         /**
         * Specifies the type of the gallery object. This is the client-side version of the GalleryObjectType enumeration defined on the server.
@@ -22043,6 +22043,7 @@ var Gs;
         * are not needed at this time.
         * @enum ItemType
         */
+        var ItemType;
         (function (ItemType) {
             /**
             * Specifies that no gallery object type has been assigned.
@@ -22072,13 +22073,13 @@ var Gs;
             * Gets the External gallery object type.
             */
             ItemType[ItemType["External"] = 8] = "External";
-        })(Enums.ItemType || (Enums.ItemType = {}));
-        var ItemType = Enums.ItemType;
+        })(ItemType = Enums.ItemType || (Enums.ItemType = {}));
         ;
         /**
         * Specifies whether an item is editable and, if so, the type of editor to use.
         * @enum PropertyEditorMode
         */
+        var PropertyEditorMode;
         (function (PropertyEditorMode) {
             /**
             * Indicates no property editor mode has been specified
@@ -22096,8 +22097,7 @@ var Gs;
             * Indicates that the tinyMCE HTML editor is to be used for property editing.
             */
             PropertyEditorMode[PropertyEditorMode["TinyMCEHtmlEditor"] = 3] = "TinyMCEHtmlEditor";
-        })(Enums.PropertyEditorMode || (Enums.PropertyEditorMode = {}));
-        var PropertyEditorMode = Enums.PropertyEditorMode;
+        })(PropertyEditorMode = Enums.PropertyEditorMode || (Enums.PropertyEditorMode = {}));
         ;
         /**
         * Specifies one or more security-related actions within Gallery Server. A user may or may not have authorization to
@@ -22106,6 +22106,7 @@ var Gs;
         * This is the client-side version of the SecurityActions enumeration defined on the server.
         * @enum SecurityActions
         */
+        var SecurityActions;
         (function (SecurityActions) {
             /**
             * Represents the ability to create a new album within the current album. This includes the ability to move or
@@ -22123,26 +22124,26 @@ var Gs;
             * add or delete child albums or media objects.
             */
             SecurityActions[SecurityActions["EditAlbum"] = 8] = "EditAlbum";
-        })(Enums.SecurityActions || (Enums.SecurityActions = {}));
-        var SecurityActions = Enums.SecurityActions;
+        })(SecurityActions = Enums.SecurityActions || (Enums.SecurityActions = {}));
         ;
         /**
         * Identifies the type of virtual album. Note that some of the enumeration values that exist on the server are not present here.
         * This is the client-side version of the VirtualAlbumType enumeration defined on the server.
         * @enum SecurityActions
         */
+        var VirtualAlbumType;
         (function (VirtualAlbumType) {
             /**
             * Specifies that the album is not a virtual album.
             */
             VirtualAlbumType[VirtualAlbumType["NotVirtual"] = 1] = "NotVirtual";
-        })(Enums.VirtualAlbumType || (Enums.VirtualAlbumType = {}));
-        var VirtualAlbumType = Enums.VirtualAlbumType;
+        })(VirtualAlbumType = Enums.VirtualAlbumType || (Enums.VirtualAlbumType = {}));
         ;
         /**
         * Specifies the type of the slide show. . This is the client-side version of the SlideShowType enumeration defined on the server.
         * @enum SlideShowType
         */
+        var SlideShowType;
         (function (SlideShowType) {
             /**
             * Specifies that no slide show type has been assigned.
@@ -22156,42 +22157,42 @@ var Gs;
             * Gets the FullScreen slide show type.
             */
             SlideShowType[SlideShowType["FullScreen"] = 2] = "FullScreen";
-        })(Enums.SlideShowType || (Enums.SlideShowType = {}));
-        var SlideShowType = Enums.SlideShowType;
+        })(SlideShowType = Enums.SlideShowType || (Enums.SlideShowType = {}));
         ;
         /**
          * Specifies a particular message that is to be displayed to the user. The text of the message is extracted from the resource file.
          * This is useful when redirecting the user to a new page. Include 'msg=11' in the URL, where 11 is the numeric value of the desired message.
          */
+        var MessageType;
         (function (MessageType) {
             MessageType[MessageType["None"] = 0] = "None";
             MessageType[MessageType["AlbumSuccessfullyDeleted"] = 11] = "AlbumSuccessfullyDeleted";
-        })(Enums.MessageType || (Enums.MessageType = {}));
-        var MessageType = Enums.MessageType;
+        })(MessageType = Enums.MessageType || (Enums.MessageType = {}));
         /**
          * Specifies the type of meta item (e.g. title, caption, etc). Maps to the MetadataItemName enumeration on the server.
          */
+        var MetaType;
         (function (MetaType) {
             MetaType[MetaType["NotSet"] = 0] = "NotSet";
             MetaType[MetaType["Title"] = 29] = "Title";
             MetaType[MetaType["Caption"] = 41] = "Caption";
             MetaType[MetaType["HtmlSource"] = 112] = "HtmlSource";
-        })(Enums.MetaType || (Enums.MetaType = {}));
-        var MetaType = Enums.MetaType;
+        })(MetaType = Enums.MetaType || (Enums.MetaType = {}));
         /**
          * Specifies a keyboard character. Can be used to compare with an event's keyCode property to see which key a user pressed.
          */
+        var KeyCode;
         (function (KeyCode) {
             KeyCode[KeyCode["NotSet"] = 0] = "NotSet";
             KeyCode[KeyCode["Enter"] = 13] = "Enter";
             KeyCode[KeyCode["Escape"] = 27] = "Escape";
             KeyCode[KeyCode["CursorLeft"] = 37] = "CursorLeft";
             KeyCode[KeyCode["CursorRight"] = 39] = "CursorRight";
-        })(Enums.KeyCode || (Enums.KeyCode = {}));
-        var KeyCode = Enums.KeyCode;
+        })(KeyCode = Enums.KeyCode || (Enums.KeyCode = {}));
         /**
          * Identifies the amount to rotate or flip a media asset. Maps to the MediaAssetRotateFlip enumeration on the server.
          */
+        var RotateFlip;
         (function (RotateFlip) {
             RotateFlip[RotateFlip["NotSet"] = 0] = "NotSet";
             RotateFlip[RotateFlip["Rotate0FlipNone"] = 1] = "Rotate0FlipNone";
@@ -22200,11 +22201,11 @@ var Gs;
             RotateFlip[RotateFlip["Rotate90FlipNone"] = 4] = "Rotate90FlipNone";
             RotateFlip[RotateFlip["Rotate180FlipNone"] = 7] = "Rotate180FlipNone";
             RotateFlip[RotateFlip["Rotate270FlipNone"] = 10] = "Rotate270FlipNone";
-        })(Enums.RotateFlip || (Enums.RotateFlip = {}));
-        var RotateFlip = Enums.RotateFlip;
+        })(RotateFlip = Enums.RotateFlip || (Enums.RotateFlip = {}));
         /**
          * Identifies a specific page. Maps to the PageId enumeration on the server.
          */
+        var PageId;
         (function (PageId) {
             PageId[PageId["none"] = 0] = "none";
             PageId[PageId["admin_albums"] = 1] = "admin_albums";
@@ -22237,12 +22238,12 @@ var Gs;
             PageId[PageId["recoverpassword"] = 28] = "recoverpassword";
             PageId[PageId["task_addobjects"] = 29] = "task_addobjects";
             PageId[PageId["task_synchronize"] = 30] = "task_synchronize";
-        })(Enums.PageId || (Enums.PageId = {}));
-        var PageId = Enums.PageId;
+        })(PageId = Enums.PageId || (Enums.PageId = {}));
         /**
          * Specifies a Gallery Server license. Maps to LicenseLevel enumeration on the server. Some UI templates refer to the
          * numerical value of the enumeration, so if you change the value, check the UI templates.
          */
+        var LicenseLevel;
         (function (LicenseLevel) {
             LicenseLevel[LicenseLevel["NotSet"] = 0] = "NotSet";
             LicenseLevel[LicenseLevel["TrialExpired"] = 1] = "TrialExpired";
@@ -22251,14 +22252,13 @@ var Gs;
             LicenseLevel[LicenseLevel["Enterprise"] = 4] = "Enterprise";
             LicenseLevel[LicenseLevel["EnterpriseUltimate"] = 5] = "EnterpriseUltimate";
             LicenseLevel[LicenseLevel["Trial"] = 6] = "Trial";
-        })(Enums.LicenseLevel || (Enums.LicenseLevel = {}));
-        var LicenseLevel = Enums.LicenseLevel;
+        })(LicenseLevel = Enums.LicenseLevel || (Enums.LicenseLevel = {}));
     })(Enums = Gs.Enums || (Gs.Enums = {}));
     /**
     * A client-optimized object that stores application-level properties for the gallery.
     * @class Permissions
     */
-    var App = (function () {
+    var App = /** @class */ (function () {
         function App() {
         }
         return App;
@@ -22268,7 +22268,7 @@ var Gs;
      * A simple object that contains gallery item information. It is essentially a client-optimized version of IGalleryObject.
      * @class GalleryItem
      */
-    var GalleryItem = (function () {
+    var GalleryItem = /** @class */ (function () {
         function GalleryItem() {
         }
         return GalleryItem;
@@ -22278,7 +22278,7 @@ var Gs;
      * A client-optimized object that contains information about a particular view of a media object.
      * @class DisplayObject
      */
-    var DisplayObject = (function () {
+    var DisplayObject = /** @class */ (function () {
         function DisplayObject() {
         }
         return DisplayObject;
@@ -22288,7 +22288,7 @@ var Gs;
      * A client-optimized object that stores a piece of information describing a gallery object.
      * @class MetaItem
      */
-    var MetaItem = (function () {
+    var MetaItem = /** @class */ (function () {
         function MetaItem(mTypeId) {
             this.Id = 0;
             this.MediaId = 0;
@@ -22306,7 +22306,7 @@ var Gs;
      * A data object that contains permissions relevant to the current user.
      * @class Permissions
      */
-    var Permissions = (function () {
+    var Permissions = /** @class */ (function () {
         function Permissions() {
         }
         return Permissions;
@@ -22316,7 +22316,7 @@ var Gs;
      * A simple object that contains album information. This class is used to pass information between the browser and the web server via AJAX callbacks.
      * @class Album
      */
-    var Album = (function () {
+    var Album = /** @class */ (function () {
         function Album() {
         }
         return Album;
@@ -22326,7 +22326,7 @@ var Gs;
      * A client-optimized object that contains media object information.
      * @class MediaItem
      */
-    var MediaItem = (function () {
+    var MediaItem = /** @class */ (function () {
         function MediaItem() {
         }
         return MediaItem;
@@ -22336,7 +22336,7 @@ var Gs;
      * A client-optimized object that contains language resources.
      * @class Resource
      */
-    var Resource = (function () {
+    var Resource = /** @class */ (function () {
         function Resource() {
         }
         return Resource;
@@ -22346,7 +22346,7 @@ var Gs;
      * A client-optimized object that stores properties that affect the user experience.
      * @class Settings
      */
-    var Settings = (function () {
+    var Settings = /** @class */ (function () {
         function Settings() {
         }
         return Settings;
@@ -22356,7 +22356,7 @@ var Gs;
      * A client-optimized object containing information about the current user.
      * @class User
      */
-    var User = (function () {
+    var User = /** @class */ (function () {
         function User() {
         }
         return User;
@@ -22366,7 +22366,7 @@ var Gs;
      * A client-optimized object that contains gallery data.
      * @class GalleryData
      */
-    var GalleryData = (function () {
+    var GalleryData = /** @class */ (function () {
         function GalleryData() {
         }
         return GalleryData;
@@ -22376,7 +22376,7 @@ var Gs;
      * A data object containing information about the result of an action. Maps to the ActionResult class on the server.
      * @class ActionResult
      */
-    var ActionResult = (function () {
+    var ActionResult = /** @class */ (function () {
         function ActionResult() {
         }
         return ActionResult;
@@ -22386,7 +22386,7 @@ var Gs;
      * A client-optimized object that wraps a meta item and the gallery items it applies to.
      * @class GalleryItemMeta
      */
-    var GalleryItemMeta = (function () {
+    var GalleryItemMeta = /** @class */ (function () {
         function GalleryItemMeta() {
         }
         return GalleryItemMeta;
@@ -22419,7 +22419,7 @@ var Gs;
                     }
                 }
             });
-            var TinyMcePlaceholder = (function () {
+            var TinyMcePlaceholder = /** @class */ (function () {
                 function TinyMcePlaceholder(editor) {
                     // The placeholder text comes from the first of these locations: (1) placedholder attribute of the tinyMCE element 
                     // (2) placeholder_text setting in tinyMCE.init() (3) hard-coded text 'Add...'
@@ -22444,7 +22444,7 @@ var Gs;
     $(document).ready(Utils.Init);
     //#endregion End Gallery-wide functions
     //#region AJAX functions
-    var DataService = (function () {
+    var DataService = /** @class */ (function () {
         function DataService() {
         }
         DataService.logOff = function (callback) {
@@ -22805,7 +22805,7 @@ var Gs;
         tagCloudUrl: '',
         shape: 'rectangular' // Shape of cloud. Set to false to get the elliptic shape (the default shape of JQCloud)
     };
-    var GsTagCloud = (function () {
+    var GsTagCloud = /** @class */ (function () {
         function GsTagCloud(target, data, options) {
             this.$target = target; // A jQuery object to receive the tag cloud.
             this.TagCloudOptions = options;
@@ -22879,7 +22879,7 @@ var Gs;
         includeAlbum: true,
         treeDataUrl: '' // The URL for retrieving tree data. Ignored when tree data is passed via data parameter
     };
-    var GsTreeView = (function () {
+    var GsTreeView = /** @class */ (function () {
         function GsTreeView(target, data, options) {
             this.$target = target; // A jQuery object to receive the rendered treeview.
             this.TreeViewOptions = options;
@@ -23069,7 +23069,7 @@ var Gs;
             this.gspMedia.removeCursorNavigationHandler();
         }
     });
-    var GsMedia = (function () {
+    var GsMedia = /** @class */ (function () {
         function GsMedia(target, data, options) {
             this.$target = target; // A jQuery object to receive the rendered HTML from the template.
             this.data = data;
@@ -23559,7 +23559,7 @@ var Gs;
             this.gsThumbnails.deselectThumbnails();
         }
     });
-    var GsThumbnails = (function () {
+    var GsThumbnails = /** @class */ (function () {
         function GsThumbnails(target, data, options) {
             this.hndleDom = "<div class='hndl'><span class='fa fa-arrows'></span></div>"; // The drag handle for rearranging thumbnails
             this.$target = target; // A jQuery object to receive the rendered HTML from the template.
@@ -23851,7 +23851,7 @@ var Gs;
     $.fn.gspMeta.defaults = {
         tmplName: ''
     };
-    var GsMeta = (function () {
+    var GsMeta = /** @class */ (function () {
         function GsMeta() {
         }
         GsMeta.prototype.init = function (target, gsData, options) {
@@ -24349,7 +24349,7 @@ var Gs;
     });
     //#endregion gs.gsHeader widget
     //#region gsHeader class
-    var GsHeader = (function () {
+    var GsHeader = /** @class */ (function () {
         function GsHeader(target, data) {
             var _this = this;
             this.viewSizeClick = function (e) {
@@ -25138,9 +25138,9 @@ var Gs;
                         $.getScript(files.shift(), files.length ? function () { loadScripts(files, callback); } : callback);
                     };
                     if (!jQuery().plupload) {
-                        var scripts = [(Vars.GalleryResourcesRoot + "/script/plupload/plupload.full.min.js"), (Vars.GalleryResourcesRoot + "/script/plupload/jquery.ui.plupload.min.js")];
+                        var scripts = [Vars.GalleryResourcesRoot + "/script/plupload/plupload.full.min.js", Vars.GalleryResourcesRoot + "/script/plupload/jquery.ui.plupload.min.js"];
                         if (_this.data.App.IsDebugEnabled) {
-                            scripts = [(Vars.GalleryResourcesRoot + "/script/plupload/moxie.js"), (Vars.GalleryResourcesRoot + "/script/plupload/plupload.dev.js"), (Vars.GalleryResourcesRoot + "/script/plupload/jquery.ui.plupload.js")];
+                            scripts = [Vars.GalleryResourcesRoot + "/script/plupload/moxie.js", Vars.GalleryResourcesRoot + "/script/plupload/plupload.dev.js", Vars.GalleryResourcesRoot + "/script/plupload/jquery.ui.plupload.js"];
                         }
                         loadScripts(scripts, configUploader);
                     }
@@ -25839,7 +25839,7 @@ var Gs;
                         _this.data.Album.Owner = $(e1.currentTarget).val();
                         if (oldAbmOwnr !== _this.data.Album.Owner) {
                             $(e1.currentTarget).addClass('gsp_wait_center');
-                            DataService.changeAlbumOwner(_this.data.Album.Id, _this.data.Album.Owner, function () {
+                            DataService.changeAlbumOwner(_this.data.Album.Id, encodeURIComponent(_this.data.Album.Owner), function () {
                                 // Done event.
                                 $(e1.currentTarget).removeClass('gsp_wait_center');
                                 $(e1.currentTarget).val(_this.data.Album.Owner);
@@ -26271,7 +26271,7 @@ var Gs;
         title: '',
         content: ''
     };
-    var GsTooltip = (function () {
+    var GsTooltip = /** @class */ (function () {
         function GsTooltip() {
         }
         GsTooltip.prototype.init = function (target, options) {
@@ -26358,7 +26358,7 @@ var Gs;
             return jQuery(this).height();
         }).get()));
     };
-    var GsFullScreenSlideShow = (function () {
+    var GsFullScreenSlideShow = /** @class */ (function () {
         function GsFullScreenSlideShow(data, options) {
             var defaults = {
                 viewSize: Enums.ViewSize.Optimized,
@@ -26498,7 +26498,7 @@ var Gs;
         ;
         return GsFullScreenSlideShow;
     }());
-    var GsTimer = (function () {
+    var GsTimer = /** @class */ (function () {
         function GsTimer(callback, milliseconds, context) {
             this.isRunning = false;
             this.milliseconds = milliseconds;
@@ -26528,7 +26528,7 @@ var Gs;
         return GsTimer;
     }());
     Gs.GsTimer = GsTimer;
-    var Msg = (function () {
+    var Msg = /** @class */ (function () {
         function Msg() {
         }
         Msg.show = function (title, message, options) {
@@ -26579,7 +26579,7 @@ var Gs;
     *   function is responsible for detecting when the task is complete and subsequently calling resetTask, which cancels the
     *   polling mechanism.
     */
-    var ServerTask = (function () {
+    var ServerTask = /** @class */ (function () {
         function ServerTask(options) {
             var _this = this;
             /**
@@ -26687,6 +26687,7 @@ var Gs;
         return ServerTask;
     }());
     Gs.ServerTask = ServerTask;
+    //#endregion ServerTask class
 })(Gs || (Gs = {}));
 /**
  * Remove items from an array. From http://ejohn.org/blog/javascript-array-remove/ Examples of usage:
@@ -26735,7 +26736,7 @@ Object.defineProperty(Array.prototype, 'equals', { enumerable: false });
 String.prototype.format = function () {
     var params = [];
     for (var _i = 0; _i < arguments.length; _i++) {
-        params[_i - 0] = arguments[_i];
+        params[_i] = arguments[_i];
     }
     var args = arguments;
     return this.replace(/{(\d+)}/g, function (match, number) { return (typeof args[number] != 'undefined'

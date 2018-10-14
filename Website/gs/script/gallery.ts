@@ -3468,7 +3468,7 @@ module Gs {
             };
 
             tinyMCE.init(tinyMcePlainTextOptions);
-            
+
             // Set up the HTML editor.
             const tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
 
@@ -6781,7 +6781,7 @@ module Gs {
 
                     if (oldAbmOwnr !== this.data.Album.Owner) {
                         $(e1.currentTarget).addClass('gsp_wait_center');
-                        DataService.changeAlbumOwner(this.data.Album.Id, this.data.Album.Owner, () => {
+                        DataService.changeAlbumOwner(this.data.Album.Id, encodeURIComponent(this.data.Album.Owner), () => {
                             // Done event.
                             $(e1.currentTarget).removeClass('gsp_wait_center');
                             $(e1.currentTarget).val(this.data.Album.Owner);

@@ -963,6 +963,20 @@ var Gs;
             PageId[PageId["task_addobjects"] = 29] = "task_addobjects";
             PageId[PageId["task_synchronize"] = 30] = "task_synchronize";
         })(PageId = Enums.PageId || (Enums.PageId = {}));
+        /**
+         * Specifies a Gallery Server license. Maps to LicenseLevel enumeration on the server. Some UI templates refer to the
+         * numerical value of the enumeration, so if you change the value, check the UI templates.
+         */
+        var LicenseLevel;
+        (function (LicenseLevel) {
+            LicenseLevel[LicenseLevel["NotSet"] = 0] = "NotSet";
+            LicenseLevel[LicenseLevel["TrialExpired"] = 1] = "TrialExpired";
+            LicenseLevel[LicenseLevel["Free"] = 2] = "Free";
+            LicenseLevel[LicenseLevel["HomeNonprofit"] = 3] = "HomeNonprofit";
+            LicenseLevel[LicenseLevel["Enterprise"] = 4] = "Enterprise";
+            LicenseLevel[LicenseLevel["EnterpriseUltimate"] = 5] = "EnterpriseUltimate";
+            LicenseLevel[LicenseLevel["Trial"] = 6] = "Trial";
+        })(LicenseLevel = Enums.LicenseLevel || (Enums.LicenseLevel = {}));
     })(Enums = Gs.Enums || (Gs.Enums = {}));
     /**
     * A client-optimized object that stores application-level properties for the gallery.
@@ -2036,16 +2050,19 @@ var Gs;
                 }
             };
             tinyMCE.init(tinyMcePlainTextOptions);
-            // Set up the HTML editor.
-            var tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
-            tinyMceHtmlOptions.selector = "#" + this.data.Settings.MediaClientId + " section[data-editMode=3]";
-            tinyMceHtmlOptions.plugins = ['code autolink image link textcolor placeholder'];
-            tinyMceHtmlOptions.image_advtab = true; // Add advanced tab to image editor
-            tinyMceHtmlOptions.verify_html = false; // Use Gallery Server's scrubber. When verify_html is ommitted or set to true, tinyMCE strips out invalid elements, but only on the client. 
-            tinyMceHtmlOptions.toolbar1 = 'formatselect fontsizeselect forecolor backcolor image';
-            tinyMceHtmlOptions.toolbar2 = 'undo redo | code bold italic link | alignleft aligncenter alignright | bullist numlist indent';
-            delete tinyMceHtmlOptions.forced_root_block; // Remove forced_root_block setting to force it to inherit default value
-            tinyMCE.init(tinyMceHtmlOptions);
+            if (this.data.App.License >= Enums.LicenseLevel.HomeNonprofit) {
+                // Don't bother setting up the HTML editor for expired trials and the free version. This code won't do anything anyway since
+                // the server won't send any meta properties with editMode=3 (HTML editor).
+                var tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
+                tinyMceHtmlOptions.selector = "#" + this.data.Settings.MediaClientId + " section[data-editMode=3]";
+                tinyMceHtmlOptions.plugins = ['code autolink image link textcolor placeholder'];
+                tinyMceHtmlOptions.image_advtab = true; // Add advanced tab to image editor
+                tinyMceHtmlOptions.verify_html = false; // Use Gallery Server's scrubber. When verify_html is ommitted or set to true, tinyMCE strips out invalid elements, but only on the client. 
+                tinyMceHtmlOptions.toolbar1 = 'formatselect fontsizeselect forecolor backcolor image';
+                tinyMceHtmlOptions.toolbar2 = 'undo redo | code bold italic link | alignleft aligncenter alignright | bullist numlist indent';
+                delete tinyMceHtmlOptions.forced_root_block; // Remove forced_root_block setting to force it to inherit default value
+                tinyMCE.init(tinyMceHtmlOptions);
+            }
         };
         GsMedia.prototype.animateMediaObject = function () {
             var _this = this;
@@ -2881,16 +2898,19 @@ var Gs;
                 }
             };
             tinyMCE.init(tinyMcePlainTextOptions);
-            // Set up the HTML editor.
-            var tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
-            tinyMceHtmlOptions.selector = "#" + this.data.Settings.RightPaneClientId + " tr[data-editMode=3] section";
-            tinyMceHtmlOptions.plugins = ['code autolink image link textcolor placeholder'];
-            tinyMceHtmlOptions.image_advtab = true; // Add advanced tab to image editor
-            tinyMceHtmlOptions.verify_html = false; // Use Gallery Server's scrubber. When verify_html is ommitted or set to true, tinyMCE strips out invalid elements, but only on the client. 
-            tinyMceHtmlOptions.toolbar1 = 'formatselect fontsizeselect forecolor backcolor image';
-            tinyMceHtmlOptions.toolbar2 = 'undo redo | code bold italic link | alignleft aligncenter alignright | bullist numlist indent';
-            delete tinyMceHtmlOptions.forced_root_block; // Remove forced_root_block setting to force it to inherit default value
-            tinyMCE.init(tinyMceHtmlOptions);
+            if (this.data.App.License >= Enums.LicenseLevel.HomeNonprofit) {
+                // Don't bother setting up the HTML editor for expired trials and the free version. This code won't do anything anyway since
+                // the server won't send any meta properties with editMode=3 (HTML editor).
+                var tinyMceHtmlOptions = Utils.deepCopy(tinyMcePlainTextOptions);
+                tinyMceHtmlOptions.selector = "#" + this.data.Settings.RightPaneClientId + " tr[data-editMode=3] section";
+                tinyMceHtmlOptions.plugins = ['code autolink image link textcolor placeholder'];
+                tinyMceHtmlOptions.image_advtab = true; // Add advanced tab to image editor
+                tinyMceHtmlOptions.verify_html = false; // Use Gallery Server's scrubber. When verify_html is ommitted or set to true, tinyMCE strips out invalid elements, but only on the client. 
+                tinyMceHtmlOptions.toolbar1 = 'formatselect fontsizeselect forecolor backcolor image';
+                tinyMceHtmlOptions.toolbar2 = 'undo redo | code bold italic link | alignleft aligncenter alignright | bullist numlist indent';
+                delete tinyMceHtmlOptions.forced_root_block; // Remove forced_root_block setting to force it to inherit default value
+                tinyMCE.init(tinyMceHtmlOptions);
+            }
             // Get the tag value, stripping off trailing count if present. Ex: If tag="Animal (3)", change it to "Animal".
             // The parameter 'e' is expected to be a jQuery reference to the li element containing the tag.
             var getTagValue = function (e) { return e.contents()
@@ -4543,7 +4563,7 @@ var Gs;
                         _this.data.Album.Owner = $(e1.currentTarget).val();
                         if (oldAbmOwnr !== _this.data.Album.Owner) {
                             $(e1.currentTarget).addClass('gsp_wait_center');
-                            DataService.changeAlbumOwner(_this.data.Album.Id, _this.data.Album.Owner, function () {
+                            DataService.changeAlbumOwner(_this.data.Album.Id, encodeURIComponent(_this.data.Album.Owner), function () {
                                 // Done event.
                                 $(e1.currentTarget).removeClass('gsp_wait_center');
                                 $(e1.currentTarget).val(_this.data.Album.Owner);

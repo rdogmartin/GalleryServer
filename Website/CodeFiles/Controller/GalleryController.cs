@@ -646,7 +646,7 @@ namespace GalleryServer.Web.Controller
             // Pass these values to our global app settings instance, where the values can be used throughout the application.
             AppSetting.Instance.Initialize(trustLevel, physicalApplicationPath, Constants.APP_NAME, Utils.GalleryResourcesPath);
 
-            //Business.Entity.VersionKey.GenerateEncryptedVersionKeys();
+            // Business.Entity.VersionKey.GenerateEncryptedVersionKeys();
         }
 
         /// <summary>
@@ -703,35 +703,35 @@ namespace GalleryServer.Web.Controller
             if ((e.DefaultRolesForUserAdded != null && e.DefaultRolesForUserAdded.Length > 0) || (e.DefaultRolesForUserRemoved != null && e.DefaultRolesForUserRemoved.Length > 0))
             {
                 System.Threading.Tasks.Task.Factory.StartNew(() =>
-                 {
-                     try
-                     {
-                 // For each added role, find the users *NOT* in the role and add them to the role
-                 var allUsers = UserController.GetAllUsers();
-                         foreach (var roleName in e.DefaultRolesForUserAdded)
-                         {
-                             if (RoleController.RoleExists(roleName))
-                             {
-                                 RoleController.AddUsersToRole(allUsers.Select(u => u.UserName).Except(RoleController.GetUsersInRole(roleName)).ToArray(), roleName);
-                             }
-                         }
+                {
+                    try
+                    {
+                        // For each added role, find the users *NOT* in the role and add them to the role
+                        var allUsers = UserController.GetAllUsers();
+                        foreach (var roleName in e.DefaultRolesForUserAdded)
+                        {
+                            if (RoleController.RoleExists(roleName))
+                            {
+                                RoleController.AddUsersToRole(allUsers.Select(u => u.UserName).Except(RoleController.GetUsersInRole(roleName)).ToArray(), roleName);
+                            }
+                        }
 
-                 // For each removed role, find the users in the role and remove them from the role
-                 foreach (var roleName in e.DefaultRolesForUserRemoved)
-                         {
-                             if (RoleController.RoleExists(roleName))
-                             {
-                                 RoleController.RemoveUsersFromRole(RoleController.GetUsersInRole(roleName), roleName);
-                             }
-                         }
+                        // For each removed role, find the users in the role and remove them from the role
+                        foreach (var roleName in e.DefaultRolesForUserRemoved)
+                        {
+                            if (RoleController.RoleExists(roleName))
+                            {
+                                RoleController.RemoveUsersFromRole(RoleController.GetUsersInRole(roleName), roleName);
+                            }
+                        }
 
-                         CacheController.RemoveCache(CacheItem.GalleryServerRoles);
-                     }
-                     catch (Exception ex)
-                     {
-                         AppEventController.LogError(ex, e.GalleryId);
-                     }
-                 });
+                        CacheController.RemoveCache(CacheItem.GalleryServerRoles);
+                    }
+                    catch (Exception ex)
+                    {
+                        AppEventController.LogError(ex, e.GalleryId);
+                    }
+                });
             }
         }
 

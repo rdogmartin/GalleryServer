@@ -14,7 +14,7 @@
     <MSBuildCommunityTasksPath>$(SolutionDir)\.build</MSBuildCommunityTasksPath>
 
     <ProductName>GalleryServer</ProductName>
-    <ProductVersion>V4_4_2</ProductVersion>
+    <ProductVersion>V4_4_3</ProductVersion>
 
     <!-- Specify 1 to create the light skin CSS file -->
     <UpdateSkins>1</UpdateSkins>

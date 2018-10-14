@@ -20,4 +20,4 @@ using System.Runtime.InteropServices;
 // contents are changed to represent a different locale.
 [assembly: System.Resources.NeutralResourcesLanguage("en-US")]
 
-[assembly: AssemblyVersion("4.4.2.*")]
+[assembly: AssemblyVersion("4.4.3.*")]
