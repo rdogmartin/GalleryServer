@@ -129,18 +129,18 @@ namespace GalleryServer.Web.Controller
                 Tree.Nodes.Add(rootNode);
 
                 // Add the first level of albums below the root album.
-                if (Options.NumberOfLevels == 1 && Options.Galleries != null && Options.Galleries.Count > 1)
+                //var childAlbums = rootAlbum.GetChildGalleryObjects(GalleryObjectType.Album, !Utils.IsAuthenticated);
+                if (rootAlbum.Parent is NullGalleryObject && Options.NumberOfLevels == 1)
                 {
                     // We get here when building the gallery tree in a multi-gallery scenario. For perf reasons we don't want to call GetChildGalleryObjects.
                     rootNode.HasChildren = true;
                 }
-                else if (Options.NumberOfLevels == 1 && !rootAlbum.IsVirtualAlbum)
+                else if (Options.NumberOfLevels == 1)
                 {
                     rootNode.HasChildren = rootAlbum.GetChildGalleryObjects(GalleryObjectType.Album, !Utils.IsAuthenticated).Any();
                 }
                 else
                 {
-                    // We want to get here when NumberOfLevels > 1 or when the root album is virtual
                     BindAlbumToTreeview(rootAlbum.GetChildGalleryObjects(GalleryObjectType.Album, !Utils.IsAuthenticated).ToSortedList(), rootNode, false);
                 }
 
