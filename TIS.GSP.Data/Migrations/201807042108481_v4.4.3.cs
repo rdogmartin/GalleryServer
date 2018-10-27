@@ -4,7 +4,7 @@ using System.Linq;
 namespace GalleryServer.Data.Migrations
 {
     /// <summary>
-    /// Represents the version 4.4.2 schema of the Gallery Server data structure.
+    /// Represents the version 4.4.3 schema of the Gallery Server data structure.
     /// </summary>
     /// <remarks>To re-scaffold this migration, run 'Add-Migration v4.4.3'</remarks>
     /// <seealso cref="System.Data.Entity.Migrations.DbMigration" />

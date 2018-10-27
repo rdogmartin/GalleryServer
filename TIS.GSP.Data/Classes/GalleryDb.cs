@@ -52,7 +52,7 @@ namespace GalleryServer.Data
         {
             get
             {
-                return GalleryDataSchemaVersion.V4_4_3;
+                return GalleryDataSchemaVersion.V4_5_0;
             }
         }
 

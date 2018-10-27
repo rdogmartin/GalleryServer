@@ -28,5 +28,5 @@ using System.Runtime.InteropServices;
 
 [assembly: System.Web.UI.WebResource("GalleryServer.Web.App_GlobalResources.gs-ftr-logo.png", "image/png")]
 
-[assembly: AssemblyVersion("4.4.3.*")]
+[assembly: AssemblyVersion("4.5.0.*")]
 [assembly: System.Resources.SatelliteContractVersion("1.0.0.0")]

@@ -177,6 +177,10 @@
     <Compile Include="Migrations\201807042108481_v4.4.3.Designer.cs">
       <DependentUpon>201807042108481_v4.4.3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810272149184_v4.5.0.cs" />
+    <Compile Include="Migrations\201810272149184_v4.5.0.Designer.cs">
+      <DependentUpon>201810272149184_v4.5.0.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AlbumRepository.cs" />
@@ -266,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807042108481_v4.4.3.resx">
       <DependentUpon>201807042108481_v4.4.3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810272149184_v4.5.0.resx">
+      <DependentUpon>201810272149184_v4.5.0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Schema\GalleryServerSchema.xml">
       <SubType>Designer</SubType>

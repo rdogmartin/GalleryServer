@@ -55,6 +55,7 @@ namespace GalleryServer.Data
                     case GalleryDataSchemaVersion.V4_4_0: UpgradeTo441(ctx); break;
                     case GalleryDataSchemaVersion.V4_4_1: UpgradeTo442(ctx); break;
                     case GalleryDataSchemaVersion.V4_4_2: UpgradeTo443(ctx); break;
+                    case GalleryDataSchemaVersion.V4_4_3: UpgradeTo450(ctx); break;
                 }
 
                 curSchema = GetCurrentSchema(ctx);
@@ -873,9 +874,18 @@ if ($lp.length > 0) {
 
         private static void UpgradeTo443(GalleryDb ctx)
         {
-            // Update data schema version to 4.4.2
+            // Update data schema version to 4.4.3
             var asDataSchema = ctx.AppSettings.First(a => a.SettingName == "DataSchemaVersion");
             asDataSchema.SettingValue = "4.4.3";
+
+            ctx.SaveChanges();
+        }
+
+        private static void UpgradeTo450(GalleryDb ctx)
+        {
+            // Update data schema version to 4.5.0
+            var asDataSchema = ctx.AppSettings.First(a => a.SettingName == "DataSchemaVersion");
+            asDataSchema.SettingValue = "4.5.0";
 
             ctx.SaveChanges();
         }

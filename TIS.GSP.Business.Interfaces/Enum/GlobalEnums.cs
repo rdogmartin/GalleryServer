@@ -1110,7 +1110,11 @@ namespace GalleryServer.Business
         /// <summary>
         /// Gets the schema version for 4.4.3.
         /// </summary>
-        V4_4_3
+        V4_4_3,
+        /// <summary>
+        /// Gets the schema version for 4.5.0.
+        /// </summary>
+        V4_5_0
     }
 
     /// <summary>
@@ -1181,6 +1185,8 @@ namespace GalleryServer.Business
                     return "4.4.2";
                 case GalleryDataSchemaVersion.V4_4_3:
                     return "4.4.3";
+                case GalleryDataSchemaVersion.V4_5_0:
+                    return "4.5.0";
                 case GalleryDataSchemaVersion.Unknown:
                     return "Unknown";
                 default:
@@ -1270,6 +1276,8 @@ namespace GalleryServer.Business
                     return GalleryDataSchemaVersion.V4_4_2;
                 case "4.4.3":
                     return GalleryDataSchemaVersion.V4_4_3;
+                case "4.5.0":
+                    return GalleryDataSchemaVersion.V4_5_0;
                 default:
                     return GalleryDataSchemaVersion.Unknown;
             }
@@ -1311,6 +1319,7 @@ namespace GalleryServer.Business
                 case GalleryDataSchemaVersion.V4_4_1:
                 case GalleryDataSchemaVersion.V4_4_2:
                 case GalleryDataSchemaVersion.V4_4_3:
+                case GalleryDataSchemaVersion.V4_5_0:
                 case GalleryDataSchemaVersion.Unknown:
 
                     return true;
