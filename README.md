@@ -8,7 +8,7 @@ Clone this repo and open TIS.GSP.sln in Visual Studio 2015 or higher. Hit F5 to 
 
 By default the data will be stored in a SQL CE database file in the App_Data directory. To use SQL Server, which gives much better performance, open web.config and switch the connection string to the included SQL Server one. Gallery Server requires a database account with a minimum of db_owner permission to the gallery database. If the account does not have permission to create the database, use SSMS to create the empty database first. The next time you access the gallery in the browser, Gallery Server will configure the database with the tables and seed data.
 
-See deployment for notes on how to deploy the project to a server.
+See the deployment section for notes on how to deploy the project to a server.
 
 ### Prerequisites
 
@@ -23,52 +23,9 @@ To run the gallery on a web server, you need
 * Optional: Ghostscript (for generating thumbnails for certain file types)
 * Optional: ImageMagick (for generating images for certain file types)
 
+### Deploying to a Web Server
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+Instructions are in the [Admin Guide](https://github.com/rdogmartin/GalleryServer/blob/master/releases/GalleryServerAdminGuide.pdf)
 
 ## Built With
 
@@ -86,9 +43,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Roger Martin** - *Initial work* - [rdogmartin](https://github.com/rdogmartin)
 
 ## License
 
