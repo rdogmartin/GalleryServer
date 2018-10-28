@@ -12,7 +12,7 @@ See deployment for notes on how to deploy the project to a server.
 
 ### Prerequisites
 
-To compile the code, use Visual Studio 2015 or higher with the Bundler & Minifier extension (https://github.com/madskristensen/BundlerMinifier).
+To compile the code, use Visual Studio 2015 or higher with the [Bundler & Minifier](https://github.com/madskristensen/BundlerMinifier) extension.
 
 To run the gallery on a web server, you need
 * .NET Framework 4.5 or higher
