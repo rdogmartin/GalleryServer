@@ -29,7 +29,7 @@ To run the gallery on a web server, you need
 
 ### Deploying to a Web Server
 
-Instructions are in the [Admin Guide](https://github.com/rdogmartin/GalleryServer/blob/master/releases/GalleryServerAdminGuide.pdf)
+Instructions are in the [Admin Guide](https://github.com/rdogmartin/GalleryServer/releases/download/v4.5.0/GalleryServerAdminGuide.pdf)
 
 ## Author
 
